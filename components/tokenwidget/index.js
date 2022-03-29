@@ -49,26 +49,20 @@ export default function TokenWidget({
       className={
         className
       }
-      style={{
-        backgroundColor: `${customBg}`,
-        width: `${widthCard}`,
-        borderColor: `${primaryColor ? primaryColor : "trasnparent"}`,
-        borderWidth: `${primaryColor ? "5px" : "0"}`,
-      }}
+
     >
       <div className="content-token">
 
 
-        <div className="flex items-center justify-between bg-gray-dark rounded px-8 py-1">
+        <div className="flex items-center justify-between bg-gray-dark rounded px-4 py-4">
           <a
             href={linkBsc}
             target="_blank"
             rel="noreferrer"
           >
-            {" "}
             <BnbIcon />
           </a>
-          <div className="flex items-center">
+          <div className="flex items-center w-full ml-4">
             <CopyAdress contract={contract} />
             <MetaMask token={token} iconToken={iconToken} contract={contract} />
           </div>
@@ -99,8 +93,8 @@ export function BnbIcon() {
       viewBox="0 0 50 50"
       style={{
         enableBackground: "new 0 0 50 50",
-        width: "25px",
-        margin: "10px 15px",
+        width: "20px",
+
       }}
       xmlSpace="preserve"
     >

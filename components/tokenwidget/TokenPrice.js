@@ -15,14 +15,13 @@ export default function TokePrice({token,loading,iconToken,primaryColor,linkBsc}
         :
 
         <>
-        <p>{token.name}  <span>({token.symbol})</span> </p>
-        <div className="d-flex ai-center">
-            {/* <StaticImage  style={{overFlow:"visible"}} imgClassName="token-image" src="./../../images/body/cmf-token.svg" alt="CMF Token" /> */}
-            <div className="d-flex fd-column ai-start">
-                <p className="token-money h1 fw-bold">$ {tokenvalue}</p>
+
+
+            <div className="flex text-sm mt-2 uppercase text-gray">
+                <p className="mr-4 pr-4 border-r border-r-gray"><strong className=" font-bold">{token.symbol} </strong> {tokenvalue}</p>
                 <p className="token-crypto"><span className="amount">{ bnbvalue }</span> <span className="coin fw-bold">BNB</span></p>
             </div>
-        </div>
+
 
 
         </>
