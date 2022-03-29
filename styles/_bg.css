@@ -1,0 +1,10 @@
+@layer{
+
+    .bg-body:before{
+      @apply bg-bottom fixed w-screen top-0 h-screen bg-cover bg-no-repeat -z-20  bg-main;
+      content: "";
+    }
+
+
+
+  }

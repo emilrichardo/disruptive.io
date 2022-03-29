@@ -1,0 +1,25 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('../assets/fonts/satoshi/css/satoshi.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./_bg.css";
+
+@layer base {
+  html {
+
+    @apply scroll-smooth font-body bg-dark text-light  overflow-x-hidden w-screen h-full;
+  }
+  body{
+    @apply overflow-x-hidden;
+  }
+}
+
+.animate-spin{
+  -webkit-animation: spin 10s linear infinite;
+  animation: spin 10s linear infinite;
+}
