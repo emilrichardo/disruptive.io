@@ -14,6 +14,7 @@ module.exports = {
         light:'#2D3037',
         DEFAULT:"#1F2229",
         dark:"#161920",
+        black:"#1B1D24",
       },
       light:{
         light:'#fff',
@@ -34,6 +35,7 @@ module.exports = {
       backgroundImage: {
         main : "url('/bgmain.jpg')",
         astronauta: "url('/bg-astronauta.jpg')",
+        pages: "url('/bg-pages.jpg')",
       }
     },
   },

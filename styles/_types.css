@@ -1,0 +1,13 @@
+@layer {
+    .content-base{
+        @apply text-gray leading-7 lg:text-2xl lg:leading-10 font-light;
+
+    }
+
+
+
+}
+
+.content-base p{
+    @apply mb-4 lg:mb-8;
+}

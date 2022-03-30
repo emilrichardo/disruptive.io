@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "./buttons";
 import Logo from "./Logo";
 import MenuOverlay from "./MenuOverlay";
@@ -11,8 +11,30 @@ export default function Header({className}) {
     const MenuToggleSwitch = () => {
         menuOverlay ? setMenuOverlay(false) : setMenuOverlay(true);
       };
+
+      const [scrolled, setScrolled] = useState(false);
+      // change state on scroll
+      useEffect(() => {
+        const handleScroll = () => {
+          const isScrolled = window.scrollY > 10;
+          if (isScrolled !== scrolled) {
+            setScrolled(!scrolled);
+          }
+        };
+
+        document.addEventListener("scroll", handleScroll, { passive: true });
+
+        return () => {
+          // clean up the event handler when the component unmounts
+          document.removeEventListener("scroll", handleScroll);
+        };
+      }, [scrolled]);
+
+
+
+
     return(
-        <header className={` ${className} px-4 py-2 lg:py-4 fixed top-0 w-screen flex justify-between items-center z-50 `}>
+        <header className={` ${className} ${scrolled && "bg-dark "} transition-all  px-4 py-2 lg:py-4 fixed top-0 w-screen flex justify-between items-center z-50 `}>
             <Logo className=" w-8 lg:ml-2"/>
 
             <div className="flex items-center">

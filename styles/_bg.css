@@ -2,4 +2,7 @@
     .bg-body{
       @apply bg-center  bg-cover bg-no-repeat   bg-main;
     }
+    .bg-lines{
+      @apply bg-pages  bg-right-top bg-no-repeat;
+    }
   }

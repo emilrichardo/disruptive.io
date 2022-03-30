@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Hero() {
     return(
-      <div className=' bg-body -mt-20  z-0  w-full  h-screen '>
+      <div className=' bg-body -mt-14  z-0  w-full  h-screen '>
 
        <div className="relative  h-full w-full">
             <div className="absolute  w-screen flex items-center justify-center  gap-4 place-content-center   h-full top-auto bottom-auto">
@@ -27,7 +27,7 @@ export default function Hero() {
             </div>
         </div>
 
-        <div className="absolute -top-20 flex flex-col w-full h-full justify-center tracking-[.3em] text-xs items-center font-title_bold font-bold">
+        <div className="absolute -top-14 flex flex-col w-full h-full justify-center tracking-[.3em] text-xs items-center font-title_bold font-bold">
             <Link href="/"><a className="my-4 hover:text-primary hover:scale-105 transition-all">PAYMENTS</a></Link>
             <Link href="/"><a className="my-4 hover:text-primary hover:scale-105 transition-all">TRADING BOTS</a></Link>
             <Link href="/"><a className="my-4 hover:text-primary hover:scale-105 transition-all">METAVERSE</a></Link>

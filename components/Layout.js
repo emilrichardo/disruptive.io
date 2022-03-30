@@ -6,9 +6,9 @@ export default function Layout({children}) {
             <Header/>
             <div>
                 <Sidebar/>
-                <>
+                <div className=" md:ml-20 ">
                     {children}
-                </>
+                </div>
             </div>
         </>
     )
