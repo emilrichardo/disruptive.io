@@ -4,7 +4,7 @@ import Logo from "./Logo";
 import MenuOverlay from "./MenuOverlay";
 import NavMain from "./NavMain";
 
-export default function Header() {
+export default function Header({className}) {
 
     const [menuOverlay, setMenuOverlay] = useState(false)
 
@@ -12,7 +12,7 @@ export default function Header() {
         menuOverlay ? setMenuOverlay(false) : setMenuOverlay(true);
       };
     return(
-        <header className="px-4 py-2 lg:py-4 fixed top-0 w-screen flex justify-between items-center z-50">
+        <header className={` ${className} px-4 py-2 lg:py-4 fixed top-0 w-screen flex justify-between items-center z-50 `}>
             <Logo className=" w-8 lg:ml-2"/>
 
             <div className="flex items-center">

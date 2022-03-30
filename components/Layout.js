@@ -4,11 +4,11 @@ export default function Layout({children}) {
     return(
         <>
             <Header/>
-            <div >
+            <div>
                 <Sidebar/>
-                <main className="md:ml-20">
+                <>
                     {children}
-                </main>
+                </>
             </div>
         </>
     )
