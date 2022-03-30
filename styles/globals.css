@@ -19,7 +19,15 @@
   }
 }
 
-.animate-spin{
-  -webkit-animation: spin 10s linear infinite;
-  animation: spin 10s linear infinite;
+
+.speed-slow{
+  animation-duration: 35s;
+}
+
+.speed-normal{
+  animation-duration: 20s;
+}
+
+.speed-fast{
+  animation-duration: 15s;
 }

@@ -1,7 +1,7 @@
 export default function SelectForm({size,htmlFor,label,className,inputClassName, children}) {
 
     const inputBase = ' children:z-10 children:relative relativew-full tracking-wider block text-lg transition-all duration-200 focus:outline-none  rounded   border-2'
-    const inputColor= ' bg-light-200 dark:bg-dark-100  border-light-200 dark:border-dark-100 focus:border-secondary dark:focus:border-secondary placeholder:text-dark-200 dark:placeholder:text-light-500 placeholder:opacity-40 focus:placeholder:opacity-5 dark:autofill:text-primary-lightest '
+    const inputColor= ' bg-primary   border-light-200 dark:border-dark-100 focus:border-secondary dark:focus:border-secondary placeholder:text-dark-200 dark:placeholder:text-light-500 placeholder:opacity-40 focus:placeholder:opacity-5 dark:autofill:text-primary-lightest '
 
     const sizes ={
         sm : ' px-4 md:pl-6 pr-10 py-2 text-sm',
@@ -9,7 +9,7 @@ export default function SelectForm({size,htmlFor,label,className,inputClassName,
         lg:' px-4  py-2 md:px-10 md:py-4 md:text-lg ',
     }
     return(
-        <div className={`${className } relative my-4  `}>
+        <div className={`${className && className } relative my-4  `}>
 
             {(label != undefined) &&
                 <label

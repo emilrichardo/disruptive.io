@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from "./buttons";
 import Logo from "./Logo";
 import MenuOverlay from "./MenuOverlay";
+import NavMain from "./NavMain";
 
 export default function Header() {
 
@@ -11,10 +12,11 @@ export default function Header() {
         menuOverlay ? setMenuOverlay(false) : setMenuOverlay(true);
       };
     return(
-        <header className="px-4 py-2 fixed top-0 w-screen flex justify-between items-center z-50">
-            <Logo className=" w-8"/>
+        <header className="px-4 py-2 lg:py-4 fixed top-0 w-screen flex justify-between items-center z-50">
+            <Logo className=" w-8 lg:ml-2"/>
 
-            <nav className="flex items-center">
+            <div className="flex items-center">
+                <NavMain className="hidden lg:inline-block uppercase text-sm font-title tracking-wider" itemClassName="mr-8"/>
                 <Button className="px-7 mr-2" variant="primary" size="sm">Stake</Button>
                 <Button
                 className="pr-8 md:pr-8 pl-0 mt-0 mr-4 "
@@ -35,14 +37,17 @@ export default function Header() {
                 >
                     <span className="hidden md:inline-block">ACQUIRE</span>
                 </Button>
-                <Button onClick={MenuToggleSwitch} onKeyDown={MenuToggleSwitch} size="sm" className="relative z-50  py-3">
+                <Button onClick={MenuToggleSwitch} onKeyDown={MenuToggleSwitch} size="sm" className="lg:hidden relative z-50  py-3">
                     <div className={` ${menuOverlay ? " rotate-45 w-10 top-2":" rotate-0 w-6"} transition-all relative h-[2px]  bg-light `}></div>
                     <div className={` ${menuOverlay ? " -rotate-45 w-10":" rotate-0 w-6"} transition-all h-[2px]   bg-light mt-[7px] `}></div>
 
-                </Button>
+                </Button >
 
-                 <MenuOverlay menuState={menuOverlay}/>
-            </nav>
+                    <MenuOverlay menuState={menuOverlay} />
+
+
+
+            </div>
         </header>
     )
 };

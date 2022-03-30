@@ -9,7 +9,7 @@ const sizes ={
 
 const variants ={
     outline: ' bg-none border border-light hover:bg-light hover:text-dark-100',
-    default:' bg-light-300  hover:bg-light-200 dark:bg-dark-400 dark:hover:bg-dark-500 text-dark-200 dark:text-light-300',
+    default:' ',
     primary:' bg-primary dark:bg-primary hover:bg-primary-light dark:hover:bg-primary-light text-light-100 dark:text-light-100 border border-primary ',
     gray:' dark:bg-dark-gray  dark:hover:bg-opacity-70 text-light-100 dark:text-light-100 ',
     secondary: ' bg-secondary hover:bg-secondary-lightest text-light-white ',
