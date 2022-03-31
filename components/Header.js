@@ -10,8 +10,7 @@ import NavMain from "./NavMain"
 
 export default function Header({className}) {
 
-    //detect window size width height
-    const size = useWindowSize();
+
 
 
 
@@ -25,7 +24,7 @@ export default function Header({className}) {
       // change state on scroll
       useEffect(() => {
         const handleScroll = () => {
-          const isScrolled = window.scrollY > 20;
+          const isScrolled = window.scrollY > 10;
           if (isScrolled !== scrolled) {
             setScrolled(!scrolled);
           }
@@ -38,6 +37,11 @@ export default function Header({className}) {
           document.removeEventListener("scroll", handleScroll);
         };
       }, [scrolled]);
+
+      console.log(scrolled)
+
+        //detect window size width height
+    const size = useWindowSize();
 
 
 

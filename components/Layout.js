@@ -7,9 +7,9 @@ export default function Layout({children}) {
     return(
         <>
             <Header/>
-            <div>
+            <div >
                 <Sidebar/>
-                <div className=" lg:ml-20 ">
+                <div className="min-h-full lg:ml-20 ">
                     {children}
                 </div>
             </div>

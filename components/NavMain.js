@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from 'next/router'
 const mainMenuItems = [
     {id:0 ,label:"Whitepaper", link : "/whitepaper" },
-    {id:1 ,label:"Tokenomics", link : "/tokenomic" },
+    {id:1 ,label:"Tokenomics", link : "/tokenomics" },
     {id:2 ,label:"News", link : "/news" },
     {id:3 ,label:"Roadmap", link : "/roadmap" },
 ]
