@@ -16,7 +16,7 @@
     @apply scroll-smooth font-body bg-dark text-light  overflow-x-hidden w-screen h-full;
   }
   body{
-    @apply overflow-x-hidden h-full;
+    @apply overflow-x-hidden;
   }
 
 
