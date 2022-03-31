@@ -18,20 +18,26 @@
   body{
     @apply overflow-x-hidden;
   }
+
+
 }
 
 
-.speed-slow{
-  animation-duration: 35s;
-}
+  .speed-slow{
+    animation-duration: 35s;
+  }
 
-.speed-normal{
-  animation-duration: 20s;
-}
+  .speed-normal{
+    animation-duration: 20s;
+  }
 
-.speed-fast{
-  animation-duration: 15s;
-}
+  .speed-fast{
+    animation-duration: 15s;
+  }
+
+
+
+
 
 h1,h2,h3,h4,h5,h6{
   @apply font-title;

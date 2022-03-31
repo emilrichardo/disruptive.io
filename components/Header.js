@@ -2,9 +2,18 @@ import React, { useState, useEffect } from "react";
 import Button from "./buttons";
 import Logo from "./Logo";
 import MenuOverlay from "./MenuOverlay";
-import NavMain from "./NavMain";
+import {useWindowSize} from "./DetectWSize"
+
+import Link from "next/link";
+import NavMain from "./NavMain"
+
 
 export default function Header({className}) {
+
+    //detect window size width height
+    const size = useWindowSize();
+    console.log(size.width)
+
 
     const [menuOverlay, setMenuOverlay] = useState(false)
 
@@ -16,7 +25,7 @@ export default function Header({className}) {
       // change state on scroll
       useEffect(() => {
         const handleScroll = () => {
-          const isScrolled = window.scrollY > 10;
+          const isScrolled = window.scrollY > 20;
           if (isScrolled !== scrolled) {
             setScrolled(!scrolled);
           }
@@ -35,10 +44,21 @@ export default function Header({className}) {
 
     return(
         <header className={` ${className} ${scrolled && "bg-dark "} transition-all  px-4 py-2 lg:py-4 fixed top-0 w-screen flex justify-between items-center z-50 `}>
-            <Logo className=" w-8 lg:ml-2"/>
+           <Link href="/"><a><Logo className=" z-50 w-8 lg:ml-2"/></a></Link>
 
-            <div className="flex items-center">
-                <NavMain className="hidden lg:inline-block uppercase text-sm font-title tracking-wider" itemClassName="mr-8"/>
+
+            <div className="flex items-center" >
+
+              {size.width  >   1024
+              ?
+              <NavMain  className="hidden lg:inline-block uppercase text-sm font-title tracking-wider" itemClassName="mr-8"/>
+              :
+              <MenuOverlay  menuState={menuOverlay} MenuToggleSwitch={MenuToggleSwitch} />
+              }
+
+
+
+
                 <Button className="px-7 mr-2" variant="primary" size="sm">Stake</Button>
                 <Button
                 className="pr-8 md:pr-8 pl-0 mt-0 mr-4 "
@@ -65,7 +85,7 @@ export default function Header({className}) {
 
                 </Button >
 
-                    <MenuOverlay menuState={menuOverlay} />
+
 
 
 

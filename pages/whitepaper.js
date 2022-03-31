@@ -1,11 +1,43 @@
 import MainContent from "../components/MainContent";
 
-export default function whitepaper() {
+export default function WhitePaper() {
     return(
-        <div className="h-full flex flex-col md:flex-row">
-            <div className=" bg-dark-black w-full max-w-lg  lg:min-h-screen pt-32 pb-14 px-8 lg:px-24">
+        <div className="h-full flex flex-col lg:flex-row">
+            <div className=" bg-dark-black w-full lg:max-w-lg  lg:min-h-screen pt-32 pb-14 px-8 lg:px-24">
                 <h1 className=" text-4xl lg:text-6xl">Whitepaper</h1>
                 <h4 className="text-xl mt-8 lg:text-4xl opacity-60">Marzo 2022</h4>
+
+                <div className="mt-24">
+                <h2 className=" text-lg lg:text-2xl mb-4 lg:mb-8 font-title_bold"> <span className=" text-primary">0.1</span>  Disclaimer</h2>
+                <ul className="text-gray text-xl pb-8 pl-4 leading-10">
+                    <li>
+                        <a>Un momento histórico</a>
+                    </li>
+                    <li>
+                        <a>Desafíos no; oportunidades</a>
+                    </li>
+                    <li>
+                        <a>Una experiencia distinta para un mercado distinto</a>
+                    </li>
+                </ul>
+                <h2 className=" text-lg lg:text-2xl mb-4 lg:mb-8 font-title_bold"> <span className=" text-primary">0.2</span>  DISR Coin, una propuesta diferente</h2>
+
+
+
+                <ul className="text-gray text-xl pb-8  pl-4 leading-10">
+                    <li>
+                        <a>Ventajas reales contra un sistema obsoleto</a>
+                    </li>
+                    <li>
+                        <a>Tokenomics</a>
+                    </li>
+                    <li>
+                        <a>Futuro en el mercado</a>
+                    </li>
+                </ul>
+
+
+                </div>
 
             </div>
             <div className=" bg-lines w-full min-h-screen pt-4 lg:pt-52">

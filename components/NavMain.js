@@ -1,16 +1,18 @@
 import Link from "next/link";
-
+import { useRouter } from 'next/router'
 const mainMenuItems = [
-    {id:0 ,label:"Whitepaper", link : "/" },
-    {id:1 ,label:"Tokenomics", link : "/" },
-    {id:2 ,label:"News", link : "/" },
-    {id:3 ,label:"Roadmap", link : "/" },
+    {id:0 ,label:"Whitepaper", link : "/whitepaper" },
+    {id:1 ,label:"Tokenomics", link : "/tokenomic" },
+    {id:2 ,label:"News", link : "/news" },
+    {id:3 ,label:"Roadmap", link : "/roadmap" },
 ]
-export default function NavMain({className,itemClassName}) {
+export default function Test({className,itemClassName,MenuToggleSwitch}) {
+    const router = useRouter();
+
     return(
-        <nav className={`${className} font-title_bold flex flex-col lg:flex-row  "`}>
+        <nav  className={`${className} font-title_bold flex flex-col lg:flex-row  "`}>
             {mainMenuItems.map((item)=>(
-                <Link key={item.id} href={item.link}><a className={`${itemClassName} my-4 hover:text-primary inline-block hover:scale-105`}>{item.label}</a></Link>
+                <Link  key={item.id} href={item.link}><a onClick={MenuToggleSwitch} className={`${router.asPath == item.link && " text-primary-light " + " "} ${itemClassName} my-4 hover:text-primary inline-block hover:scale-105 transition-all duration-200`}>{item.label}</a></Link>
             ))}
         </nav>
     )
