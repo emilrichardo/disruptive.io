@@ -74,27 +74,117 @@ export default function Tokenomics() {
 
          </section>
 
-         <section>
-             <div>
-                 <div>
-                     <h3>Cada DISR se divide de la siguiente manera</h3>
-                     <p>Para garantizar un máximo rendimiento; DISR ha creado un plan a largo  plazo para estabilizar su activo y permitir a los titulares obtener más   servicios y beneficios por menos. Debido a esto, hemos creado una   forma innovadora de recompensar a los titulares de DISR.</p>
-                     <ul>
-                         <li>20% Quemado</li>
-                         <li>25% Pagado en estacas a los titulares</li>
-                         <li>50% Utilizado para operaciones</li>
-                     </ul>
 
-
-
-
-                 </div>
-
-             </div>
-         </section>
 
         </MainContent>
 
+        <section className="bg-dark-black py-[10vh]">
+            <MainContent>
+                 <div>
+                     <h3 className="text-2xl mb-8">Cada <span className="text-primary">DISR </span> se divide de la siguiente manera</h3>
+                     <p className="text-gray mb-8">Para garantizar un máximo rendimiento; DISR ha creado un plan a largo  plazo para estabilizar su activo y permitir a los titulares obtener más   servicios y beneficios por menos. Debido a esto, hemos creado una   forma innovadora de recompensar a los titulares de DISR.</p>
+                     <ul>
+                         <li> <div className=" rounded-full h-3 w-3 bg-primary-light inline-block mr-3"></div> <span className="text-primary font-bold"> 20%</span> Quemado</li>
+                         <li><div className=" rounded-full h-3 w-3 bg-[#57DED6] inline-block mr-3"></div> <span className="text-primary font-bold"> 25%</span> Pagado en estacas a los titulares</li>
+                         <li><div className=" rounded-full h-3 w-3 bg-primary inline-block mr-3"></div> <span className="text-primary font-bold"> 50%</span> Utilizado para operaciones</li>
+                     </ul>
+                 </div>
+                 <div>
+                     <Image
+                     src="/bg-chart.jpg"
+                     width={761}
+                     height={622}
+                     />
+                 </div>
+
+             </MainContent>
+         </section>
+         <div className="text-center">
+                <Image
+                className=" inline-block"
+                src="/bg-moon-bottom.jpg"
+                width={908}
+                height={160}
+                quality={100}
+                />
+
+             </div>
+             <div className="my-24 text-center mb-8">
+                 <MainContent>
+                     <h4 className="text-4xl lg:text-6xl">Points scored</h4>
+                     <h5 className="text-primary text-2xl lg:text-4xl font-title_bold my-4">99,000,000</h5>
+                     <p className="text-gray text-sm">Total Supply</p>
+                 </MainContent>
+
+             </div>
+             <div>
+             <MainContent className="py-24">
+                 <div className=" grid grid-cols-1 lg:grid-cols-2">
+                 <Image
+                    className=" inline-block"
+                    src="/bg-chart-02.svg"
+                    width={536}
+                    height={500}
+                    quality={100}
+                    />
+                    <div>
+                        <ul className="grid grid-cols-1 lg:grid-cols-2">
+                            <li className="flex items-center my-8">
+                                <div className="rounded-full h-4 w-4 bg-[#727E84] inline-block mr-4"></div>
+                                <div>
+                                    <h3 className=" text-2xl font-title_bold">15,000,000</h3>
+                                    <p className="text-gray font-light text-sm">Founders</p>
+                                </div>
+                            </li>
+                            <li className="flex items-center my-8">
+                                <div className="rounded-full h-4 w-4 bg-[#8F8FB2] inline-block mr-4"></div>
+                                <div>
+                                    <h3 className=" text-2xl font-title_bold">77,634,442</h3>
+                                    <p className="text-gray font-light text-sm">Pancake Swap Supply</p>
+                                </div>
+                            </li>
+                            <li className="flex items-center my-8">
+                                <div className="rounded-full h-4 w-4 bg-[#606380] inline-block mr-4"></div>
+                                <div>
+                                    <h3 className=" text-4xl font-title_bold">44,589,963</h3>
+                                    <p className="text-gray font-light text-sm">Revolving Treasury Funds</p>
+                                </div>
+                            </li>
+                            <li className="flex items-center my-8">
+                                <div className="rounded-full h-4 w-4 bg-[#6E7DA3] inline-block mr-4"></div>
+                                <div>
+                                    <h3 className=" text-2xl font-title_bold">12,000,000</h3>
+                                    <p className="text-gray font-light text-sm">Community</p>
+                                </div>
+                            </li>
+                            <li className="flex items-center my-8">
+                                <div className="rounded-full h-4 w-4 bg-[#58516B] inline-block mr-4"></div>
+                                <div>
+                                    <h3 className=" text-2xl font-title_bold">1,170,000</h3>
+                                    <p className="text-gray font-light text-sm">Processing paid costs</p>
+                                </div>
+                            </li>
+                            <li className="flex items-center my-8">
+                                <div className="rounded-full h-4 w-4 bg-[#8EA7FF] inline-block mr-4"></div>
+                                <div>
+                                    <h3 className=" text-2xl font-title_bold">12,167,111</h3>
+                                    <p className="text-gray font-light text-sm">Initial investors</p>
+                                </div>
+                            </li>
+                            <li className="flex items-center my-8">
+                                <div className="rounded-full h-4 w-4 bg-[#DCB3EF] inline-block mr-4"></div>
+                                <div>
+                                    <h3 className=" text-2xl font-title_bold">7,000,000</h3>
+                                    <p className="text-gray font-light text-sm">Circulating</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                 </div>
+
+                </MainContent>
+             </div>
 
         </>
     )
