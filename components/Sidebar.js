@@ -1,6 +1,6 @@
 export default function Sidebar() {
     return(
-        <div className="hidden md:block border-r border-r-gray border-opacity-25 fixed top-0 left-0  w-20 h-screen z-0">
+        <div className="hidden md:block border-r border-r-gray border-opacity-25 fixed top-0 left-0  w-20 h-screen z-20">
             <div className="flex flex-col justify-center h-full items-center">
                 <a href="/" className="hover:scale-125 transition-all">
                     <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">

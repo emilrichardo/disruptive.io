@@ -40,7 +40,7 @@ export default function RoadMap() {
         <div className="h-full flex flex-col md:flex-row">
             <div className=" bg-dark-black bg-astro w-full max-w-lg  lg:min-h-screen pt-32 pb-14 px-8 lg:px-24">
                 <h1 className=" text-4xl lg:text-6xl">Roadmap</h1>
-                <p className="text-gray mt-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p className="text-gray mt-14">The road to success is traveled step by step and DISR is moving steadily forward. Join us and discover every detail of our growth, until we reach the top. You can be part of the journey! Get to know our roadmap.</p>
 
 
 

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Logo from "./Logo";
 
 export default function Hero() {
     return(
@@ -27,12 +28,27 @@ export default function Hero() {
             </div>
         </div>
 
-        <div className="absolute lg:-ml-10 -top-14 flex flex-col w-full h-full justify-center tracking-[.3em] text-xs items-center font-title_bold font-bold">
-            <Link href="/"><a className="my-4 hover:text-primary hover:scale-105 transition-all">PAYMENTS</a></Link>
-            <Link href="/"><a className="my-4 hover:text-primary hover:scale-105 transition-all">TRADING BOTS</a></Link>
-            <Link href="/"><a className="my-4 hover:text-primary hover:scale-105 transition-all">METAVERSE</a></Link>
-            <Link href="/"><a className="my-4 hover:text-primary hover:scale-105 transition-all">TRADERS CITY</a></Link>
+        <div>
+
+            <div className="absolute    lg:-ml-10 -top-14 flex flex-col w-full h-full justify-center tracking-[.3em] text-xs items-center font-title_bold font-bold">
+                <div className="flex peer flex-col lg:justify-center items-center transition-all lg:scale-50 lg:hover:scale-105 hover:z-0 lg:opacity-0 lg:hover:opacity-100" >
+                        <Link href="/"><a className="my-4 hover:text-primary hover:scale-125 transition-all">PAYMENTS</a></Link>
+                        <Link href="/"><a className="my-4 hover:text-primary hover:scale-125 transition-all">TRADING BOTS</a></Link>
+                        <Link href="/"><a className="my-4 hover:text-primary hover:scale-125 transition-all">METAVERSE</a></Link>
+                        <Link href="/"><a className="my-4 hover:text-primary hover:scale-125 transition-all">TRADERS CITY</a></Link>
+                </div>
+                <div className="hidden peer-hover:hidden  lg:flex items-center hover:-z-10 justify-center w-full h-full absolute">
+                <Logo className="animate-pulse  w-24 transition-all duration-700     " variant="gradient"/>
+                </div>
+
+            </div>
+
+
+
         </div>
+
+
+
 
 
     </div>
