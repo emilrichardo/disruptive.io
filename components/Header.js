@@ -12,7 +12,7 @@ export default function Header({className}) {
 
     //detect window size width height
     const size = useWindowSize();
-    console.log(size.width)
+
 
 
     const [menuOverlay, setMenuOverlay] = useState(false)
@@ -43,7 +43,7 @@ export default function Header({className}) {
 
 
     return(
-        <header className={` ${className} ${scrolled && "bg-dark "} transition-all  px-4 py-2 lg:py-4 fixed top-0 w-screen flex justify-between items-center z-50 `}>
+        <header className={` ${className} ${scrolled && "bg-dark bg-opacity-80 "} transition-all  px-4 py-2 lg:py-4 fixed top-0 w-screen flex justify-between items-center z-50 `}>
            <Link href="/"><a><Logo className=" z-50 w-8 lg:ml-2"/></a></Link>
 
 
