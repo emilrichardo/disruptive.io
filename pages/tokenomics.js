@@ -78,19 +78,20 @@ export default function Tokenomics() {
 
         </MainContent>
 
-        <section className="bg-dark-black py-[10vh]">
-            <MainContent>
+        <section className="bg-dark-black py-[10vh] lg:py-14">
+            <MainContent className="grid grid-cols-2 items-center justify-center">
                  <div>
-                     <h3 className="text-2xl mb-8">Cada <span className="text-primary">DISR </span> se divide de la siguiente manera</h3>
-                     <p className="text-gray mb-8">Para garantizar un máximo rendimiento; DISR ha creado un plan a largo  plazo para estabilizar su activo y permitir a los titulares obtener más   servicios y beneficios por menos. Debido a esto, hemos creado una   forma innovadora de recompensar a los titulares de DISR.</p>
-                     <ul>
+                     <h3 className="text-2xl lg:text-5xl mb-8">Cada <span className="text-primary">DISR </span> se divide de la siguiente manera</h3>
+                     <p className="text-gray mb-8 max-w-lg">Para garantizar un máximo rendimiento; DISR ha creado un plan a largo  plazo para estabilizar su activo y permitir a los titulares obtener más   servicios y beneficios por menos. Debido a esto, hemos creado una   forma innovadora de recompensar a los titulares de DISR.</p>
+                     <ul className="lg:text-2xl font-thin">
                          <li> <div className=" rounded-full h-3 w-3 bg-primary-light inline-block mr-3"></div> <span className="text-primary font-bold"> 20%</span> Quemado</li>
                          <li><div className=" rounded-full h-3 w-3 bg-[#57DED6] inline-block mr-3"></div> <span className="text-primary font-bold"> 25%</span> Pagado en estacas a los titulares</li>
                          <li><div className=" rounded-full h-3 w-3 bg-primary inline-block mr-3"></div> <span className="text-primary font-bold"> 50%</span> Utilizado para operaciones</li>
                      </ul>
                  </div>
-                 <div>
+                 <div className="text-center">
                      <Image
+                     className="inline-block"
                      src="/bg-chart.jpg"
                      width={761}
                      height={622}
