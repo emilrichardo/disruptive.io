@@ -38,7 +38,7 @@ export default function Header({className}) {
         };
       }, [scrolled]);
 
-      console.log(scrolled)
+
 
         //detect window size width height
     const size = useWindowSize();
