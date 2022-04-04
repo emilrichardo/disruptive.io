@@ -26,7 +26,7 @@ export default function news({posts}) {
            <h1 className="text-5xl">News</h1>
           {posts.map((post,i) => (
                 <div className="my-16" key={`id-${post.id}`}>
-                  <Link href={"/ne" + post.slug}><a> <h3 className=" text-primary-light text-2xl lg:text-4xl ">{post.title.rendered}</h3></a></Link>
+                  <Link href={"/news/" + post.slug}><a> <h3 className=" text-primary-light text-2xl lg:text-4xl ">{post.title.rendered}</h3></a></Link>
                   <h4 className="text-sm text-gray">{formatDate(post.date)}</h4>
                   <div className="text-lg mt-8"  dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}></div>
                 </div>
