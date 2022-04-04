@@ -1,30 +1,108 @@
-import MainContent from "../../components/MainContent";
+import Image from 'next/image'
+import MainContent from '../../components/MainContent';
 
-import { useRouter } from "next/router";
+export default function Post( data ){
 
-  const Details = ({data}) => {
-    const router = useRouter();
+    const post = data.post;
 
-    console.log(data)
+    console.log(post.featuredImage.node.sourceUrl)
+
     return (
-      <>
-      <MainContent>
-        {/* {post.title.rendered} */}
-        Post
-      </MainContent>
+        <div>
+          <MainContent>
 
-      </>
-    );
-  }
 
-  export default Details;
+          <Image
+          alt={post.slug}
+          src={post.featuredImage.node.sourceUrl}
+          width={640} height={426}
+          />
+          <h1 className=' text-2xl'>{post.title}</h1>
 
-  // This gets called on every request
-export async function getServerSideProps() {
-  // Fetch data from external API
-  const res = await fetch(`${process.env.restApi}/wp-json/wp/v2/posts` )
-  const data = await res.json()
 
-  // Pass data to the page via props
-  return { props: { data } }
+
+
+          <article dangerouslySetInnerHTML={{__html: post.content}}></article>
+
+          </MainContent>
+
+
+            {/* <h1>{post.title}</h1>
+            <Image width="640" height="426" src={post.featuredImage.node.sourceUrl} />
+            <article dangerouslySetInnerHTML={{__html: post.content}}></article> */}
+        </div>
+    )
+
+}
+
+export async function getStaticProps(context) {
+
+    const res = await fetch(`https://staging.disruptivenews.io/graphql`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            query: `
+                query SinglePost($id: ID!, $idType: PostIdType!) {
+                    post(id: $id, idType: $idType) {
+                        title
+                        slug
+                        content
+                        featuredImage {
+                            node {
+                                sourceUrl
+                            }
+                        }
+                    }
+                }
+            `,
+            variables: {
+                id: context.params.slug,
+                idType: 'SLUG'
+            }
+        })
+    })
+
+    const json = await res.json()
+
+    return {
+        props: {
+            post: json.data.post,
+        },
+    }
+
+}
+
+export async function getStaticPaths() {
+
+    const res = await fetch(`https://staging.disruptivenews.io/graphql`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            query: `
+            query AllPostsQuery {
+                posts {
+                    nodes {
+                        slug
+                        content
+                        title
+                        featuredImage {
+                            node {
+                                sourceUrl
+                            }
+                        }
+                    }
+                }
+            }
+        `})
+    })
+
+    const json = await res.json()
+    const posts = json.data.posts.nodes;
+
+    const paths = posts.map((post) => ({
+        params: { slug: post.slug },
+    }))
+
+    return { paths, fallback: false }
+
 }
