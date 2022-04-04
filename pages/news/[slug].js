@@ -14,13 +14,14 @@ export default function Post( data ){
         <div>
           <MainContent>
           {post.featuredImage &&
-                <div className='relative w-full h-96'>
+                <div className='relative w-full h-screen'>
                     <Image
 
                     alt={post.slug}
                     src={post.featuredImage.node.sourceUrl}
                     /* width={780} height={506} */
-                    layout="fill"
+                    layout='fill'
+                    objectFit='contain'
                     placeholder='blur'
                     blurDataURL={post.featuredImage.node.sourceUrl}
 
