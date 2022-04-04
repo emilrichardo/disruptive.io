@@ -5,31 +5,32 @@ export default function Post( data ){
 
     const post = data.post;
 
-    console.log(post.featuredImage.node.sourceUrl)
+
+
+
+
 
     return (
         <div>
           <MainContent>
+          {post.featuredImage &&
+                <div className='relative w-full h-96'>
+                    <Image
 
+                    alt={post.slug}
+                    src={post.featuredImage.node.sourceUrl}
+                    /* width={780} height={506} */
+                    layout="fill"
+                    placeholder='blur'
+                    blurDataURL={post.featuredImage.node.sourceUrl}
 
-          <Image
-          alt={post.slug}
-          src={post.featuredImage.node.sourceUrl}
-          width={640} height={426}
-          />
-          <h1 className=' text-2xl'>{post.title}</h1>
+                    />
+                </div>
+            }
 
-
-
-
-          <article dangerouslySetInnerHTML={{__html: post.content}}></article>
-
+            <h1 className=' text-2xl'>{post.title}</h1>
+            <article dangerouslySetInnerHTML={{__html: post.content}}></article>
           </MainContent>
-
-
-            {/* <h1>{post.title}</h1>
-            <Image width="640" height="426" src={post.featuredImage.node.sourceUrl} />
-            <article dangerouslySetInnerHTML={{__html: post.content}}></article> */}
         </div>
     )
 
