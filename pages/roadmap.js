@@ -38,15 +38,15 @@ const RoadMapData = [
 export default function RoadMap() {
     return(
         <div className="h-full flex flex-col md:flex-row justify-center">
-            <div className="lg:min-h-screen bg-dark-black bg-astro w-full  text-right lg:max-w-[35%]">
-                <div className=" inline-block text-left w-full max-w-lg  lg:min-h-screen pt-32 pb-14 px-8 lg:px-24">
+            <div className="lg:min-h-screen bg-dark-black bg-astro w-full flex justify-end  lg:max-w-[40%]">
+                <div className=" w-full max-w-xl  lg:min-h-screen pt-32 pb-14 px-8 lg:px-24">
                     <h1 className=" text-4xl lg:text-6xl">Roadmap</h1>
                     <p className="text-gray mt-14">The road to success is traveled step by step and DISR is moving steadily forward. Join us and discover every detail of our growth, until we reach the top. You can be part of the journey! Get to know our roadmap.</p>
                 </div>
 
             </div>
 
-            <div className="w-full lg:max-w-[65%] bg-lines">
+            <div className="w-full lg:max-w-[60%] bg-lines">
                 <div className="  w-full max-w-4xl min-h-screen pt-4 lg:pt-52">
                     <MainContent>
 
