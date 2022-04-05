@@ -111,9 +111,9 @@ export default function WhitePaper() {
                         <div className=" content-base" dangerouslySetInnerHTML={{__html: itemWp.content}}/>
                          <section className="text-gray text-xl pb-4   leading-10">
                             {itemWp.sections.map((subItem,i) =>(
-                                <div id={subItem.slug} className="mb-2 pt-12" key={subItem + i}>
-                                <h3 className=" leading-7 text-2xl text-light font-title_bold">{subItem.title}</h3>
-                                <div className=" content-base" dangerouslySetInnerHTML={{__html: subItem.content}}/>
+                                <div id={subItem.slug} className="mb-2 pt-12" key={subItem.slug}>
+                                    <h3 className=" leading-7 text-2xl text-light font-title_bold">{subItem.title}</h3>
+                                    <div className=" content-base" dangerouslySetInnerHTML={{__html: subItem.content}}/>
                                 </div>
                             ))}
                         </section>
