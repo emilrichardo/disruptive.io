@@ -70,7 +70,7 @@ export default function WhitePaper() {
 
                 <div className="mt-24">
                 {whitePaperData.map((itemWp,i)=>(
-                    <div key={itemWp.slug}>
+                    <div key={i + "-itemWp-"+itemWp.slug}>
                         <Link href={"#" + itemWp.slug}>
                             <a className="hover:text-primary">
                                 <h2 className=" text-lg lg:text-2xl lg:mb-8 font-title_bold"> <span className="mr-3 text-primary">{(i + 1 ) / 10}</span>{itemWp.title}</h2>
@@ -79,7 +79,7 @@ export default function WhitePaper() {
 
                          <ul className="text-gray text-xl pb-4 pl-4 leading-10">
                             {itemWp.sections.map((subItem,i) =>(
-                                <Link href={"#" + subItem.slug}>
+                                <Link href={"#" + subItem.slug} key={"link-" +subItem.slug}>
                                    <a className="hover:text-primary">
                                        <li className="mb-2 leading-7" key={subItem + i}>
                                         {subItem.title}
@@ -103,7 +103,7 @@ export default function WhitePaper() {
                 <MainContent>
 
                 {whitePaperData.map((itemWp,i)=>(
-                    <div className="mb-14 pt-14" key={itemWp.slug} id={itemWp.slug}>
+                    <div className="mb-14 pt-14" key={i + itemWp.slug} id={itemWp.slug}>
                         <h2 className=" text-2xl lg:text-4xl mb-4 lg:mb-8 font-title_bold">
                             <span className="mr-3 text-primary">{(i + 1 ) / 10}</span>{itemWp.title}
                         </h2>
@@ -111,7 +111,7 @@ export default function WhitePaper() {
                         <div className=" content-base" dangerouslySetInnerHTML={{__html: itemWp.content}}/>
                          <section className="text-gray text-xl pb-4   leading-10">
                             {itemWp.sections.map((subItem,i) =>(
-                                <div id={subItem.slug} className="mb-2 pt-12" key={subItem.slug}>
+                                <div id={subItem.slug} className="mb-2 pt-12" key={"subItem"+ subItem.slug}>
                                     <h3 className=" leading-7 text-2xl text-light font-title_bold">{subItem.title}</h3>
                                     <div className=" content-base" dangerouslySetInnerHTML={{__html: subItem.content}}/>
                                 </div>
