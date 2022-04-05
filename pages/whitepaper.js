@@ -10,7 +10,7 @@ const whitePaperData = [
     },
     {
         title: "Introducción",
-        slug: "introducción",
+        slug: "introduccion",
         sections:[
             {
                 title: "Un momento histórico",
