@@ -37,6 +37,7 @@ module.exports = {
         astronauta: "url('/bg-astronauta.jpg')",
         pages: "url('/bg-pages.jpg')",
         page_news: "url('/bg-news.jpg')",
+        post: "url('/bg-post.jpg')",
       }
     },
   },
