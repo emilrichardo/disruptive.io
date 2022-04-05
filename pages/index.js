@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Hero/>
-      <MainContent className="!py-0">
+      <MainContent className="!py-0 min-h-0">
         <div className="">
           <div className="left-0 w-full absolute max-w-3xl   bottom-0 py-8 box-border  px-8 lg:px-32">
           <TokenWidget
