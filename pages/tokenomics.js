@@ -79,7 +79,7 @@ export default function Tokenomics() {
         </MainContent>
 
         <section className="bg-dark-black py-[10vh] lg:py-14">
-            <MainContent className="grid grid-cols-2 items-center justify-center">
+            <MainContent className="grid grid-cols-1 lg:grid-cols-2 items-center justify-center">
                  <div>
                      <h3 className="text-2xl lg:text-5xl mb-8">Cada <span className="text-primary">DISR </span> se divide de la siguiente manera</h3>
                      <p className="text-gray mb-8 max-w-lg">Para garantizar un máximo rendimiento; DISR ha creado un plan a largo  plazo para estabilizar su activo y permitir a los titulares obtener más   servicios y beneficios por menos. Debido a esto, hemos creado una   forma innovadora de recompensar a los titulares de DISR.</p>
@@ -111,7 +111,7 @@ export default function Tokenomics() {
 
              </div>
              <div className="my-24 text-center mb-8">
-                 <MainContent>
+                 <MainContent className="min-h-0">
                      <h4 className="text-4xl lg:text-6xl">Points scored</h4>
                      <h5 className="text-primary text-2xl lg:text-4xl font-title_bold my-4">99,000,000</h5>
                      <p className="text-gray text-sm">Total Supply</p>
