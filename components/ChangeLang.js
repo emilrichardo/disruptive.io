@@ -1,12 +1,8 @@
 import { useRouter } from 'next/router';
 
-
-
-
   export default function ChangeLang({size}) {
   const router = useRouter();
   const { locale } = router;
-
 
 
     const changeLanguage = (e) => {

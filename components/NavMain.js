@@ -1,13 +1,19 @@
 import Link from "next/link";
 import { useRouter } from 'next/router'
+
+
+export default function Test({className,itemClassName,MenuToggleSwitch}) {
+
+const router = useRouter();
+const { locale } = router;
+
 const mainMenuItems = [
     {id:0 ,label:"Whitepaper", link : "/whitepaper" },
     {id:1 ,label:"Tokenomics", link : "/tokenomics" },
-    {id:2 ,label:"News", link : "/news" },
+    {id:2 ,label:`${locale =='en' ? "News" : "Noticias"}`, link : "/news" },
     {id:3 ,label:"Roadmap", link : "/roadmap" },
 ]
-export default function Test({className,itemClassName,MenuToggleSwitch}) {
-    const router = useRouter();
+
 
     return(
         <nav  className={`${className} font-title_bold flex flex-col lg:flex-row  "`}>

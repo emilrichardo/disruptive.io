@@ -6,10 +6,11 @@ import {useWindowSize} from "./DetectWSize"
 
 import Link from "next/link";
 import NavMain from "./NavMain"
-
+import { useRouter } from 'next/router';
 
 export default function Header({className}) {
-
+  const router = useRouter();
+  const { locale } = router;
 
 
 
@@ -81,7 +82,7 @@ export default function Header({className}) {
                 </svg>
                 }
                 >
-                    <span className="hidden md:inline-block">ACQUIRE</span>
+                    <span className="hidden md:inline-block">{locale =='en' ? "ACQUIRE" : "Adquirir"}</span>
                 </Button>
                 <Button onClick={MenuToggleSwitch} onKeyDown={MenuToggleSwitch} size="sm" className="lg:hidden relative z-50  py-3">
                     <div className={` ${menuOverlay ? " rotate-45 w-10 top-2":" rotate-0 w-6"} transition-all relative h-[2px]  bg-light `}></div>
