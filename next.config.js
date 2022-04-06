@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
+const {i18n} = require('./next-i18next.config')
 const nextConfig = {
   reactStrictMode: true,
+  i18n,
   env:{
     restApi : "http://disruptiveio.local",
     tokenApi  : "https://api.pancakeswap.info/api/v2/tokens/",
@@ -8,7 +10,8 @@ const nextConfig = {
   },
   images:{
     domains:['staging.disruptivenews.io']
-  }
+  },
+
 }
 
 module.exports = nextConfig

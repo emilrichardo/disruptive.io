@@ -4,7 +4,20 @@ import MainContent from "../components/MainContent";
 import TokenWidget from "../components/tokenwidget/";
 
 
-export default function Home() {
+export  async function getStaticProps({ locale }){
+  return{
+    props:{
+      locale,
+
+      /* ...(await serverSideTrasnlations(locale, ["whitepaper"])) */
+    }
+  }
+}
+
+
+
+export default function Home({locale}) {
+
 
   return (
     <>
