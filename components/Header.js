@@ -48,7 +48,7 @@ export default function Header({className}) {
 
 
     return(
-        <header className={` ${className} ${scrolled && "bg-dark bg-opacity-80 "} transition-all  px-4 py-2 lg:py-4 fixed top-0 w-screen flex justify-between items-center z-50 `}>
+        <header className={` ${className} ${scrolled && "bg-dark bg-opacity-80 "} transition-all  px-4 py-2 lg:py-4 fixed top-0 w-screen flex justify-between items-center z-30 `}>
            <Link href="/"><a><Logo className=" z-50 w-8 lg:ml-2"/></a></Link>
 
 
@@ -84,10 +84,9 @@ export default function Header({className}) {
                 >
                     <span className="hidden md:inline-block">{locale =='en' ? "ACQUIRE" : "Adquirir"}</span>
                 </Button>
-                <Button onClick={MenuToggleSwitch} onKeyDown={MenuToggleSwitch} size="sm" className="lg:hidden relative z-50  py-3">
+                <Button onClick={MenuToggleSwitch} onKeyDown={MenuToggleSwitch} size="sm" className="lg:hidden relative   py-3">
                     <div className={` ${menuOverlay ? " rotate-45 w-10 top-2":" rotate-0 w-6"} transition-all relative h-[2px]  bg-light `}></div>
                     <div className={` ${menuOverlay ? " -rotate-45 w-10":" rotate-0 w-6"} transition-all h-[2px]   bg-light mt-[7px] `}></div>
-
                 </Button >
 
 

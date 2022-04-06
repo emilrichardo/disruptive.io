@@ -1,47 +1,26 @@
 import MainContent from "../components/MainContent";
+import en from "../public/locales/en/roadMap";
+import es from "../public/locales/es/roadMap";
 
 
-const RoadMapData = [
-        {"yeard" : 2021,
-        "accomplished" : "true",
-        "milestones" : [
-             {"title":"Token Launch" , "accomplished": "true"},
-            {"title":"Exchange Enlisting" , "accomplished": "true"},
-        ]},
-        {"yeard" : 2022,
-        "accomplished" : "false",
-        "milestones" : [
-            {"title":"Decentralized staking", "accomplished": "false"},
-           {"title": "Crypto Processing (beta)", "accomplished": "false"},
-            {"title":"Trading bots launch", "accomplished": "false"},
-           {"title":"Mass payment processing ", "accomplished": "false"},
-            {"title":"Website enlistings (coingeko, coinmarketcap)", "accomplished": "false"},
-           {"title": "First Burn", "accomplished": "false"},
-            {"title":"Metaverse Introduction", "accomplished": "false"},
-        ]},
-        {"yeard" : 2023,
-        "accomplished" : "false",
-        "milestones" : [
-            {"title":"Metaverse public release", "accomplished": "false"},
-        ]},
-        {"yeard" : 2024,
-        "accomplished" : "false",
-        "milestones" : [
-            {"title":"City of traders", "accomplished": "false"},
-        ]},
-
-    ]
+export  async function getStaticProps({ locale }){
+    return{
+      props:{
+        locale,
+      }
+    }
+  }
 
 
 
-
-export default function RoadMap() {
+export default function RoadMap({locale}) {
+    const {allMilestones,title,excerpt} = locale === 'en' ? en : es;
     return(
         <div className="h-full flex flex-col md:flex-row justify-center">
             <div className="lg:min-h-screen bg-dark-black bg-astro w-full flex justify-end  lg:max-w-[40%]">
                 <div className=" w-full max-w-xl  lg:min-h-screen pt-32 pb-14 px-8 lg:px-24">
-                    <h1 className=" text-4xl lg:text-6xl">Roadmap</h1>
-                    <p className="text-gray mt-14">The road to success is traveled step by step and DISR is moving steadily forward. Join us and discover every detail of our growth, until we reach the top. You can be part of the journey! Get to know our roadmap.</p>
+                    <h1 className=" text-4xl lg:text-6xl">{title}</h1>
+                    <p className="text-gray mt-14">{excerpt}</p>
                 </div>
 
             </div>
@@ -51,7 +30,7 @@ export default function RoadMap() {
                     <MainContent>
 
                         <ul>
-                            {RoadMapData.map((item,i)=>(
+                            {allMilestones.map((item,i)=>(
                                 <li key={i} className="mb-16">
                                     <h4 className={`${ item.accomplished == "true" && "text-primary"} text-3xl font-title_bold mb-4 `}>{item.yeard}</h4>
                                     <ul className=" text-gray text-xl font-thin">

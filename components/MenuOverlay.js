@@ -9,15 +9,18 @@ export default function MenuOverlay({menuState,MenuToggleSwitch}) {
         <div >
             {menuState && <div className={`${menuState ? " backdrop-blur-sm ": " backdrop-blur-none"} bg-dark bg-opacity-5 transition-all duration-300 delay-700  w-screen h-screen fixed left-0 top-0 `} onClick={MenuToggleSwitch}></div>}
 
-            <div className={` ${menuState ? "right-0 ": " -right-[700px]"} transition-all duration-500  bg-dark bg-opacity-90 px-12 backdrop-blur-sm fixed w-[85%]  max-w-[400px] h-screen top-0  text-light `}>
+            <div className={` ${menuState ? "right-0 ": " -right-[700px]"} transition-all duration-500  bg-dark bg-opacity-90 px-12 backdrop-blur-sm fixed w-[85%]  max-w-[400px] h-screen top-0  text-light z-30 `}>
+
+                <Button onClick={MenuToggleSwitch} onKeyDown={MenuToggleSwitch} size="sm" className=" !absolute right-8 top-8  py-3">
+                    <div className={` ${menuState ? " rotate-45 w-10 top-2":" rotate-0 w-6"} transition-all relative h-[2px]  bg-light `}></div>
+                    <div className={` ${menuState ? " -rotate-45 w-10":" rotate-0 w-6"} transition-all h-[2px]   bg-light mt-[7px] `}></div>
+                </Button >
                 <div className="h-full flex-col flex justify-between">
                     <NavMain MenuToggleSwitch={MenuToggleSwitch} className="mt-36 " itemClassName="text-xl"/>
                     <div className=" text-xs text-gray pb-14 text-center">
 
 
-
                         <ChangeLang/>
-
                         <div className="flex justify-between  items-center">
                             <a href="/" className="hover:scale-125 transition-all">
                                 <svg width="44" height="44" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
