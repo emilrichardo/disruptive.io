@@ -2,7 +2,7 @@ export default{
 
     whitePaperData: [
             {
-                title: "Disclaimer Es",
+                title: "Disclaimer",
                 slug: "declaimer",
                 content: "Este documento tiene el único objetivo de describir las características de DISR Coin.<br> Un token diseñado y desarrollado como una alternativa para acercar a los usuarios a la tecnología blockchain; la industria crypto y el sector de las finanzas descentralizadas o DeFi. <br> La información descrita en este documento no necesariamente es detallada, ni tiene la intención de establecer ninguna relación contractual. Únicamente se trata de un documento descriptivo, en el que se ilustra, con fines informativos, las características de un proyecto en el ámbito de las criptodivisas.<br> Cada una de las decisiones que asuma el usuario, así como el manejo que haga de las herramientas sugeridas, podrían implicar riesgos bajo su propia responsabilidad y DISR Coin no se hace responsable de estas acciones, ni las consecuencias que ellas puedan ocasionar. ",
                 sections:[]

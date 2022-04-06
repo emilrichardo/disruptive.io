@@ -8,8 +8,6 @@ export  async function getStaticProps({ locale }){
   return{
     props:{
       locale,
-
-      /* ...(await serverSideTrasnlations(locale, ["whitepaper"])) */
     }
   }
 }
@@ -17,7 +15,7 @@ export  async function getStaticProps({ locale }){
 
 
 export default function Home({locale}) {
-
+  console.log(locale)
 
   return (
     <>

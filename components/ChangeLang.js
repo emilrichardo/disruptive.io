@@ -1,23 +1,24 @@
 import { useRouter } from 'next/router';
 
 
-export  async function getStaticProps({ locale }){
 
-    return{
-      props:{
-        locale,
-      }
-    }
-  }
 
-  export default function ChangeLang({locale,size}) {
-    const router = useRouter();
+  export default function ChangeLang({size}) {
+  const router = useRouter();
+  const { locale } = router;
+
+
+
     const changeLanguage = (e) => {
         const locale = e.target.value;
         router.push(router.pathname, router.asPath, { locale });
       };
+
+
+
       return(
           <div>
+
 
               <div className={` relative overflow-x-hidden flex items-center justify-between py-3  rounded      mb-8 normal-case text-lg ${size == "sm"? "px-0 " : "px-8 bg-gray-dark w-full"}`}>
                 <svg className="mr-4" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,7 +31,7 @@ export  async function getStaticProps({ locale }){
                         className=" ring-0 outline-none  w-full h-full appearance-none bg-dark-light bg-opacity-0 absolute left-0 top-0 px-20"
 
                     >
-                    <option className="text-black" value="en">English</option>
+                    <option className="text-black" value="en"  >English</option>
                     <option className="text-black" value="es">Spanish</option>
                 </select>
 
@@ -44,7 +45,6 @@ export  async function getStaticProps({ locale }){
                 }
 
               </div>
-
           </div>
       )
 
