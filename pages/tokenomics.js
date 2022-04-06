@@ -11,7 +11,6 @@ export  async function getStaticProps({ locale }){
 
 export default function Tokenomics({locale}) {
 
-    console.log(locale)
     return(
         <>
         <MainContent>
