@@ -1,4 +1,4 @@
-export default function InputForm({type,placeholder,size, value, label,className,inputClassName, maxLength,iconRight, iconLeft, onClick}) {
+export default function InputForm({type,placeholder,size, value, label,className,inputClassName, maxLength,iconRight, iconLeft}) {
 
     const inputBase = ' w-full tracking-wider block text-lg transition-all duration-200 focus:outline-none  rounded'
     const inputColor= ' text-gray bg-dark-light   placeholder:text-gray placeholder:opacity-40 focus:placeholder:opacity-5 dark:autofill:text-primary-lightest '
@@ -32,7 +32,6 @@ export default function InputForm({type,placeholder,size, value, label,className
 
                     type={type}
                     value={value}
-                    onClick={onClick}
                     maxLength={maxLength}
                     placeholder={placeholder}
                     className={` ${inputClassName} ${type == "number" && "!pr-3 !pl-4"} ${iconLeft && "!pl-14"} ${inputBase + " "  + inputColor} ${sizes[size] || sizes.default} realtive z-10`}
