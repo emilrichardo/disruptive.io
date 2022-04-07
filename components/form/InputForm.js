@@ -1,5 +1,9 @@
 export default function InputForm({type,placeholder,size, value, label,className,inputClassName, maxLength,iconRight, iconLeft}) {
 
+    function handleChange(event) {
+
+    }
+
     const inputBase = ' w-full tracking-wider block text-lg transition-all duration-200 focus:outline-none  rounded'
     const inputColor= ' text-gray bg-dark-light   placeholder:text-gray placeholder:opacity-40 focus:placeholder:opacity-5 dark:autofill:text-primary-lightest '
 
@@ -31,6 +35,7 @@ export default function InputForm({type,placeholder,size, value, label,className
 
 
                     type={type}
+                    onChange={handleChange}
                     value={value}
                     maxLength={maxLength}
                     placeholder={placeholder}
