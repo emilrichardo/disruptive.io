@@ -15,7 +15,6 @@ export  async function getStaticProps({ locale }){
 
 
 export default function Home({locale}) {
-  console.log(locale)
 
   return (
     <>
