@@ -18,7 +18,7 @@ export default function PaneleStake({panelState, panelToggleSwitch}) {
           }, 1500);
       }
     return(
-        <SlidePanel state={panelState} toggleSwitch={panelToggleSwitch} className=" !w-full max-w-full ">
+        <SlidePanel state={panelState} toggleSwitch={panelToggleSwitch}>
             <Button variant="outline" size="sm">Unstake</Button>
             <div className="mt-14">
                 <div className="relative">

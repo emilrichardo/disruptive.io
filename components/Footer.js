@@ -6,7 +6,7 @@ export default function Footer({className}) {
     const router = useRouter();
     const { locale } = router;
     return(
-        <footer className={`${className} bg-dark-black py-8 `}>
+        <footer className={`${className} bg-dark-black relative py-8 z-10`}>
             <div className="flex flex-col lg:flex-row justify-between px-8 lg:px-20 py-8">
                 <div className="text-light flex items-start">
                     <Logo className=" w-8 mr-4"/>

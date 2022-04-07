@@ -119,7 +119,7 @@ export default function Tokenomics({locale}) {
 
                      <ul className="lg:text-2xl font-thin">
                          <li> <div className=" rounded-full h-3 w-3 bg-primary-light inline-block mr-3"></div> <span className="text-primary font-bold"> 20%</span>{locale == 'en' ? "Burned": "Quemado"} </li>
-                         <li><div className=" rounded-full h-3 w-3 bg-[#57DED6] inline-block mr-3"></div> <span className="text-primary font-bold"> 25%</span> {locale == 'en' ? "Pagado en estacas a los titulares": "Pagado en estacas a los titulares"}</li>
+                         <li><div className=" rounded-full h-3 w-3 bg-[#57DED6] inline-block mr-3"></div> <span className="text-primary font-bold my-4"> 25%</span> {locale == 'en' ? "Pagado en estacas a los titulares": "Pagado en estacas a los titulares"}</li>
                          <li><div className=" rounded-full h-3 w-3 bg-primary inline-block mr-3"></div> <span className="text-primary font-bold"> 50%</span>{locale == 'en' ? "Used for operations": "Utilizado para operaciones"} </li>
                      </ul>
                  </div>
