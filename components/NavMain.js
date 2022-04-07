@@ -18,15 +18,15 @@ const mainMenuItems = [
     return(
         <nav  className={`${className} font-title_bold flex flex-col lg:flex-row  "`}>
             {mainMenuItems.map((item)=>(
-                <>
+                <span key={item.id}>
                 {item.target == "blank"
                 ?
-                <a  key={"external" + item.id} href={item.link} target="_blank" rel="noreferrer"  onClick={MenuToggleSwitch}  className={`${router.asPath == item.link && " text-primary-light " + " "} ${itemClassName} my-4 hover:text-primary inline-block hover:scale-105 transition-all duration-200`}>{item.label}</a>
+                <a   href={item.link} target="_blank" rel="noreferrer"  onClick={MenuToggleSwitch}  className={`${router.asPath == item.link && " text-primary-light " + " "} ${itemClassName} my-4 hover:text-primary inline-block hover:scale-105 transition-all duration-200`}>{item.label}</a>
                 :
-                <Link  key={item.id} href={item.link} ><a onClick={MenuToggleSwitch}  className={`${router.asPath == item.link && " text-primary-light " + " "} ${itemClassName} my-4 hover:text-primary inline-block hover:scale-105 transition-all duration-200`}>{item.label}</a></Link>
+                <Link   href={item.link} ><a onClick={MenuToggleSwitch}  className={`${router.asPath == item.link && " text-primary-light " + " "} ${itemClassName} my-4 hover:text-primary inline-block hover:scale-105 transition-all duration-200`}>{item.label}</a></Link>
 
                 }
-                </>
+                </span>
             ))}
         </nav>
     )
