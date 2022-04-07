@@ -60,13 +60,27 @@ export default function Tokenomics({locale}) {
                      </div>
                  </div>
                 <MoonItem
-                icon=""
+                icon={
+                    <Image
+                    className="inline-block"
+                    src="/icon-moon-1.svg"
+                    width={80}
+                    height={80}
+                    />
+                }
                 subHeading={locale == 'en'? "Cost per transaction in DISR." : "Costo por transacción en DISR."}
                 heading={locale == 'en' ? "100 DISR or up to 0.50 BUSD" : "100 DISR o hasta 0,50 BUSD"}
                 text={locale == 'en' ? "value per forward address": "por dirección de reenvío"}
                 />
                 <MoonItem
-                icon=""
+                icon={
+                    <Image
+                    className="inline-block"
+                    src="/icon-moon-2.svg"
+                    width={80}
+                    height={80}
+                    />
+                }
                 subHeading={locale == 'en' ?"Mass payment": "Pago masivo"}
                 heading={locale == 'en' ? "100 DISR or up to 0.50 BUSD": "  100 DISR o hasta 0,50 BUSD"}
                 text={locale == 'en' ? "value per forward address": "por dirección de envío"}
@@ -230,7 +244,7 @@ export  function MoonItem({icon,subHeading,heading,text}) {
     return(
         <div>
             <div className="text-left lg:text-center my-8 flex lg:flex-col items-center">
-                <div className=" bg-gray-dark rounded-3xl h-20 w-20 lg:w-28 lg:h-28 mr-4 lg:mr-0 lg:mb-8">
+                <div className=" bg-gray-dark rounded-3xl h-20 w-20 lg:w-28 lg:h-28 mr-4 lg:mr-0 lg:mb-8 flex justify-center items-center">
                     {icon}
                 </div>
                 <div className="inline-block w-2/3">
