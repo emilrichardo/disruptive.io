@@ -97,8 +97,8 @@ export default function Header({className}) {
                     <span className="hidden md:inline-block">{locale =='en' ? "ACQUIRE" : "Adquirir"}</span>
                 </Button>
                 <Button onClick={MenuToggleSwitch} onKeyDown={MenuToggleSwitch} size="sm" className="lg:hidden relative   py-3">
-                    <div className={` ${menuOverlay ? " rotate-45 w-10 top-2":" rotate-0 w-6"} transition-all relative h-[2px]  bg-light `}></div>
-                    <div className={` ${menuOverlay ? " -rotate-45 w-10":" rotate-0 w-6"} transition-all h-[2px]   bg-light mt-[7px] `}></div>
+                    <div className={`   w-6 transition-all relative h-[2px]  bg-light `}></div>
+                    <div className={`   w-6transition-all h-[2px]   bg-light mt-[7px] `}></div>
                 </Button >
 
                 <PaneleStake panelState={slidePanel} panelToggleSwitch={PanelToggleSwitch}/>
