@@ -123,18 +123,18 @@ export default function Tokenomics({locale}) {
 
                     {locale == 'en'
                     ?
-                    <p className="text-gray mb-8 max-w-lg">DISR has created a long-term plan to stabilize its assets and enable holders to get more services and benefits for less. For this reason, an innovative way of rewarding DISR holders has been developed.
+                    <p className="text-gray mb-8 max-w-lg font-light">DISR has created a long-term plan to stabilize its assets and enable holders to get more services and benefits for less. For this reason, an innovative way of rewarding DISR holders has been developed.
                     </p>
                     :
-                    <p className="text-gray mb-8 max-w-lg">DISR ha creado un plan a largo plazo para estabilizar su activo y permitir a los titulares obtener más servicios y beneficios por menos. Por esta razón, se ha desarrollado una forma innovadora de recompensar a los titulares de DISR.</p>
+                    <p className="text-gray mb-8 max-w-lg font-light">DISR ha creado un plan a largo plazo para estabilizar su activo y permitir a los titulares obtener más servicios y beneficios por menos. Por esta razón, se ha desarrollado una forma innovadora de recompensar a los titulares de DISR.</p>
                     }
 
 
 
-                     <ul className="lg:text-2xl font-thin">
-                         <li> <div className=" rounded-full h-3 w-3 bg-primary-light inline-block mr-3"></div> <span className="text-primary font-bold"> 20%</span>{locale == 'en' ? "Burned": "Quemado"} </li>
-                         <li><div className=" rounded-full h-3 w-3 bg-[#57DED6] inline-block mr-3"></div> <span className="text-primary font-bold my-4"> 25%</span> {locale == 'en' ? "Pagado en estacas a los titulares": "Pagado en estacas a los titulares"}</li>
-                         <li><div className=" rounded-full h-3 w-3 bg-primary inline-block mr-3"></div> <span className="text-primary font-bold"> 50%</span>{locale == 'en' ? "Used for operations": "Utilizado para operaciones"} </li>
+                     <ul className="lg:text-2xl ">
+                         <li> <div className=" rounded-full h-3 w-3 bg-primary-light inline-block mr-3"></div> <span className="text-primary font-bold mr-5">20%</span>{locale == 'en' ? "Burned": "Quemado"} </li>
+                         <li><div className=" rounded-full h-3 w-3 bg-[#57DED6] inline-block mr-3"></div> <span className="text-primary font-bold my-4 mr-5">25%</span>{locale == 'en' ? "Pagado en estacas a los titulares": "Pagado en estacas a los titulares"}</li>
+                         <li><div className=" rounded-full h-3 w-3 bg-primary inline-block mr-3"></div> <span className="text-primary font-bold mr-5"> 50%</span>{locale == 'en' ? "Used for operations": "Utilizado para operaciones"} </li>
                      </ul>
                  </div>
                  <div className="text-center">
@@ -195,7 +195,7 @@ export default function Tokenomics({locale}) {
                             <li className="flex items-center my-8">
                                 <div className="rounded-full h-4 w-4 bg-[#606380] inline-block mr-4"></div>
                                 <div>
-                                    <h3 className=" text-4xl font-title_bold">44,589,963</h3>
+                                    <h3 className=" text-2xl font-title_bold">44,589,963</h3>
                                     <p className="text-gray font-light text-sm">{locale == 'en' ? "Revolving Treasury Funds": "Fondos rotatorios del Tesoro"}</p>
                                 </div>
                             </li>
