@@ -4,7 +4,7 @@ import Logo from "./Logo";
 
 export default function Hero() {
     return(
-      <div className=' bg-body  -mt-14  z-0  w-full  h-screen '>
+      <div className=' bg-body  -mt-14  z-0  w-full  h-screen pb-14'>
 
        <div className="relative  h-full w-full">
             <div className="absolute  w-full flex items-center justify-center  gap-4 place-content-center   h-full top-auto bottom-auto">
