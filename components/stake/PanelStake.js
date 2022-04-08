@@ -22,7 +22,7 @@ export default function PaneleStake({panelState, panelToggleSwitch}) {
             <Button variant="outline" size="sm">Unstake</Button>
             <div className="mt-14">
                 <div className="relative">
-                    <button className="w-full text-left"  onClick={clip}>
+                    <button className="w-full text-left relative"  onClick={clip}>
                         <InputForm
                         inputClassName="cursor-pointer w-full"
                         label="Mi wallet"
@@ -32,9 +32,10 @@ export default function PaneleStake({panelState, panelToggleSwitch}) {
                         <path d="M22.2039 11.1644C22.3842 11.1644 22.5589 11.1587 22.7392 11.1644C23.235 11.1927 23.5844 11.5502 23.5844 12.0097C23.5787 12.4636 23.235 12.8153 22.7561 12.838C22.3842 12.855 22.0067 12.855 21.6349 12.838C21.1559 12.8153 20.8179 12.4465 20.8179 11.9984C20.8235 11.5445 21.1672 11.1984 21.6461 11.1701C21.8321 11.153 22.018 11.1644 22.2039 11.1644Z" fill="white"/>
                         </svg>}
                         />
+                         {copied && <div className='absolute w-24  right-0 -bottom-4 rounded bg-primary p-1'>✓ Copied</div>}
                     </button>
 
-                    {copied && <span className="absolute text-dark bg-light-light bg-opacity-60 rounded px-4 bottom-4 right-4">Copied</span>}
+
                 </div>
                 <div className="py-8 flex">
                     <Logo className="w-10 mr-4" />

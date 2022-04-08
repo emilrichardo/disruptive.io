@@ -17,13 +17,14 @@ export default function CopyClipboard({contract}) {
                 <input onClick={clip} className=' outline-none bg-gray-dark text-gray text-xs mr-4 w-full box-border overflow-ellipsis' type="text" value={contract} readOnly="readOnly"/>
                 <button
                 onClick={clip}
-                className="copy-button mr-5"
+                className="copy-button mr-5 relative"
                 >
                     <CopyIcon className="w-5" />
+                    {copied && <div className='absolute w-24 -right-8 -top-8 rounded bg-primary p-1'>✓ Copied</div>}
                 </button>
             </div>
 
-            {copied && <div className='absolute rounded bg-primary p-1'>✓ Copied</div>}
+
         </>
     )
 };
