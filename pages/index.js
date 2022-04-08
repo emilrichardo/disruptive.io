@@ -2,6 +2,7 @@
 import Hero from "../components/Hero";
 import MainContent from "../components/MainContent";
 import TokenWidget from "../components/tokenwidget/";
+import { TokenProvider } from "../context/tokenContext";
 
 
 export  async function getStaticProps({ locale }){
@@ -22,10 +23,13 @@ export default function Home({locale}) {
       <MainContent className="!py-0 min-h-0">
         <div className="">
           <div className="left-0 w-full absolute max-w-3xl   bottom-0 py-8 box-border  px-8 lg:px-32">
-          <TokenWidget
-            contract="0xd70a9D1c9fDd3D8DD2fb672bB399F7bcA61666bD"
-            linkBsc="https://bscscan.com/token/0xd70a9D1c9fDd3D8DD2fb672bB399F7bcA61666bD"
-          />
+           <TokenProvider>
+              <TokenWidget
+                contract="0xd70a9D1c9fDd3D8DD2fb672bB399F7bcA61666bD"
+                linkBsc="https://bscscan.com/token/0xd70a9D1c9fDd3D8DD2fb672bB399F7bcA61666bD"
+              />
+             </TokenProvider>
+
           <div className="mt-7">
             <a href="/" target="_bleank" className=" inline-block opacity-40 hover:opacity-100 hover:scale-125 transition-all">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

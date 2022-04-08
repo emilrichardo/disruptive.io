@@ -3,9 +3,11 @@ import detectEthereumProvider from "@metamask/detect-provider";
 import AddToken from "./AddToken";
 import ButtonFox from "./ButtonFox";
 
-const MetaMask = () => {
+const MetaMask = ({token}) => {
   const [isProviderLoaded, setProvider] = useState(null);
   const [isLoading, setLoading] = useState(true);
+
+
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -33,7 +35,7 @@ const MetaMask = () => {
       ) : (
         <>
           {isProviderLoaded ? (
-            <AddToken />
+            <AddToken token={token} />
           ) : (
             <a
               href="https://metamask.io/download.html"

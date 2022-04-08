@@ -4,25 +4,23 @@ import axios from "axios";
 import CopyAdress from "./CopyAdress";
 import TokenPrice from "./TokenPrice";
 import MetaMask from "./metamask/";
+import { useToken } from "../../context/tokenContext"
+
 
 export default function TokenWidget({
   className,
   contract,
   iconToken,
-  theme,
-  customBg,
-  transparent,
-  bgIcon,
-  widthCard,
   primaryColor,
   linkBsc,
 }) {
+  const {contractId,tokenApi} = useToken();
   const [token, setToken] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axios
-      .get(`https://api.pancakeswap.info/api/v2/tokens/${contract}`)
+      .get(tokenApi)
       .then((res) => {
         const token = res.data;
         setToken(token.data);
@@ -37,7 +35,7 @@ export default function TokenWidget({
     setCardAttributes(ref.current.offsetWidth);
   }, []);
 
-  //console.log(cardAttributes)
+
 
 
 
@@ -73,9 +71,6 @@ export default function TokenWidget({
           token={token}
           loading={loading}
           contract={contract}
-          iconToken={iconToken}
-          primaryColor={primaryColor}
-          linkBsc={linkBsc}
         />
     </div>
   );

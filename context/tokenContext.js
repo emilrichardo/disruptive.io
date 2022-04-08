@@ -5,17 +5,22 @@ export const TokenContext = createContext();
 export const useToken =  () => useContext(TokenContext)
 
 
-const {contract} = process.env.tokenApi
+
+const  contractId  = process.env.token.contractToken
+
+const  tokenApi  = process.env.token.tokenApi + contractId
 
 
 
+export const TokenProvider = ({children}) => {
 
-export const TokenProvider = ({children }) => {
 
     return(
         <TokenContext.Provider
             value={{
-                contract
+                contractId,
+                tokenApi,
+
 
             }}
         >

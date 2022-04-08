@@ -9,11 +9,11 @@ import queryString from "querystringify";
 class AddToken extends Component {
   constructor(props) {
     const {
-      tokenName = "Crypto Makers Foundation",
-      tokenSymbol = "CMF",
+      tokenName = "Disruptive",
+      tokenSymbol = "DISR",
       tokenDecimals = 18,
-      tokenAddress = process.env.METAMASK_TOKEN_ADDRESS,
-      tokenImage = "https://assets.coingecko.com/coins/images/23028/small/200x200.png?1643095567",
+      tokenAddress = process.env.token.contractToken,
+      tokenImage = "https://bscscan.com/images/main/empty-token.png",
       tokenNet = "56",
       message = "",
       errorMessage = "",
