@@ -1,5 +1,5 @@
 import Head from "next/head";
-import AnimationPage from "../components/animationPage";
+import AnimationPage from "../components/AnimationPage";
 import MainContent from "../components/MainContent";
 import en from "../public/locales/en/roadMap";
 import es from "../public/locales/es/roadMap";

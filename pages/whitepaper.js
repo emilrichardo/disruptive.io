@@ -4,7 +4,7 @@ import en from "../public/locales/en/whitePaper";
 import es from "../public/locales/es/whitePaper";
 import { useState, useEffect } from "react";
 import Head from "next/head";
-import AnimationPage from "../components/animationPage";
+import AnimationPage from "../components/AnimationPage";
 
 export  async function getStaticProps({ locale }){
     return{

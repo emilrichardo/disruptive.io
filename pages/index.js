@@ -1,6 +1,6 @@
 
 import Head from "next/head";
-import AnimationPage from "../components/animationPage";
+import AnimationPage from "../components/AnimationPage";
 
 import Hero from "../components/Hero";
 import MainContent from "../components/MainContent";

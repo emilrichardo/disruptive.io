@@ -6,15 +6,15 @@ const pageMotionProps = {
     animate:{
         opacity:1,
         transition: {
-            duration: 0.6,
+            duration: 0.2,
             ease:[0.83,0,0.17,1]
         }
     },
     exit:{
         opacity:0,
         transition:{
-            duration:0.6,
-            delay:0.6,
+            duration:0.2,
+            delay:0.2,
             ease:[0.83,0,0.17,1]
         }
     }

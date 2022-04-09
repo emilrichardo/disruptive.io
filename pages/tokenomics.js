@@ -2,7 +2,7 @@ import Button from "../components/buttons";
 import MainContent from "../components/MainContent";
 import Image from "next/image";
 import Head from "next/head";
-import AnimationPage from "../components/animationPage";
+import AnimationPage from "../components/AnimationPage";
 export  async function getStaticProps({ locale }){
     return{
       props:{
