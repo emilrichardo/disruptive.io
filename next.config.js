@@ -4,6 +4,7 @@ const nextConfig = {
   reactStrictMode: true,
   i18n,
   env:{
+    projectName: "Disruptive.io",
     restApi : "http://disruptiveio.local",
     token :{
       tokenApi  : "https://api.pancakeswap.info/api/v2/tokens/",

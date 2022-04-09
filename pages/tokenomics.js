@@ -2,6 +2,7 @@ import Button from "../components/buttons";
 import MainContent from "../components/MainContent";
 import Image from "next/image";
 import Head from "next/head";
+import AnimationPage from "../components/animationPage";
 export  async function getStaticProps({ locale }){
     return{
       props:{
@@ -14,6 +15,7 @@ export default function Tokenomics({locale}) {
 
     return(
         <>
+        <AnimationPage>
         <Head>
             <title>Tokenomics {" - " + process.env.projectName}</title>
         </Head>
@@ -238,6 +240,7 @@ export default function Tokenomics({locale}) {
 
                 </MainContent>
              </div>
+             </AnimationPage>
 
         </>
     )

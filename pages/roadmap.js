@@ -1,4 +1,5 @@
 import Head from "next/head";
+import AnimationPage from "../components/animationPage";
 import MainContent from "../components/MainContent";
 import en from "../public/locales/en/roadMap";
 import es from "../public/locales/es/roadMap";
@@ -18,6 +19,9 @@ export default function RoadMap({locale}) {
     const {allMilestones,title,excerpt} = locale === 'en' ? en : es;
     return(
         <>
+        <AnimationPage>
+
+
          <Head>
             <title>Roadmap {" - " + process.env.projectName}</title>
 
@@ -68,6 +72,7 @@ export default function RoadMap({locale}) {
 
 
         </div>
+        </AnimationPage>
         </>
 
     )
