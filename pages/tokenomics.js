@@ -1,6 +1,7 @@
 import Button from "../components/buttons";
 import MainContent from "../components/MainContent";
 import Image from "next/image";
+import Head from "next/head";
 export  async function getStaticProps({ locale }){
     return{
       props:{
@@ -13,6 +14,9 @@ export default function Tokenomics({locale}) {
 
     return(
         <>
+        <Head>
+            <title>Tokenomics {" - " + process.env.projectName}</title>
+        </Head>
         <MainContent>
         <div className=" flex flex-col lg:flex-row items-center justify-between lg:py-[15vh]">
             <div className="lg:w-1/2 lg:order-2">

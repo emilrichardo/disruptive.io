@@ -1,3 +1,4 @@
+import Head from "next/head";
 import MainContent from "../components/MainContent";
 import en from "../public/locales/en/roadMap";
 import es from "../public/locales/es/roadMap";
@@ -16,6 +17,11 @@ export  async function getStaticProps({ locale }){
 export default function RoadMap({locale}) {
     const {allMilestones,title,excerpt} = locale === 'en' ? en : es;
     return(
+        <>
+         <Head>
+            <title>Roadmap {" - " + process.env.projectName}</title>
+
+        </Head>
         <div className="h-full flex flex-col md:flex-row justify-center">
             <div className="lg:min-h-screen bg-dark-black bg-astro w-full flex justify-end  lg:max-w-[40%]">
                 <div className=" w-full max-w-xl  lg:min-h-screen pt-32 pb-14 px-8 lg:px-24">
@@ -62,5 +68,7 @@ export default function RoadMap({locale}) {
 
 
         </div>
+        </>
+
     )
 };

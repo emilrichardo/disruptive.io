@@ -1,4 +1,5 @@
 
+import Head from "next/head";
 import Hero from "../components/Hero";
 import MainContent from "../components/MainContent";
 import TokenWidget from "../components/tokenwidget/";
@@ -17,9 +18,15 @@ export  async function getStaticProps({ locale }){
 
 export default function Home({locale}) {
 
+
   return (
     <>
+    <Head>
+      <title>Home  {" - " + process.env.projectName}</title>
+    </Head>
       <Hero/>
+
+
       <MainContent className="!py-0 min-h-0">
         <div className="">
           <div className="left-0 w-full absolute max-w-3xl   bottom-0 py-8 box-border  px-8 lg:px-32">

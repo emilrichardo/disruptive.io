@@ -3,6 +3,7 @@ import MainContent from "../components/MainContent";
 import en from "../public/locales/en/whitePaper";
 import es from "../public/locales/es/whitePaper";
 import { useState, useEffect } from "react";
+import Head from "next/head";
 
 export  async function getStaticProps({ locale }){
     return{
@@ -46,6 +47,9 @@ export default function WhitePaper({locale}) {
     const {whitePaperData} =  locale === 'en' ? en : es;
     return(
         <div className="h-full flex flex-col xl:flex-row">
+            <Head>
+            <title>Whitepaper {" - " + process.env.projectName}</title>
+            </Head>
             <div className="xl:min-h-screen bg-dark-black  w-full flex justify-end   xl:max-w-[35%]">
                 <div className=" bg-dark-black w-full xl:max-w-xl  xl:min-h-screen pt-32 pb-14 px-8 xl:px-24 ">
                     <h1 className=" text-4xl xl:text-6xl">Whitepaper</h1>
