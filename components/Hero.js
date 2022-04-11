@@ -4,7 +4,7 @@ import Logo from "./Logo";
 
 export default function Hero() {
     return(
-      <div className=' bg-body  -mt-14  z-0  w-full  h-screen pb-14'>
+      <div className=' bg-body   z-0  w-full  h-screen  '>
 
        <div className="relative  h-full w-full">
             <div className="absolute  w-full flex items-center justify-center  gap-4 place-content-center   h-full top-auto bottom-auto">
@@ -30,7 +30,7 @@ export default function Hero() {
 
         <div>
 
-            <div className="absolute    lg:-ml-10 -top-14 flex flex-col w-full h-full justify-center tracking-[.3em] text-xs items-center font-title_bold font-bold">
+            <div className="absolute    lg:-ml-10 top-0 flex flex-col w-full h-full justify-center tracking-[.3em] text-xs items-center font-title_bold font-bold">
                 <div className="flex peer flex-col lg:justify-center items-center transition-all lg:scale-50 lg:hover:scale-105 z-10 hover:z-20 lg:opacity-0 lg:hover:opacity-100" >
                         <Link href="/comming"><a className="my-4 hover:text-primary hover:scale-125 transition-all">PAYMENTS</a></Link>
                         <Link href="/comming"><a className="my-4 hover:text-primary hover:scale-125 transition-all">TRADING BOTS</a></Link>
