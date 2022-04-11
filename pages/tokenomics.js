@@ -23,7 +23,8 @@ export default function Tokenomics({locale}) {
         <div className=" flex flex-col lg:flex-row items-center justify-between lg:py-[15vh]">
             <div className="lg:w-1/2 lg:order-2">
                 <Image
-                src="/bg-logo3d.jpg"
+                src="/iso-3d.png"
+                className="-mb-16 -mr-16"
                 width={534}
                 height={523}
                 quality={100}
