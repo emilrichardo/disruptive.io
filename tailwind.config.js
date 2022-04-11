@@ -33,7 +33,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        main : "url('/bgmain.jpg')",
+        main : "url('/agujero.jpg')",
         astronauta: "url('/bg-astronauta.jpg')",
         pages: "url('/bg-pages.jpg')",
         page_news: "url('/bg-news.jpg')",
