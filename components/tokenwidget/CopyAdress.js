@@ -14,7 +14,7 @@ export default function CopyClipboard({contract}) {
     return(
         <>
             <div className='flex w-full'>
-                <input onClick={clip} className=' outline-none bg-gray-dark text-gray text-xs mr-4 w-full box-border overflow-ellipsis' type="text" value={contract} readOnly="readOnly"/>
+                <input onClick={clip} className=' outline-none bg-gray-dark text-gray text-sm mr-4 w-full box-border overflow-ellipsis' type="text" value={contract} readOnly="readOnly"/>
                 <button
                 onClick={clip}
                 className="copy-button mr-5 relative"

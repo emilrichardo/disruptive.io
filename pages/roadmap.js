@@ -26,9 +26,9 @@ export default function RoadMap({locale}) {
             <title>Roadmap {" - " + process.env.projectName}</title>
 
         </Head>
-        <div className="h-full flex flex-col md:flex-row justify-center">
-            <div className="lg:min-h-screen bg-dark-black bg-astro w-full flex justify-end  lg:max-w-[40%]">
-                <div className=" w-full max-w-xl  lg:min-h-screen pt-32 pb-14 px-8 lg:px-24">
+        <div className="h-full flex flex-col lg:flex-row justify-center">
+            <div className="lg:min-h-screen bg-dark-black bg-astronauta bg-center lg:bg-bottom bg-no-repeat bg-cover w-full lg:flex lg:justify-end  lg:max-w-[40%]">
+                <div className=" w-full lg:max-w-xl  lg:min-h-screen pt-32 pb-14 px-8 lg:px-24">
                     <h1 className=" text-4xl lg:text-6xl">{title}</h1>
                     <p className="text-gray mt-14">{excerpt}</p>
                 </div>
@@ -36,7 +36,7 @@ export default function RoadMap({locale}) {
             </div>
 
             <div className="w-full lg:max-w-[60%] bg-lines">
-                <div className="  w-full max-w-4xl min-h-screen pt-4 lg:pt-52">
+                <div className="  w-full lg:max-w-4xl min-h-screen pt-4 lg:pt-52">
                     <MainContent>
 
                         <ul>

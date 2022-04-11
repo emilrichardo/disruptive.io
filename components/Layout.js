@@ -18,7 +18,7 @@ export default function Layout({children}) {
                         {children}
                     </div>
                 </div>
-            {router.pathname != "/" && <Footer className="md:ml-20 "/>}
+            {router.pathname != "/" && <Footer className="lg:ml-20 "/>}
         </>
     )
 };

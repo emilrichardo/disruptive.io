@@ -47,7 +47,7 @@ export default function WhitePaper({locale}) {
 
     const {whitePaperData} =  locale === 'en' ? en : es;
     return(
-        <AnimationPage>
+
              <div className="h-full flex flex-col xl:flex-row">
                 <Head>
                 <title>Whitepaper {" - " + process.env.projectName}</title>
@@ -105,12 +105,12 @@ export default function WhitePaper({locale}) {
                                     <span className="mr-3 text-primary">{(i + 1 ) / 10}</span>{itemWp.title}
                                 </h2>
 
-                                <div className=" content-base" dangerouslySetInnerHTML={{__html: itemWp.content}}/>
+                                <div className="text-gray leading-7 lg:text-2xl lg:leading-10 font-light" dangerouslySetInnerHTML={{__html: itemWp.content}}/>
                                 <section className="text-gray text-xl pb-4   leading-10">
                                     {itemWp.sections.map((subItem,i) =>(
                                         <div id={subItem.slug} className="mb-2 pt-12" key={"subItem"+ subItem.slug}>
                                             <h3 className=" leading-7 text-2xl text-light font-title_bold">{subItem.title}</h3>
-                                            <div className=" content-base" dangerouslySetInnerHTML={{__html: subItem.content}}/>
+                                            <div className="text-gray leading-7 lg:text-2xl lg:leading-10 font-light" dangerouslySetInnerHTML={{__html: subItem.content}}></div>
                                         </div>
                                     ))}
                                 </section>
@@ -121,7 +121,7 @@ export default function WhitePaper({locale}) {
                 </div>
             </div>
 
-        </AnimationPage>
+
 
     )
 };

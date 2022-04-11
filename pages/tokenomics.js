@@ -98,9 +98,9 @@ export default function Tokenomics({locale}) {
 
 
 
-             <div className="text-center">
+             <div className="text-center  max-w-3xl mx-auto">
                 <Image
-                className=" inline-block"
+                className=" inline-block "
                 src="/bg-moon-top.jpg"
                 width={911}
                 height={294}
@@ -154,7 +154,7 @@ export default function Tokenomics({locale}) {
 
              </MainContent>
          </section>
-         <div className="text-center">
+         <div className="text-center  max-w-3xl mx-auto">
                 <Image
                 className=" inline-block"
                 src="/bg-moon-bottom.jpg"
