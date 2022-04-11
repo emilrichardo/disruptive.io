@@ -10,7 +10,8 @@ export default function Hero() {
             <div className="absolute  w-full flex items-center justify-center  gap-4 place-content-center   h-full top-auto bottom-auto">
                 <Image
                 className="animate-spin speed-slow"
-                placeholder="blurDataURL"
+                placeholder="blur"
+                blurDataURL="/light-mobile.png"
                 src="/light-mobile.png"
                 height={500}
                 width={500}
