@@ -4,7 +4,7 @@ const nextConfig = {
   reactStrictMode: true,
   i18n,
   env:{
-    projectName: "Disruptive.io",
+    projectName: "Disr.io",
     restApi : "http://disruptiveio.local",
     token :{
       tokenApi  : "https://api.pancakeswap.info/api/v2/tokens/",
@@ -13,7 +13,7 @@ const nextConfig = {
 
   },
   images:{
-    domains:['staging.disruptivenews.io']
+    domains:['disruptivenews.io']
   },
 
 }
