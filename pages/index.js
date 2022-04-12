@@ -1,12 +1,8 @@
 
 import Head from "next/head";
-import AnimationPage from "../components/AnimationPage";
+import Image from "next/image";
 
-import Hero from "../components/Hero";
-import Logo from "../components/Logo";
-import MainContent from "../components/MainContent";
-import TokenWidget from "../components/tokenwidget/";
-import { TokenProvider } from "../context/tokenContext";
+
 
 
 export  async function getStaticProps({ locale }){
@@ -24,15 +20,23 @@ export default function Home({locale}) {
 
   return (
     <>
-    <AnimationPage>
+
       <Head>
         <title>Home  {" - " + process.env.projectName}</title>
       </Head>
-      <div className="bg-astro bg-dark-black  bg-contain bg-left h-screen flex items-center justify-center">
-        <div className="text-center">
-          <Logo className="w-20 inline-block mb-4"/>
-          <h2 className="text-4xl lg:text-6xl max-w-2xl">CHANGING THE WAY YOU SEE THE FUTURE </h2>
-          <h4 className="text-2xl font-title_bold mt-8 text-primary-light">Coming Soon!</h4>
+      <div className="bg-commingsoon bg-no-repeat bg-cover bg-dark-black  bg-center  h-screen flex items-center justify-center">
+        <div className="flex flex-col lg:flex-row justify-between items-center px-8 text-center lg:text-left">
+          <Image
+          src="/astronauta__2.png"
+          width={508}
+          height={720}
+          />
+          <div>
+            <h2 className="text-4xl lg:text-7xl max-w-2xl font-title_bold">CHANGING THE WAY YOU SEE <br/>THE FUTURE </h2>
+            <h4 className="text-3xl lg:text-5xl uppercase font-title_bold mt-8 ">Coming Soon!</h4>
+
+          </div>
+
         </div>
 
 
@@ -40,7 +44,7 @@ export default function Home({locale}) {
       </div>
 
 
-      </AnimationPage>
+
    </>
   )
 }
