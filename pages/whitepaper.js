@@ -63,7 +63,7 @@ export default function WhitePaper({locale}) {
                             {whitePaperData.map((itemWp,i)=>(
                                 <div key={i + "-itemWp-"+itemWp.slug}>
                                     <Link href={"#" + itemWp.slug}>
-                                        <a className="hover:text-primary">
+                                        <a className="hover:text-primary transition-all  duration-700">
                                             <h2 className=" text-lg xl:text-2xl xl:mb-8 font-title_bold"> <span className="mr-3 text-primary">{(i + 1 ) / 10}</span>{itemWp.title}</h2>
                                         </a>
                                     </Link>
@@ -71,7 +71,7 @@ export default function WhitePaper({locale}) {
                                     <ul className="text-gray text-xl pb-4 pl-4 leading-10">
                                         {itemWp.sections.map((subItem,i) =>(
                                             <Link href={"#" + subItem.slug} key={"link-" +subItem.slug}>
-                                            <a className="hover:text-primary">
+                                            <a className="hover:text-primary transition-all  duration-700">
                                                 <li className="mb-2 leading-7" key={subItem + i}>
                                                     {subItem.title}
                                                     </li>
@@ -105,12 +105,12 @@ export default function WhitePaper({locale}) {
                                     <span className="mr-3 text-primary">{(i + 1 ) / 10}</span>{itemWp.title}
                                 </h2>
 
-                                <div className="text-gray leading-7 lg:text-2xl lg:leading-10 font-light" dangerouslySetInnerHTML={{__html: itemWp.content}}/>
-                                <section className="text-gray text-xl pb-4   leading-10">
+                                <div className="text-gray leading-7 lg:text-xl lg:leading-8 font-light" dangerouslySetInnerHTML={{__html: itemWp.content}}/>
+                                <section className="text-gray text-xl pb-4   leading-8">
                                     {itemWp.sections.map((subItem,i) =>(
                                         <div id={subItem.slug} className="mb-2 pt-12" key={"subItem"+ subItem.slug}>
                                             <h3 className=" leading-7 text-2xl text-light font-title_bold">{subItem.title}</h3>
-                                            <div className="text-gray leading-7 lg:text-2xl lg:leading-10 font-light" dangerouslySetInnerHTML={{__html: subItem.content}}></div>
+                                            <div className="text-gray leading-7 lg:text-xl lg:leading-8 font-light" dangerouslySetInnerHTML={{__html: subItem.content}}></div>
                                         </div>
                                     ))}
                                 </section>
