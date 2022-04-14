@@ -36,6 +36,7 @@ export default function Hero() {
                         <Link href="/comming"><a className="my-4 hover:text-primary hover:scale-125 transition-all">PAYMENTS</a></Link>
                         <Link href="/comming"><a className="my-4 hover:text-primary hover:scale-125 transition-all">TRADING BOTS</a></Link>
                         <Link href="/comming"><a className="my-4 hover:text-primary hover:scale-125 transition-all">METAVERSE</a></Link>
+                        <Link href="/comming"><a className="my-4 hover:text-primary hover:scale-125 transition-all">EXCHANGE</a></Link>
                         <Link href="/comming"><a className="my-4 hover:text-primary hover:scale-125 transition-all">TRADERS CITY</a></Link>
                 </div>
                 <div className="hidden peer-hover:hidden lg:flex items-center  z-0 justify-center w-full h-full absolute">
