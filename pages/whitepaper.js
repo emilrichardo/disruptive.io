@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 import Head from "next/head";
 import AnimationPage from "../components/AnimationPage";
 
+
+
 export  async function getStaticProps({ locale }){
     return{
       props:{
@@ -15,7 +17,7 @@ export  async function getStaticProps({ locale }){
   }
 
 
-export default function WhitePaper({locale}) {
+export default function WhitePaper({locale,data}) {
 
      //scroll
 

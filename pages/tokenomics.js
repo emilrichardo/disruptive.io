@@ -3,6 +3,10 @@ import MainContent from "../components/MainContent";
 import Image from "next/image";
 import Head from "next/head";
 import AnimationPage from "../components/AnimationPage";
+import PointScored from "../components/PointScored";
+import { TokenProvider } from "../context/tokenContext";
+
+
 export  async function getStaticProps({ locale }){
     return{
       props:{
@@ -165,82 +169,14 @@ export default function Tokenomics({locale}) {
                 />
 
              </div>
-             <div className="my-24 text-center mb-8">
-                 <MainContent className="min-h-0">
-                     <h4 className="text-4xl lg:text-6xl">{locale == 'en' ? "Points scored": "Puntos conseguidos"}</h4>
-                     <h5 className="text-primary text-2xl lg:text-4xl font-title_bold my-4">99,000,000</h5>
-                     <p className="text-gray text-sm">{locale == 'en' ? "Total Supply": " Suministro total:"}</p>
-                 </MainContent>
 
-             </div>
-             <div>
-             <MainContent className="py-24">
-                 <div className=" grid grid-cols-1 lg:grid-cols-2">
-                 <Image
-                    className=" inline-block"
-                    src="/bg-chart-02.svg"
-                    width={536}
-                    height={500}
-                    quality={100}
-                    />
-                    <div>
-                        <ul className="grid grid-cols-1 lg:grid-cols-2">
-                            <li className="flex items-center my-8">
-                                <div className="rounded-full h-4 w-4 bg-[#727E84] inline-block mr-4"></div>
-                                <div>
-                                    <h3 className=" text-2xl font-title_bold">15,000,000</h3>
-                                    <p className="text-gray font-light text-sm">{locale == 'en' ? "Founders": "Fundadores"}</p>
-                                </div>
-                            </li>
-                            <li className="flex items-center my-8">
-                                <div className="rounded-full h-4 w-4 bg-[#8F8FB2] inline-block mr-4"></div>
-                                <div>
-                                    <h3 className=" text-2xl font-title_bold">77,634,442</h3>
-                                    <p className="text-gray font-light text-sm">{locale == 'en' ? "Pancake Swap Supply": "Oferta de intercambio en PancakeSwap"}</p>
-                                </div>
-                            </li>
-                            <li className="flex items-center my-8">
-                                <div className="rounded-full h-4 w-4 bg-[#606380] inline-block mr-4"></div>
-                                <div>
-                                    <h3 className=" text-2xl font-title_bold">44,589,963</h3>
-                                    <p className="text-gray font-light text-sm">{locale == 'en' ? "Revolving Treasury Funds": "Fondos rotatorios del Tesoro"}</p>
-                                </div>
-                            </li>
-                            <li className="flex items-center my-8">
-                                <div className="rounded-full h-4 w-4 bg-[#6E7DA3] inline-block mr-4"></div>
-                                <div>
-                                    <h3 className=" text-2xl font-title_bold">12,000,000</h3>
-                                    <p className="text-gray font-light text-sm">{locale == 'en' ? "Community": "Comunidad"}</p>
-                                </div>
-                            </li>
-                            <li className="flex items-center my-8">
-                                <div className="rounded-full h-4 w-4 bg-[#58516B] inline-block mr-4"></div>
-                                <div>
-                                    <h3 className=" text-2xl font-title_bold">1,170,000</h3>
-                                    <p className="text-gray font-light text-sm">{locale == 'en' ? "Processing paid costs": "Gastos de trámites pagados"}</p>
-                                </div>
-                            </li>
-                            <li className="flex items-center my-8">
-                                <div className="rounded-full h-4 w-4 bg-[#8EA7FF] inline-block mr-4"></div>
-                                <div>
-                                    <h3 className=" text-2xl font-title_bold">12,167,111</h3>
-                                    <p className="text-gray font-light text-sm">{locale == 'en' ? "Initial investors": "Inversores iniciales"}</p>
-                                </div>
-                            </li>
-                            <li className="flex items-center my-8">
-                                <div className="rounded-full h-4 w-4 bg-[#DCB3EF] inline-block mr-4"></div>
-                                <div>
-                                    <h3 className=" text-2xl font-title_bold">7,000,000</h3>
-                                    <p className="text-gray font-light text-sm">{locale == 'en' ? "Circulating": "En circulación"}</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+             <TokenProvider>
+                <PointScored
+                locale={locale}
+                />
+             </TokenProvider>
 
-                 </div>
 
-                </MainContent>
-             </div>
              </AnimationPage>
 
         </>
