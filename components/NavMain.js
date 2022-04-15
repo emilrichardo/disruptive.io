@@ -8,10 +8,10 @@ const router = useRouter();
 const { locale } = router;
 
 const mainMenuItems = [
-    {id:0 ,label:"Whitepaper", link : "/whitepaper" },
-    {id:1 ,label:"Tokenomics", link : "/tokenomics" },
+    {id:0 ,label:`${locale =='en' ? "Whitepaper" : " Libro Blanco"}`, link : "/whitepaper" },
+    {id:1 ,label:`${locale =='en' ? "Tokenomics" : " Economía"}` , link : "/tokenomics" },
     /* {id:2 ,label:`${locale =='en' ? "News" : "Noticias"}`, link : "https://staging.disruptivenews.io/",target:"blank" }, */
-    {id:3 ,label:"Roadmap", link : "/roadmap" },
+    {id:3 ,label:`${locale =='en' ? "Roadmap" : " Mapa de Ruta"}`, link : "/roadmap" },
 ]
 
 
