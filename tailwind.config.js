@@ -35,6 +35,7 @@ module.exports = {
       backgroundImage: {
         main : "url('/agujero.jpg')",
         astronauta: "url('/bg-astronauta.jpg')",
+        team: "url('/bg-team.jpg')",
         pages: "url('/bg-pages.jpg')",
         page_news: "url('/bg-news.jpg')",
         post: "url('/bg-post.jpg')",

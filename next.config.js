@@ -13,7 +13,7 @@ const nextConfig = {
 
   },
   images:{
-    domains:['disruptivenews.io']
+    domains:['disruptivestudio.com']
   },
 
 }

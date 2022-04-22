@@ -10,6 +10,7 @@ const { locale } = router;
 const mainMenuItems = [
     {id:0 ,label:`${locale =='en' ? "Whitepaper" : " Libro Blanco"}`, link : "/whitepaper" },
     {id:1 ,label:`${locale =='en' ? "Tokenomics" : " Economía"}` , link : "/tokenomics" },
+    {id:1 ,label:`${locale =='en' ? "Our team" : " Nuestro equipo"}` , link : "/team" },
     /* {id:2 ,label:`${locale =='en' ? "News" : "Noticias"}`, link : "https://staging.disruptivenews.io/",target:"blank" }, */
     {id:3 ,label:`${locale =='en' ? "Roadmap" : " Mapa de Ruta"}`, link : "/roadmap" },
 ]
