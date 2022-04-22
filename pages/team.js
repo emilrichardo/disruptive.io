@@ -57,7 +57,9 @@ export default function Team() {
                 <div className="flex flex-col items-center justify-center py-24">
                     <h3 className=" text-center text-xl lg:text-2xl mb-8 max-w-2xl">Disr is a project that has been achieved thanks to the teamwork with Disruptive Studio.</h3>
                     <Logo className=" w-14 mb-8" />
-                    <Button  size="sm" variant="primary">Disruptive full team</Button>
+                    <a href="https://disruptivestudio.com/?p=team" rel="noopener noreferrer" target="_blank">
+                        <Button  size="sm" variant="primary">Disruptive full team</Button>
+                    </a>
                 </div>
 
             </MainContent>
@@ -78,8 +80,6 @@ const TeamCard = ({name,desc,image}) => {
                     src={image}
                    layout="fill"
                    objectFit='cover'
-
-
                 />
             </div>
 
