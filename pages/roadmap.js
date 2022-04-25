@@ -48,9 +48,11 @@ export default function RoadMap({locale}) {
                                             <li key={i}>
                                                 <div className={` ${ milestone.accomplished == "true" && "border-primary border-2 text-light"} my-1 inline-flex items-center px-4 py-2 rounded-full    `}>
                                                     {  milestone.accomplished == "true"
-                                                    ? <svg className="mr-7" width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1 7.5L7.5 14L20.5 1" stroke="#5D5FEF" strokeWidth="2"/>
+                                                    ? <div className="mr-7 w-8 h-8 bg-[#68B22D] flex justify-center items-center rounded-full p-2">
+                                                        <svg className="" width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1 7.5L7.5 14L20.5 1" stroke="#fff" strokeWidth="2"/>
                                                         </svg>
+                                                       </div>
 
                                                     : <span className="w-7 h-7 block mr-7 bg-dark-light rounded-full"></span>
                                                     }
