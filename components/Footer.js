@@ -7,8 +7,8 @@ export default function Footer({className}) {
     const { locale } = router;
     return(
         <footer className={`${className} bg-dark-dark relative py-8 z-10`}>
-            <div className="flex flex-col lg:flex-row justify-between px-8 lg:px-20 py-8">
-                <div className="text-light flex items-start">
+            <div className="flex flex-col lg:flex-row justify-end px-8 lg:px-20 py-8">
+                {/* <div className="text-light flex items-start">
                     <Logo className=" w-8 mr-4"/>
                     <div>
                         <h5 className=" text-md lg:text-xl">About</h5>
@@ -19,7 +19,7 @@ export default function Footer({className}) {
                             }
                         </p>
                     </div>
-                    </div>
+                    </div> */}
                 <div className="mt-12 lg:mt-0">
                     <div className="flex justify-center lg:justify-end  items-center">
                         <a href="/" className="hover:scale-125 transition-all">

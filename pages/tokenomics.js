@@ -66,10 +66,10 @@ export default function Tokenomics({locale}) {
 
 
 
-             <div   className="py-16 grid grid-cols-2 lg:grid-cols-4 relative">
+             <div   className="py-16 grid grid-cols-2  gap-y-8 lg:grid-cols-4 relative">
                  <div className="text-center">
                     <svg className=" inline-block" width="60" height="66" viewBox="0 0 60 66" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_381_470)">
+                        <g clipPath="url(#clip0_381_470)">
                         <path d="M43.3311 37.432L47.6891 41.791L56.2791 33.201" stroke="#5D5FEF" strokeWidth="1.5"/>
                         <path d="M58.5001 36.6901C59.0765 39.0646 58.8194 41.565 57.7719 43.7725C56.7244 45.9801 54.9501 47.7606 52.7462 48.8158C50.5424 49.8711 48.0429 50.137 45.6664 49.5689C43.2899 49.0009 41.1807 47.6334 39.6923 45.6957C38.2038 43.7579 37.4265 41.3675 37.4905 38.9249C37.5544 36.4823 38.4559 34.1358 40.0437 32.2786C41.6315 30.4214 43.8094 29.1662 46.2123 28.7234C48.6153 28.2805 51.0975 28.6769 53.2431 29.8461" stroke="#5D5FEF" strokeWidth="1.5"/>
                         <path d="M48.145 28.34V3.25C48.145 2.58696 47.8816 1.95107 47.4128 1.48223C46.9439 1.01339 46.308 0.75 45.645 0.75H14.467L0.75 14.467V62.143C0.75 62.806 1.01339 63.4419 1.48223 63.9108C1.95107 64.3796 2.58696 64.643 3.25 64.643H45.65C46.313 64.643 46.9489 64.3796 47.4178 63.9108C47.8866 63.4419 48.15 62.806 48.15 62.143V49.877" stroke="#5D5FEF" strokeWidth="1.5" stroke-linecap="round"/>
@@ -94,11 +94,11 @@ export default function Tokenomics({locale}) {
                         </clipPath>
                         </defs>
                     </svg>
-                     <h3 className=" text-2xl font-title_bold mt-8">Crypto processing</h3>
+                     <h3 className=" text-lg lg:text-2xl font-title_bold mt-8">Crypto processing</h3>
                  </div>
                  <div className="text-center">
                  <svg className=" inline-block mb-5" width="122" height="50" viewBox="0 0 122 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_372_388)">
+                    <g clipPath="url(#clip0_372_388)">
                     <path d="M120.911 31.265H79.2671V42.227C79.2674 43.0653 79.6005 43.8691 80.1932 44.4619C80.786 45.0546 81.5898 45.3878 82.4281 45.388H117.75C118.588 45.3878 119.392 45.0546 119.985 44.4619C120.578 43.8691 120.911 43.0653 120.911 42.227V31.265Z" stroke="#5D5FEF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     <path d="M120.91 17.1429H79.2671V31.2649H120.91V17.1429Z" stroke="#5D5FEF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     <path d="M120.911 6.181C120.911 5.76594 120.829 5.35494 120.67 4.97149C120.512 4.58803 120.279 4.23963 119.985 3.94619C119.692 3.65274 119.343 3.42 118.96 3.26125C118.576 3.1025 118.165 3.02086 117.75 3.021H82.4281C82.013 3.02086 81.602 3.1025 81.2185 3.26125C80.835 3.42 80.4865 3.65274 80.193 3.94619C79.8994 4.23963 79.6666 4.58803 79.5077 4.97149C79.3489 5.35494 79.2671 5.76594 79.2671 6.181V17.143H120.911V6.181Z" stroke="#5D5FEF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -139,11 +139,11 @@ export default function Tokenomics({locale}) {
                     </defs>
                     </svg>
 
-                     <h3 className=" text-2xl font-title_bold mt-8">Bot Server Requests</h3>
+                     <h3 className=" text-lg lg:text-2xl font-title_bold mt-8">Bot Server Requests</h3>
                  </div>
                  <div className="text-center">
                         <svg className=" inline-block" width="96" height="74" viewBox="0 0 96 74" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_381_490)">
+                        <g clipPath="url(#clip0_381_490)">
                         <path d="M46.819 39.3619C46.0091 39.3599 45.2118 39.1608 44.496 38.7819C43.7043 38.3797 43.0402 37.7651 42.5781 37.0069C42.1159 36.2488 41.8738 35.3769 41.879 34.4889V29.0349C41.8763 28.1501 42.1324 27.2837 42.6159 26.5426C43.0994 25.8015 43.789 25.218 44.6 24.8639C45.4095 24.4923 46.3085 24.3608 47.1906 24.4848C48.0726 24.6089 48.9005 24.9834 49.576 25.5639L53.026 28.5059C53.6191 29.0172 54.0855 29.659 54.3884 30.3811C54.6913 31.1031 54.8226 31.8856 54.7718 32.667C54.721 33.4483 54.4896 34.2072 54.0957 34.884C53.7018 35.5607 53.1563 36.1368 52.502 36.5669L49.571 38.5169C48.7582 39.0637 47.8015 39.3571 46.822 39.3599L46.819 39.3619ZM43.243 29.3349V34.4889C43.2381 35.1322 43.4127 35.7641 43.7471 36.3136C44.0815 36.8632 44.5624 37.3086 45.136 37.5999C45.7072 37.9049 46.3507 38.0484 46.9974 38.0149C47.644 37.9815 48.2693 37.7723 48.806 37.4099L51.737 35.4589C52.2186 35.1423 52.6202 34.7183 52.9102 34.2202C53.2003 33.7221 53.3709 33.1636 53.4087 32.5885C53.4465 32.0134 53.3504 31.4373 53.128 30.9056C52.9056 30.3738 52.563 29.9009 52.127 29.5239L48.683 26.5859C48.2056 26.1746 47.6202 25.9089 46.9962 25.8203C46.3723 25.7316 45.7361 25.8238 45.163 26.0859C44.9702 26.1734 44.7858 26.2781 44.612 26.3989C45.3837 26.3322 46.1511 26.5674 46.753 27.0549L51.006 30.4769C51.2853 30.6999 51.5077 30.9858 51.6551 31.3113C51.8025 31.6368 51.8707 31.9926 51.854 32.3496C51.8373 32.7065 51.7362 33.0544 51.5591 33.3648C51.382 33.6751 51.1338 33.939 50.835 34.1349L48.026 35.9999C47.7086 36.2105 47.3404 36.3319 46.9601 36.3512C46.5797 36.3706 46.2011 36.2872 45.864 36.1099C45.5286 35.9359 45.2474 35.6734 45.0508 35.3507C44.8542 35.0281 44.7498 34.6577 44.749 34.2799V29.1119L49.8 33.0999C49.8218 33.1173 49.8425 33.136 49.862 33.1559L50.074 33.0159C50.1962 32.9353 50.2976 32.827 50.37 32.6998C50.4424 32.5725 50.4836 32.43 50.4905 32.2837C50.4973 32.1375 50.4695 31.9917 50.4093 31.8583C50.349 31.7249 50.2581 31.6076 50.144 31.5159L45.891 28.0999C45.6538 27.9044 45.3654 27.781 45.0602 27.7445C44.7549 27.708 44.4456 27.7599 44.169 27.8939C43.8907 28.0184 43.6547 28.2215 43.4902 28.4782C43.3257 28.7349 43.2398 29.0341 43.243 29.3389V29.3349ZM46.112 31.9149V34.2809C46.1113 34.4142 46.1477 34.545 46.2171 34.6587C46.2865 34.7725 46.3862 34.8646 46.505 34.9249C46.6233 34.9884 46.7567 35.0184 46.8908 35.0117C47.0249 35.0051 47.1546 34.9619 47.266 34.8869L48.683 33.9469L46.112 31.9149Z" fill="#5D5FEF"/>
                         <path d="M47.83 20.782C50.0294 20.782 52.1794 21.4342 54.0081 22.6562C55.8368 23.8781 57.2621 25.615 58.1037 27.647C58.9453 29.679 59.1654 31.915 58.7361 34.0721C58.3069 36.2292 57.2476 38.2106 55.6923 39.7657C54.1369 41.3208 52.1553 42.3797 49.9981 42.8086C47.8409 43.2374 45.605 43.0169 43.5731 42.1749C41.5413 41.333 39.8047 39.9074 38.583 38.0785C37.3614 36.2495 36.7096 34.0994 36.71 31.9C36.7118 28.9515 37.884 26.1244 39.9691 24.0397C42.0542 21.955 44.8815 20.7833 47.83 20.782V20.782Z" stroke="#5D5FEF" strokeWidth="1.5"/>
                         <path d="M43.188 63.5V48.921C43.188 48.3855 43.4008 47.872 43.7794 47.4933C44.158 47.1147 44.6716 46.902 45.207 46.902C45.7425 46.902 46.2561 47.1147 46.6347 47.4933C47.0133 47.872 47.226 48.3855 47.226 48.921V55.227C47.226 54.6719 47.4466 54.1395 47.8391 53.747C48.2316 53.3545 48.7639 53.134 49.319 53.134V53.134C49.8741 53.134 50.4065 53.3545 50.799 53.747C51.1915 54.1395 51.412 54.6719 51.412 55.227V55.978C51.412 55.421 51.6333 54.8869 52.0271 54.4931C52.4209 54.0992 52.9551 53.878 53.512 53.878C54.069 53.878 54.6031 54.0992 54.997 54.4931C55.3908 54.8869 55.612 55.421 55.612 55.978V57.178C55.612 56.6741 55.8122 56.1908 56.1685 55.8345C56.5249 55.4782 57.0081 55.278 57.512 55.278V55.278C58.016 55.278 58.4992 55.4782 58.8555 55.8345C59.2119 56.1908 59.412 56.6741 59.412 57.178V62.859C59.412 65.601 57.706 72.929 52.371 72.929C47.036 72.929 44.594 69.689 41.553 67.495C40.1 66.448 38.83 65.457 37.899 64.708C37.6855 64.5341 37.509 64.3192 37.3799 64.076C37.2509 63.8327 37.172 63.566 37.1478 63.2917C37.1237 63.0174 37.1548 62.741 37.2393 62.479C37.3239 62.2169 37.4601 61.9745 37.64 61.766C38.0102 61.3358 38.5328 61.0662 39.0978 61.0137C39.6628 60.9613 40.2261 61.1303 40.669 61.485L43.188 63.5Z" stroke="#5D5FEF" strokeWidth="1.5"/>
@@ -161,11 +161,11 @@ export default function Tokenomics({locale}) {
                         </svg>
 
 
-                     <h3 className=" text-2xl font-title_bold mt-8">Metaverse Transactions</h3>
+                     <h3 className=" text-lg lg:text-2xl font-title_bold mt-8">Metaverse Transactions</h3>
                  </div>
                  <div className="text-center">
                  <svg className=" inline-block" width="78" height="69" viewBox="0 0 78 69" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_381_501)">
+                    <g clipPath="url(#clip0_381_501)">
                     <path d="M5.833 41.875H0.75V59.55H5.833V41.875Z" stroke="#5D5FEF" strokeWidth="1.5"/>
                     <path d="M3.29199 41.875V35.592" stroke="#5D5FEF" strokeWidth="1.5"/>
                     <path d="M3.29199 65.833V59.55" stroke="#5D5FEF" strokeWidth="1.5"/>
@@ -207,7 +207,7 @@ export default function Tokenomics({locale}) {
                     </defs>
                     </svg>
 
-                     <h3 className=" text-2xl font-title_bold mt-8">Traders gas fee</h3>
+                     <h3 className=" text-lg lg:text-2xl font-title_bold mt-8">Traders gas fee</h3>
                  </div>
 
 
@@ -240,7 +240,7 @@ export default function Tokenomics({locale}) {
         </MainContent>
 
         <section className="bg-dark-black py-[10vh] lg:py-14 bg-perspetiva bg-no-repeat bg-bottom">
-            <MainContent className="">
+            <MainContent className="pb-24">
 
                 <h3 className=" text-2xl lg:text-5xl text-center mb-12">Fees Economic Approach</h3>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 max-w-6xl mx-auto text-gray opacity-70 items-center justify-center">
@@ -249,7 +249,7 @@ export default function Tokenomics({locale}) {
                 </div>
 
                 <div className=" text-center pt-24 pb-24">
-                    <div className=" w-[500px] h-[500px]  inline-block bg-dark-dark shadow-2xl shadow-[#770DFF] rounded-full"
+                    <div className=" w-[300px] h-[300px] lg:w-[500px] lg:h-[500px]  inline-block bg-dark-dark shadow-2xl shadow-[#770DFF] rounded-full"
                     style={{boxShadow:" 0 0 150px 5px #770DFF"}}
                     >
                     </div>
@@ -295,10 +295,11 @@ export default function Tokenomics({locale}) {
 
              </MainContent>
          </section>
-         <div className="text-center  max-w-3xl mx-auto">
+         <section className="bg-galaxy bg-no-repeat bg-top">
+             <div className="text-center  max-w-3xl mx-auto">
                 <Image
                 className=" inline-block"
-                src="/bg-moon-bottom.jpg"
+                src="/bg-moon-bottom.png"
                 width={908}
                 height={160}
                 quality={100}
@@ -311,6 +312,9 @@ export default function Tokenomics({locale}) {
                 locale={locale}
                 />
              </TokenProvider>
+
+
+         </section>
 
 
              </AnimationPage>

@@ -40,6 +40,7 @@ module.exports = {
         page_news: "url('/bg-news.jpg')",
         post: "url('/bg-post.jpg')",
         perspetiva: "url('/bg-perspectiva.jpg')",
+        galaxy: "url('/bg-galaxy.jpg')",
       }
     },
   },
