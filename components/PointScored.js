@@ -49,7 +49,7 @@ export default function PointScored({locale}) {
                     <h3 className="text-center text-2xl lg:text-5xl">{locale == 'en' ? "Real time Token Overview": "Vista previa en tiempo real de DISR Tokens"}</h3>
 
 
-                    <div className="inline-flex mx-auto my-4">
+                    <div className="lg:inline-flex mx-auto my-4">
                         <div className=" text-right border-r border-r-light pr-7">
                             <h4 className=" text-4xl text-primary font-title_bold">99,000,000</h4>
                             <p className=" text-gray">Total Supply</p>
@@ -90,7 +90,7 @@ export default function PointScored({locale}) {
              <div>
              <MainContent className="py-24">
                  <div className="">
-                     <div className=" text-center mb-14">
+                     <div className="flex justify-center text-center mb-14">
                          <RadialBars/>
                      </div>
 

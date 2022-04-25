@@ -72,8 +72,8 @@ export default function RadialBars(params) {
 
 
     return(
-    <div className=" mx-auto inline-block">
-        <Chart className="inline-block mx-autos" options={options} series={series} type="radialBar" height={500} width={500} />
+    <div className=" mx-auto  inline-flex justify-center">
+        <Chart className="inline-block mx-autos scale-75 lg:scale-100" options={options} series={series} type="radialBar" height={500} width={500} />
     </div>
     )
 };
