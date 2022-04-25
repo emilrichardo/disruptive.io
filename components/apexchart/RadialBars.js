@@ -19,7 +19,7 @@ export default function RadialBars(params) {
             },
             offsetY: 0,
             startAngle: 0,
-            endAngle:355,
+            endAngle:358,
 
             hollow: {
               margin: 0,
