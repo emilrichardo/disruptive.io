@@ -27,7 +27,7 @@ import { useRouter } from 'next/router';
                         className=" ring-0 outline-none  w-full h-full appearance-none bg-dark-light bg-opacity-0 absolute left-0 top-0 px-20"
 
                     >
-                    <option className="text-black" value="en"> {locale == 'en' ?  "English" : "Inglés"} </option>
+                    <option className=" appearance-none text-black bg-primary-light" value="en"> {locale == 'en' ?  "English" : "Inglés"} </option>
                     <option className="text-black" value="es">{locale == 'en' ?  "Spanish" : "Español"} </option>
                 </select>
 
