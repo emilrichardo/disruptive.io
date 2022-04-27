@@ -239,7 +239,7 @@ export default function Tokenomics({locale}) {
 
         </MainContent>
 
-        <section className="bg-dark-black py-[10vh] lg:py-14 bg-perspetiva bg-no-repeat bg-bottom">
+        <section className="bg-dark-black bg-contain py-[10vh] lg:py-14 bg-perspetiva bg-no-repeat bg-bottom">
             <MainContent className="pb-24">
 
                 <h3 className=" text-2xl lg:text-5xl text-center mb-12">Fees Economic Approach</h3>
@@ -295,7 +295,7 @@ export default function Tokenomics({locale}) {
 
              </MainContent>
          </section>
-         <section className="bg-galaxy bg-no-repeat bg-top">
+         <section className="bg-galaxy bg-contain bg-no-repeat bg-top">
              <div className="text-center  max-w-3xl mx-auto">
                 <Image
                 className=" inline-block"
