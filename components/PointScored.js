@@ -112,7 +112,7 @@ export default function PointScored({locale}) {
                     <h3 className="text-center text-2xl lg:text-5xl">{locale == 'en' ? "Real time Token Overview": "Vista previa en tiempo real de DISR Tokens"}</h3>
 
 
-                    <div className="lg:inline-flex mx-auto my-4">
+                    <div className="lg:inline-flex  mx-auto my-4">
                         <div className=" text-right border-r border-r-light pr-7">
                             <h4 className=" text-4xl text-primary font-title_bold">99,000,000</h4>
                             <p className=" text-gray">Total Supply</p>
@@ -147,6 +147,13 @@ export default function PointScored({locale}) {
                         </div>
 
                     </div>
+
+                    <div className=" text-left mx-auto max-w-md">
+                      <CopyClipboard adress="0xd70a9d1c9fdd3d8dd2fb672bb399f7bca61666bd"/>
+
+                    </div>
+
+
                  </MainContent>
 
              </div>
@@ -183,7 +190,8 @@ export default function PointScored({locale}) {
                                 <div>
                                     <p className="mt-4 font-medium">{locale == 'en' ? "Founders": "Fundadores"}</p>
                                     <p className="font-medium">Locked Funds</p>
-                                    <h3 className=" text-2xl font-title_bold">{founders}</h3>
+                                    <h3 className="mb-4 text-2xl font-title_bold">{founders}</h3>
+                                    <CopyClipboard adress="0x44b0b0d24047161c1d8297b045810d762c453253"/>
 
                                 </div>
                             </li>
@@ -206,8 +214,9 @@ export default function PointScored({locale}) {
 
 
                                 <div>
-                                    <p className="mt-4 font-medium">{locale == 'en' ? "Revolving Treasury Funds": "Fondos rotatorios del Tesoro"}</p>
-                                    <h3 className=" text-2xl font-title_bold">{revolvingTreasuryFunds}</h3>
+                                    <p className="mt-4 max-w-[124px] mx-auto inline-block font-medium">{locale == 'en' ? "Revolving Treasury Funds": "Fondos rotatorios del Tesoro"}</p>
+                                    <h3 className="mb-4  text-2xl font-title_bold">{revolvingTreasuryFunds}</h3>
+                                    <CopyClipboard adress="0x8aeed93a7962e3f0ee357e3d490b09539be521f7"/>
                                 </div>
                             </li>
                             <li className="flex flex-col items-center  mx-auto   my-8 max-w-[140px]">
@@ -234,8 +243,9 @@ export default function PointScored({locale}) {
 
 
                                 <div>
-                                    <p className="mt-4 font-medium">{locale == 'en' ? "Initial Investors Unlocked Funds": "Initial Investors Unlocked Funds"}</p>
-                                    <h3 className=" text-2xl font-title_bold">{investors}</h3>
+                                    <p className="mt-4 max-w-[124px] mx-auto inline-block font-medium">{locale == 'en' ? "Initial Investors Unlocked Funds": "Initial Investors Unlocked Funds"}</p>
+                                    <h3 className="mb-4 text-2xl font-title_bold">{investors}</h3>
+                                    <CopyClipboard adress="0xef147130e1f7016ecF39916fCF8eEca7E5eD0729"/>
                                 </div>
                             </li>
 
@@ -270,8 +280,8 @@ export default function PointScored({locale}) {
 
 
                                 <div>
-                                    <p className="mt-4 font-medium">{locale == 'en' ? "Circulating Supply": "Circulating Supply"}</p>
-                                    <h3 className=" text-2xl font-title_bold">{circulation}</h3>
+                                    <p className="mt-4 font-medium max-w-[124px] mx-auto inline-block">{locale == 'en' ? "Circulating Supply": "Circulating Supply"}</p>
+                                    <h3 className="mb-4 text-2xl font-title_bold">{circulation}</h3>
                                     <CopyClipboard adress="0x7ffa738850ad1867e416e65c88a264f6e425a6b3"/>
                                 </div>
                             </li>
