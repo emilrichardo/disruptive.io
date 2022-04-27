@@ -38,9 +38,13 @@ export  async function getStaticProps({ locale }){
         pie: {
           donut: {
             size: '90%',
+
           }
         },
 
+      },
+      dataLabels: {
+        enabled: false
       },
      stroke:{
         width:8,
