@@ -304,11 +304,12 @@ export default function Tokenomics({locale}) {
                 </div>
 
                 <div className="grid grid-cols-3 lg:grid-cols-7 gap-6 mx-auto max-w-7xl ">
-                    {feesEA.map((feesItem) =>(
+                    {feesEA.map((feesItem,i) =>(
                          <CardNumbers
                          number={feesItem.number}
                          title={feesItem.title}
                          color={feesItem.color}
+                         key={i+1}
                          />
                     )) }
 

@@ -2,6 +2,7 @@ import MainContent from "./MainContent";
 import Image from "next/image";
 import { useToken } from "../context/tokenContext";
 import RadialBars from "./apexchart";
+import CopyClipboard from "./buttons/CopyClipboard";
 
 
 
@@ -17,7 +18,7 @@ export default function PointScored({locale}) {
     const investors = (fomratComunity(pointScored.investors))
 
 
-    console.log(investors)
+
 
     function addPoint(num) {
         let number = num.toString().replace(/\B(?=(\d{18})+(?!\d))/g, '.')
@@ -271,6 +272,7 @@ export default function PointScored({locale}) {
                                 <div>
                                     <p className="mt-4 font-medium">{locale == 'en' ? "Circulating Supply": "Circulating Supply"}</p>
                                     <h3 className=" text-2xl font-title_bold">{circulation}</h3>
+                                    <CopyClipboard adress="0x7ffa738850ad1867e416e65c88a264f6e425a6b3"/>
                                 </div>
                             </li>
 

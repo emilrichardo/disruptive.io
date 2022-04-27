@@ -33,7 +33,6 @@ export const TokenProvider = ({children }) => {
 
 
 
-    console.log(rtf)
 
 
 
