@@ -34,6 +34,8 @@ export  async function getStaticProps({ locale }){
         type: 'donut',
         width: '100%'
       },
+
+
       plotOptions: {
         pie: {
           donut: {
@@ -46,13 +48,16 @@ export  async function getStaticProps({ locale }){
       dataLabels: {
         enabled: false
       },
+      tooltip: {
+
+      },
      stroke:{
         width:2,
         colors: ['#161920']
      },
      labels: ['Operations',"Development","Founders","Investors","Staking","Treasury","Burn"],
 
-      legend:'false',
+      legend:false,
       colors:["#73BCFF","#A5FFFF","#F3CB8F","#BEB8FF","#C1FFAB","#fff","#FFA1CE"],
 
 
@@ -284,8 +289,8 @@ export default function Tokenomics({locale}) {
 
         </MainContent>
 
-        <section className=" bg-dark bg-cover bg-center py-[10vh] lg:py-18 bg-star bg-no-repeat border-t border-t-light   border-b border-b-light border-opacity-10">
-            <MainContent className="pb-24">
+        <section className=" bg-dark   py-[10vh] lg:py-18 border-t border-t-light   border-b border-b-light border-opacity-10">
+            <MainContent className="pb-24 !px-0">
 
                 <h3 className=" text-2xl lg:text-5xl text-center mb-12">Fees Economic Approach</h3>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 max-w-6xl mx-auto text-gray opacity-70 items-center justify-center">
@@ -293,18 +298,23 @@ export default function Tokenomics({locale}) {
                     <p>Every fee collected from Payment Processing, Bot Server Requests, Metaverse Transactions and Traders Gas Fees, will be part of the same distribution rules</p>
                 </div>
 
-                <div className=" text-center pt-24 pb-24">
-                    <div className="relative w-[300px] h-[300px] lg:w-[500px] lg:h-[500px]  inline-flex justify-center items-center scale-75 "
+                <div className="bg-star bg-no-repeat bg-cover bg-center">
+                    <div className=" text-center pt-24 pb-24">
+                        <div className="relative w-[300px] h-[300px] lg:w-[500px] lg:h-[500px]  inline-flex justify-center items-center scale-75"
 
-                    >
-                        <div className="-ml-8 -mt-20 z-10 relative">
-                         <ApexChart series={series} options={options} type={options.chart.type} height={500} width={500} />
-                        </div>
-                        <div className="-ml-4 -mt-10 z-0 absolute w-full h-full flex justify-center items-center top-0 left-0">
-                            <Logo className="w-24"/>
+                        >
+                            <div className="-ml-10 -mt-6 z-10 relative">
+                            <ApexChart series={series} options={options} type={options.chart.type} height={500} width={500} />
+                            </div>
+                            <div className="-ml-4 -mt-5 z-0 absolute w-full h-full flex justify-center items-center top-0 left-0">
+                                <Logo className="w-24"/>
+                            </div>
                         </div>
                     </div>
+
                 </div>
+
+
 
                 <div className="grid grid-cols-3 lg:grid-cols-7 gap-6 mx-auto max-w-7xl ">
 
