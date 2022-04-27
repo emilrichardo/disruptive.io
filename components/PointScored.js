@@ -1,7 +1,7 @@
 import MainContent from "./MainContent";
 import Image from "next/image";
 import { useToken } from "../context/tokenContext";
-import RadialBars from "./apexchart/RadialBars";
+import RadialBars from "./apexchart";
 
 
 
@@ -32,6 +32,68 @@ export default function PointScored({locale}) {
         let numComma = numberRound.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
         return numComma
     }
+
+    const series = [100, 48, 44, 55, 67, 83]
+    const options =  {
+        chart: {
+          height: 400,
+          type: 'radialBar',
+        },
+        plotOptions: {
+          radialBar: {
+            track: {
+              background: '#3D3D3D',
+              margin: '15px',
+            },
+            offsetY: 0,
+            startAngle: 0,
+            endAngle:358,
+
+            hollow: {
+              margin: 0,
+              size: '45px',
+              background: 'transparent',
+              image: undefined,
+            },
+            dataLabels: {
+              name: {
+                show: false,
+              },
+              value: {
+                show: false,
+              }
+            }
+          }
+        },
+        colors: ['#fff', '#fff', '#fff', '#fff', '#fff', '#fff'],
+        labels: ['Founders', 'Messenger', 'Facebook', 'LinkedIn','Facebook', 'LinkedIn'],
+        legend: {
+          show: false,
+
+          offsetX: 18,
+          offsetY: 6,
+          labels: {
+            useSeriesColors: true,
+          },
+          markers: {
+            size:8
+          },
+          formatter: function(seriesName, opts) {
+            return seriesName + ":  " + opts.w.globals.series[opts.seriesIndex]
+          },
+          itemMargin: {
+            vertical: 5
+          }
+        },
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            legend: {
+                show: false
+            }
+          }
+        }]
+      }
 
 
 
@@ -91,13 +153,13 @@ export default function PointScored({locale}) {
              <MainContent className="py-24">
                  <div className="">
                      <div className="flex justify-center text-center mb-14">
-                         <RadialBars/>
+                         <RadialBars series={series} options={options} type="radialBar" height={500} width={500}/>
                      </div>
 
 
                     <div>
                         <ul className="grid grid-cols-2 lg:grid-cols-4 text-center">
-                            <li className="flex flex-col items-center my-8 max-w-[140px]">
+                            <li className="flex flex-col items-center  mx-auto   my-8 max-w-[140px]">
                                 <svg width="61" height="78" viewBox="0 0 61 78" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clipPath="url(#clip0_382_566)">
                                 <path d="M45.3262 38.1C45.3128 40.4065 44.6165 42.6574 43.3253 44.5687C42.0341 46.48 40.2057 47.9661 38.0709 48.8395C35.9361 49.7129 33.5904 49.9345 31.3298 49.4763C29.0691 49.018 26.9949 47.9006 25.3686 46.2649C23.7423 44.6291 22.6369 42.5484 22.1919 40.2852C21.7468 38.0219 21.982 35.6776 22.8677 33.5478C23.7535 31.4181 25.2502 29.5984 27.1689 28.3183C29.0877 27.0382 31.3426 26.355 33.6492 26.355C36.7548 26.3653 39.7292 27.6082 41.9187 29.8105C44.1083 32.0129 45.3339 34.9944 45.3262 38.1V38.1Z" stroke="#5D5FEF" strokeWidth="1.5" strokeMiterlimit="1.5" strokeLinecap="square"/>
@@ -124,7 +186,7 @@ export default function PointScored({locale}) {
 
                                 </div>
                             </li>
-                            <li className="flex flex-col items-center my-8 max-w-[140px]">
+                            <li className="flex flex-col items-center  mx-auto   my-8 max-w-[140px]">
                                 <svg width="68" height="62" viewBox="0 0 68 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clipPath="url(#clip0_382_563)">
                                 <path d="M66.0989 23.377L63.3609 28.811L59.3989 24.193L66.0989 23.377Z" stroke="#5D5FEF" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round"/>
@@ -147,7 +209,7 @@ export default function PointScored({locale}) {
                                     <h3 className=" text-2xl font-title_bold">{revolvingTreasuryFunds}</h3>
                                 </div>
                             </li>
-                            <li className="flex flex-col items-center my-8 max-w-[140px]">
+                            <li className="flex flex-col items-center  mx-auto   my-8 max-w-[140px]">
                                 <svg width="75" height="59" viewBox="0 0 75 59" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clipPath="url(#clip0_370_112)">
                                 <path d="M25.4221 52.4038C31.669 52.4038 36.7331 47.311 36.7331 41.0288C36.7331 34.7466 31.669 29.6538 25.4221 29.6538C19.1752 29.6538 14.1111 34.7466 14.1111 41.0288C14.1111 47.311 19.1752 52.4038 25.4221 52.4038Z" stroke="#5D5FEF" strokeWidth="1.5" strokeMiterlimit="1.5" strokeLinecap="square"/>
@@ -176,7 +238,7 @@ export default function PointScored({locale}) {
                                 </div>
                             </li>
 
-                            <li className="flex flex-col items-center my-8 max-w-[140px]">
+                            <li className="flex flex-col items-center  mx-auto   my-8 max-w-[140px]">
                                 <svg width="67" height="66" viewBox="0 0 67 66" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clipPath="url(#clip0_382_565)">
                                 <path d="M33.135 0.633301C37.88 0.633301 41.7331 3.05141 41.7331 6.02866C41.7331 9.0059 37.88 11.424 33.135 11.424C28.39 11.424 24.5369 9.00674 24.5369 6.02866C24.5369 3.05057 28.3891 0.633301 33.135 0.633301Z" stroke="#5D5FEF" strokeWidth="1.5" strokeMiterlimit="1.5" strokeLinecap="square"/>

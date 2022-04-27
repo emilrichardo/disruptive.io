@@ -5,6 +5,7 @@ import Head from "next/head";
 import AnimationPage from "../components/AnimationPage";
 import PointScored from "../components/PointScored";
 import { TokenProvider } from "../context/tokenContext";
+import ApexChart from "../components/apexchart";
 
 
 export  async function getStaticProps({ locale }){
@@ -14,6 +15,46 @@ export  async function getStaticProps({ locale }){
       }
     }
   }
+
+  const feesEA = [
+    {    "number":25,    "title":"Operations",    "color":"#73BCFF",    },
+    {    "number":25,    "title":"Development",    "color":"#A5FFFF",    },
+    {    "number":10,    "title":"Founders",    "color":"#F3CB8F",    },
+    {    "number":10,    "title":"Investors",    "color":"#BEB8FF",    },
+    {    "number":10,    "title":"Staking",    "color":"#C1FFAB",    },
+    {    "number":10,    "title":"Treasury",    "color":"#fff",    },
+    {    "number":10,    "title":"Burn",    "color":"#FFA1CE",    }
+
+  ]
+
+
+  const series =  [25, 25, 10, 10, 10,10,10]
+  const options =  {
+      chart: {
+        type: 'donut',
+        width: '100%'
+      },
+      plotOptions: {
+        pie: {
+          donut: {
+            size: '90%',
+          }
+        },
+
+      },
+     stroke:{
+        width:8,
+        colors: ['#161920']
+     },
+     labels: ['Operations',"Development","Founders","Investors","Staking","Treasury","Burn"],
+
+      legend:'false',
+      colors:["#73BCFF","#A5FFFF","#F3CB8F","#BEB8FF","#C1FFAB","#fff","#FFA1CE"],
+
+
+    }
+
+
 
 export default function Tokenomics({locale}) {
 
@@ -249,53 +290,29 @@ export default function Tokenomics({locale}) {
                 </div>
 
                 <div className=" text-center pt-24 pb-24">
-                    <div className=" w-[300px] h-[300px] lg:w-[500px] lg:h-[500px]  inline-block bg-dark-dark shadow-2xl shadow-[#770DFF] rounded-full"
+                    <div className=" w-[300px] h-[300px] lg:w-[500px] lg:h-[500px]  inline-flex justify-center items-center bg-dark-dark shadow-2xl shadow-[#770DFF] rounded-full"
                     style={{boxShadow:" 0 0 150px 5px #770DFF"}}
                     >
+                        <div>
+                         <ApexChart series={series} options={options} type={options.chart.type} height={500} width={500} />
+                        </div>
                     </div>
                 </div>
 
                 <div className="grid grid-cols-3 lg:grid-cols-7 gap-6 mx-auto max-w-7xl ">
-                    <CardNumbers
-                    number="25"
-                    title="Operations"
-                    color={"#73BCFF"}
-                    />
-                    <CardNumbers
-                    number="25"
-                    title="Development"
-                    color={"#A5FFFF"}
-                    />
-                    <CardNumbers
-                    number="10"
-                    title="Founders"
-                    color={"#F3CB8F"}
-                    />
-                    <CardNumbers
-                    number="10"
-                    title="Investors"
-                    color={"#BEB8FF"}
-                    />
-                    <CardNumbers
-                    number="10"
-                    title="Staking"
-                    color={"#C1FFAB"}
-                    />
-                    <CardNumbers
-                    number="10"
-                    title="Treasury"
-                    color={"#fff"}
-                    />
-                    <CardNumbers
-                    number="10"
-                    title="Burn"
-                    color={"#FFA1CE"}
-                    />
+                    {feesEA.map((feesItem) =>(
+                         <CardNumbers
+                         number={feesItem.number}
+                         title={feesItem.title}
+                         color={feesItem.color}
+                         />
+                    )) }
+
                 </div>
 
              </MainContent>
          </section>
-         <section className="bg-galaxy bg-contain bg-no-repeat bg-top">
+         <section className="bg-galaxy bg-cover bg-no-repeat bg-top">
              <div className="text-center  max-w-3xl mx-auto">
                 <Image
                 className=" inline-block"
