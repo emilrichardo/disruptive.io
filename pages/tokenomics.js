@@ -265,9 +265,9 @@ export default function Tokenomics({locale}) {
 
 
 
-             <div className="text-center  max-w-3xl mx-auto">
+             <div className="text-center  max-w-3xl mx-auto  -mb-2">
                 <Image
-                className=" inline-block "
+                className=" inline-block"
                 src="/planeta_arriba.png"
                 width={797}
                 height={130}
@@ -294,7 +294,7 @@ export default function Tokenomics({locale}) {
                 </div>
 
                 <div className=" text-center pt-24 pb-24">
-                    <div className="relative w-[300px] h-[300px] lg:w-[500px] lg:h-[500px]  inline-flex justify-center items-center "
+                    <div className="relative w-[300px] h-[300px] lg:w-[500px] lg:h-[500px]  inline-flex justify-center items-center scale-75 "
 
                     >
                         <div className="-ml-8 -mt-20 z-10 relative">
