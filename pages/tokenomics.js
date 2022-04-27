@@ -284,7 +284,7 @@ export default function Tokenomics({locale}) {
 
         </MainContent>
 
-        <section className="bg-dark-black bg-cover bg-center py-[10vh] lg:py-18 bg-star bg-no-repeat border-t border-t-light border-opacity-10">
+        <section className=" bg-dark bg-cover bg-center py-[10vh] lg:py-18 bg-star bg-no-repeat border-t border-t-light   border-b border-b-light border-opacity-10">
             <MainContent className="pb-24">
 
                 <h3 className=" text-2xl lg:text-5xl text-center mb-12">Fees Economic Approach</h3>
@@ -297,10 +297,10 @@ export default function Tokenomics({locale}) {
                     <div className="relative w-[300px] h-[300px] lg:w-[500px] lg:h-[500px]  inline-flex justify-center items-center "
 
                     >
-                        <div className="-ml-8 -mt-20">
+                        <div className="-ml-8 -mt-20 z-10 relative">
                          <ApexChart series={series} options={options} type={options.chart.type} height={500} width={500} />
                         </div>
-                        <div className="-ml-4 -mt-10 absolute w-full h-full flex justify-center items-center top-0 left-0">
+                        <div className="-ml-4 -mt-10 z-0 absolute w-full h-full flex justify-center items-center top-0 left-0">
                             <Logo className="w-24"/>
                         </div>
                     </div>
