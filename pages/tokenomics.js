@@ -6,7 +6,7 @@ import AnimationPage from "../components/AnimationPage";
 import PointScored from "../components/PointScored";
 import { TokenProvider } from "../context/tokenContext";
 import ApexChart from "../components/apexchart";
-
+import Logo from "../components/Logo"
 
 export  async function getStaticProps({ locale }){
     return{
@@ -47,7 +47,7 @@ export  async function getStaticProps({ locale }){
         enabled: false
       },
      stroke:{
-        width:8,
+        width:2,
         colors: ['#161920']
      },
      labels: ['Operations',"Development","Founders","Investors","Staking","Treasury","Burn"],
@@ -269,8 +269,8 @@ export default function Tokenomics({locale}) {
                 <Image
                 className=" inline-block "
                 src="/planeta_arriba.png"
-                width={911}
-                height={294}
+                width={797}
+                height={130}
                 quality={100}
                 />
 
@@ -284,7 +284,7 @@ export default function Tokenomics({locale}) {
 
         </MainContent>
 
-        <section className="bg-dark-black bg-contain py-[10vh] lg:py-14 bg-perspetiva bg-no-repeat bg-bottom">
+        <section className="bg-dark-black bg-cover bg-center py-[10vh] lg:py-18 bg-star bg-no-repeat border-t border-t-light border-opacity-10">
             <MainContent className="pb-24">
 
                 <h3 className=" text-2xl lg:text-5xl text-center mb-12">Fees Economic Approach</h3>
@@ -294,16 +294,21 @@ export default function Tokenomics({locale}) {
                 </div>
 
                 <div className=" text-center pt-24 pb-24">
-                    <div className=" w-[300px] h-[300px] lg:w-[500px] lg:h-[500px]  inline-flex justify-center items-center bg-dark-dark shadow-2xl shadow-[#770DFF] rounded-full"
-                    style={{boxShadow:" 0 0 150px 5px #770DFF"}}
+                    <div className="relative w-[300px] h-[300px] lg:w-[500px] lg:h-[500px]  inline-flex justify-center items-center "
+
                     >
-                        <div>
+                        <div className="-ml-8 -mt-20">
                          <ApexChart series={series} options={options} type={options.chart.type} height={500} width={500} />
+                        </div>
+                        <div className="-ml-4 -mt-10 absolute w-full h-full flex justify-center items-center top-0 left-0">
+                            <Logo className="w-24"/>
                         </div>
                     </div>
                 </div>
 
                 <div className="grid grid-cols-3 lg:grid-cols-7 gap-6 mx-auto max-w-7xl ">
+
+
                     {feesEA.map((feesItem,i) =>(
                          <CardNumbers
                          number={feesItem.number}
@@ -317,7 +322,7 @@ export default function Tokenomics({locale}) {
 
              </MainContent>
          </section>
-         <section className="bg-galaxy bg-cover bg-no-repeat bg-top">
+         <section className="bg-cover bg-no-repeat bg-top">
              <div className="text-center  max-w-3xl mx-auto">
                 <Image
                 className=" inline-block"
@@ -352,8 +357,8 @@ const CardNumbers = ({number,title,color})=>{
 
     return(
 
-            <div className=" flex flex-col items-center bg-dark-light shadow-md  shadow-dark-dark rounded-xl px-10 py-4 text-center">
-                <h5 className={` ${textColor} text-2xl lg:text-4xl font-body font-semibold`} style={{color: color}}>{number}%</h5>
+            <div className=" flex flex-col items-center  px-10 py-4 text-center">
+                <h5 className={` ${textColor} text-2xl lg:text-4xl mb-3 font-semibold`} style={{color: color}}>{number}%</h5>
                 <p className=" font-thin">{title}</p>
             </div>
 
