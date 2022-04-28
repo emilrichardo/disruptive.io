@@ -118,8 +118,8 @@ export default function PointScored({locale}) {
                             <p className=" text-gray">Total Supply</p>
                         </div>
                         <div className=" border-b border-b-light-light w-14 mx-auto mt-8 lg:hidden"></div>
-                        <div className="mt-8 lg:mt-0 text-left flex pl-8 items-center">
-                            <svg className="   mr-4 inline-block" width="54" height="51" viewBox="0 0 54 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <div className="mt-8 lg:mt-0 text-left flex lg:pl-8 items-center">
+                            <svg className="hidden   mr-4 lg:inline-block" width="54" height="51" viewBox="0 0 54 51" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16.6719 6.51114C16.277 6.73576 15.8244 6.83823 15.3712 6.80559C14.9181 6.77295 14.4848 6.60666 14.1262 6.32775C13.7676 6.04884 13.4998 5.66985 13.3566 5.23871C13.2134 4.80757 13.2013 4.34364 13.3218 3.90561C13.4422 3.46758 13.6899 3.07513 14.0335 2.77788C14.3771 2.48063 14.8011 2.29195 15.2519 2.2357C15.7027 2.17944 16.16 2.25814 16.5661 2.46185C16.9722 2.66555 17.3087 2.9851 17.5331 3.38009C17.834 3.90954 17.9123 4.53679 17.7508 5.12393C17.5892 5.71108 17.2012 6.21005 16.6719 6.51114Z" stroke="#5D5FEF" strokeWidth="2" strokeMiterlimit="10"/>
                                 <path d="M35.044 2.82489C29.35 0.776048 23.0891 0.974606 17.5364 3.38013" stroke="#5D5FEF" strokeWidth="2"/>
                                 <path d="M5.59345 24.8337C5.59014 25.288 5.45222 25.731 5.19711 26.1069C4.942 26.4827 4.58117 26.7745 4.16025 26.9453C3.73933 27.116 3.27721 27.1582 2.83235 27.0663C2.38748 26.9745 1.97984 26.7528 1.66097 26.4293C1.34211 26.1057 1.12634 25.6949 1.04095 25.2488C0.955556 24.8026 1.00438 24.3412 1.18125 23.9228C1.35811 23.5043 1.65508 23.1478 2.03459 22.8982C2.4141 22.6485 2.85911 22.517 3.31335 22.5203C3.61496 22.5225 3.91319 22.5841 4.19102 22.7015C4.46884 22.8189 4.72081 22.99 4.93254 23.2048C5.14426 23.4196 5.31161 23.674 5.42501 23.9535C5.53841 24.233 5.59564 24.5321 5.59345 24.8337Z" stroke="#5D5FEF" strokeWidth="2" strokeMiterlimit="10"/>
@@ -140,7 +140,7 @@ export default function PointScored({locale}) {
                                 <path d="M35.0579 31.3249C35.5276 31.3803 36.0002 31.4081 36.4732 31.4081C38.4017 31.425 40.3014 30.9396 41.9854 29.9996C41.7058 26.7704 39.3442 24.2451 36.4732 24.2451C35.6326 24.2613 34.808 24.4783 34.0682 24.8778C33.3284 25.2773 32.6948 25.8478 32.2202 26.5419" stroke="#5D5FEF" strokeWidth="2"/>
                             </svg>
 
-                            <div>
+                            <div className="mx-auto text-center lg:text-left">
                                 <h5 className=" font-title_bold text-lg">{locale == 'en' ? "Community": "Comunidad"}</h5>
                                 <h4 className=" font-title_bold text-2xl">{community}</h4>
                             </div>
