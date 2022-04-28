@@ -24,7 +24,7 @@ import { useRouter } from 'next/router';
                 <select
                         onChange={changeLanguage}
                         defaultValue={locale}
-                        className=" ring-0 outline-none  w-full h-full appearance-none bg-dark-light bg-opacity-0 absolute left-0 top-0 px-20"
+                        className=" ring-0 outline-none  w-full h-full appearance-none bg-dark-light bg-opacity-0 absolute left-0 top-0 pl-20"
 
                     >
                     <option className=" appearance-none text-black bg-primary-light" value="en"> {locale == 'en' ?  "English" : "Inglés"} </option>
