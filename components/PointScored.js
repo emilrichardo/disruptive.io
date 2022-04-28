@@ -109,15 +109,16 @@ export default function PointScored({locale}) {
 
 
                  <MainContent className="min-h-0">
-                    <h3 className="text-center text-2xl lg:text-5xl">{locale == 'en' ? "Real time Token Overview": "Vista previa en tiempo real de DISR Tokens"}</h3>
+                    <h3 className="text-center text-3xl lg:text-5xl">{locale == 'en' ? "Real time Token Overview": "Vista previa en tiempo real de DISR Tokens"}</h3>
 
 
                     <div className="lg:inline-flex  mx-auto my-4">
-                        <div className=" text-right border-r border-r-light pr-7">
-                            <h4 className=" text-4xl text-primary font-title_bold">99,000,000</h4>
+                        <div className=" text-center lg:text-right lg:border-r lg:border-r-light lg:pr-7">
+                            <h4 className=" text-4xl text-primary font-title_bold">{totalSupply}</h4>
                             <p className=" text-gray">Total Supply</p>
                         </div>
-                        <div className=" text-left flex pl-8 items-center">
+                        <div className=" border-b border-b-light-light w-14 mx-auto mt-8 lg:hidden"></div>
+                        <div className="mt-8 lg:mt-0 text-left flex pl-8 items-center">
                             <svg className="   mr-4 inline-block" width="54" height="51" viewBox="0 0 54 51" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16.6719 6.51114C16.277 6.73576 15.8244 6.83823 15.3712 6.80559C14.9181 6.77295 14.4848 6.60666 14.1262 6.32775C13.7676 6.04884 13.4998 5.66985 13.3566 5.23871C13.2134 4.80757 13.2013 4.34364 13.3218 3.90561C13.4422 3.46758 13.6899 3.07513 14.0335 2.77788C14.3771 2.48063 14.8011 2.29195 15.2519 2.2357C15.7027 2.17944 16.16 2.25814 16.5661 2.46185C16.9722 2.66555 17.3087 2.9851 17.5331 3.38009C17.834 3.90954 17.9123 4.53679 17.7508 5.12393C17.5892 5.71108 17.2012 6.21005 16.6719 6.51114Z" stroke="#5D5FEF" strokeWidth="2" strokeMiterlimit="10"/>
                                 <path d="M35.044 2.82489C29.35 0.776048 23.0891 0.974606 17.5364 3.38013" stroke="#5D5FEF" strokeWidth="2"/>
@@ -148,7 +149,7 @@ export default function PointScored({locale}) {
 
                     </div>
 
-                    <div className=" text-left mx-auto max-w-md">
+                    <div className=" text-center lg:text-left mx-auto max-w-md">
                       <CopyClipboard adress="0xd70a9d1c9fdd3d8dd2fb672bb399f7bca61666bd"/>
 
                     </div>
