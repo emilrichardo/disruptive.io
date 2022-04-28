@@ -10,8 +10,8 @@ export default
                  {"title":"Exchange Enlisting" , "accomplished": "true", "date": "04/24/2021"},
                  {"title":"Protocol Concept" , "accomplished": "true", "date": "05/01/2021"},
                  {"title":"Keyed Entry to Exit Encryption and Decryption (alpha)" , "accomplished": "true", "date": "06/24/2021"},
-                 {"title":"Crypto Processing Launch (Alfa)" , "accomplished": "true", "date": "08/23/2021"},
-                 {"title":"Trading Bots (Alfa)" , "accomplished": "true", "date": "30/12/2021"},
+                 {"title":"Crypto Processing Launch (alpha)" , "accomplished": "true", "date": "08/23/2021"},
+                 {"title":"Trading Bots (alpha)" , "accomplished": "true", "date": "30/12/2021"},
 
             ]},
             {"yeard" : 2022,

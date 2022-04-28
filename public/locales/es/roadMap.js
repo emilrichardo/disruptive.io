@@ -9,9 +9,9 @@ export default
                  {"title":"Lanzamiento del Token" , "accomplished": "true", "date": "04/23/2021"},
                  {"title":"Listado del Exchange" , "accomplished": "true", "date": "04/24/2021"},
                  {"title":"Concepto de Protocolo" , "accomplished": "true", "date": "05/01/2021"},
-                 {"title":"Cifrado y descifrado de entrada y salida con clave (Alfa)" , "accomplished": "true", "date": "06/24/2021"},
-                 {"title":"Lanzamiento de Crypto-proccessing (Alfa) " , "accomplished": "true", "date": "08/23/2021"},
-                 {"title":"Bots de trading  (Alfa)" , "accomplished": "true", "date": "30/12/2021"},
+                 {"title":"Cifrado y descifrado de entrada y salida con clave (alpha)" , "accomplished": "true", "date": "06/24/2021"},
+                 {"title":"Lanzamiento de Crypto-proccessing (alpha) " , "accomplished": "true", "date": "08/23/2021"},
+                 {"title":"Bots de trading  (alpha)" , "accomplished": "true", "date": "30/12/2021"},
 
             ]},
             {"yeard" : 2022,
