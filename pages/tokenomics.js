@@ -49,7 +49,7 @@ export  async function getStaticProps({ locale }){
         enabled: false
       },
       tooltip: {
-
+        fillSeriesColor: false,
       },
      stroke:{
         width:2,
