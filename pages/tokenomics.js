@@ -116,7 +116,7 @@ export default function Tokenomics({locale}) {
 
 
 
-             <div   className="py-16 grid grid-cols-2  gap-y-8 lg:grid-cols-4 relative">
+             <div   className="py-16 grid grid-cols-1  gap-y-8 lg:grid-cols-4 relative">
                  <div className="text-center">
                     <svg className=" inline-block" width="60" height="66" viewBox="0 0 60 66" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clipPath="url(#clip0_381_470)">
@@ -293,18 +293,18 @@ export default function Tokenomics({locale}) {
             <MainContent className="pb-24 !px-0">
 
                 <h3 className=" text-2xl lg:text-5xl text-center mb-12">Fees Economic Approach</h3>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 max-w-6xl mx-auto text-gray opacity-70 items-center justify-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 max-w-6xl mx-auto text-gray opacity-70 items-center justify-center px-8 lg:px-0">
                     <p>DISR Protocol understands the basic economy values of scarcity/offer/demand and rewards every user who helps the internal economy grow by creating a highly incentivizing distribution of fees collected by the technology partners.</p>
                     <p>Every fee collected from Payment Processing, Bot Server Requests, Metaverse Transactions and Traders Gas Fees, will be part of the same distribution rules</p>
                 </div>
 
                 <div className="bg-star bg-no-repeat bg-cover bg-center">
                     <div className=" text-center pt-24 pb-24">
-                        <div className="relative w-[300px] h-[300px] lg:w-[500px] lg:h-[500px]  inline-flex justify-center items-center scale-75"
+                        <div className="relative w-[300px] h-[300px] lg:w-[500px] lg:h-[500px]  inline-flex justify-center items-center scale-50 lg:scale-75 mt-24 lg:mt-0"
 
                         >
                             <div className="-ml-10 -mt-6 z-10 relative">
-                            <ApexChart series={series} options={options} type={options.chart.type} height={500} width={500} />
+                                <ApexChart series={series} options={options} type={options.chart.type} height={500} width={500} />
                             </div>
                             <div className="-ml-4 -mt-5 z-0 absolute w-full h-full flex justify-center items-center top-0 left-0">
                                 <Logo className="w-24"/>

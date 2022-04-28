@@ -166,7 +166,7 @@ export default function PointScored({locale}) {
 
 
                     <div>
-                        <ul className="grid grid-cols-2 lg:grid-cols-4 text-center">
+                        <ul className="grid grid-cols-1 lg:grid-cols-4 text-center">
                             <li className="flex flex-col items-center  mx-auto   my-8 max-w-[140px]">
                                 <svg className=" scale-90" width="61" height="78" viewBox="0 0 61 78" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clipPath="url(#clip0_382_566)">
