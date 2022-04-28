@@ -10,8 +10,8 @@ export default
                  {"title":"Listado del Exchange" , "accomplished": "true", "date": "04/24/2021"},
                  {"title":"Concepto de Protocolo" , "accomplished": "true", "date": "05/01/2021"},
                  {"title":"Cifrado y descifrado de entrada y salida con clave (Alfa)" , "accomplished": "true", "date": "06/24/2021"},
-                 {"title":"Lanzamiento de Crypto-proccessing " , "accomplished": "true", "date": "08/23/2021"},
-                 {"title":"Bots de trading" , "accomplished": "true", "date": "30/12/2021"},
+                 {"title":"Lanzamiento de Crypto-proccessing (Alfa) " , "accomplished": "true", "date": "08/23/2021"},
+                 {"title":"Bots de trading" , "accomplished (Alfa)": "true", "date": "30/12/2021"},
 
             ]},
             {"yeard" : 2022,
