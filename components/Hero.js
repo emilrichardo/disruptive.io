@@ -40,7 +40,7 @@ export default function Hero() {
                 <div className="flex peer flex-col lg:justify-center items-center transition-all lg:scale-50 lg:hover:scale-105 z-10 hover:z-20 lg:opacity-0 lg:hover:opacity-100" >
                         <a href="https://disruptivepayments.io/" target="_blank" className="my-4 hover:text-primary hover:scale-125 transition-all">{ locale == "en" ? "PAYMENTS" : "PAGOS"}</a>
                         <a href="https://www.disruptivebots.io"  target="_blank" className="my-4 hover:text-primary hover:scale-125 transition-all">{ locale == "en" ? "TRADING BOTS" : "   BOTS DE TRADING"}</a>
-                        <Link href="/comming"><a className="my-4 hover:text-primary hover:scale-125 transition-all">{ locale == "en" ? "METAVERSE" : "METAVERSO"}</a></Link>
+                        <a href="http://www.planetd.io/"  target="_blank" className="my-4 hover:text-primary hover:scale-125 transition-all">{ locale == "en" ? "METAVERSE" : "METAVERSO"}</a>
                         <a href={`https://disruptivex${ locale == "en" ? ".io" : ".mx"}`} target="_blank" className="my-4 hover:text-primary hover:scale-125 transition-all">EXCHANGE</a>
                         <a href="https://tradetizen.com/"  target="_blank" className="my-4 hover:text-primary hover:scale-125 transition-all">{ locale == "en" ? "TRADERS CITY" : "CIUDAD DE TRADERS"}</a>
                 </div>
