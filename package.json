@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fullpage/react-fullpage": "^0.1.23",
     "@metamask/detect-provider": "^1.2.0",
     "apexcharts": "^3.35.0",
     "axios": "^0.26.1",

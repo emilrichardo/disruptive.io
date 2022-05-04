@@ -23,10 +23,10 @@ export default function CopyClipboard({adress}) {
 
 
     return(
-        <div className=" bg-dark-light cursor-pointer hover:scale-105 transition-all relative rounded-lg px-6 py-3 text-light-light inline-flex" onClick={clip}>
+        <div className=" bg-dark-light cursor-pointer hover:scale-105 transition-all relative rounded-lg px-2 lg:px-6 py-1 lg:py-3 text-light-light inline-flex" onClick={clip}>
             <input
             disabled = {true}
-            className=" max-w-[120px] overflow-hidden text-ellipsis  bg-none bg-dark-light text-gray text-md"
+            className=" max-w-[80px] lg:max-w-[120px] overflow-hidden text-ellipsis  bg-none bg-dark-light text-gray text-md"
             defaultValue={adress}
             name="copy"
 

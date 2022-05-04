@@ -42,6 +42,7 @@ module.exports = {
         post: "url('/bg-post.jpg')",
         perspetiva: "url('/bg-perspectiva.jpg')",
         galaxy: "url('/bg-galaxy.jpg')",
+        ring: "url('/bg-ring.jpg')",
       }
     },
   },

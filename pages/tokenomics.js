@@ -3,7 +3,7 @@ import MainContent from "../components/MainContent";
 import Image from "next/image";
 import Head from "next/head";
 import AnimationPage from "../components/AnimationPage";
-import PointScored from "../components/PointScored";
+import PointScored from "../components/tokenomics/PointScored";
 import { TokenProvider } from "../context/tokenContext";
 import ApexChart from "../components/apexchart";
 import Logo from "../components/Logo"
@@ -73,46 +73,48 @@ export default function Tokenomics({locale}) {
         <Head>
             <title>Tokenomics {" - " + process.env.projectName}</title>
         </Head>
-        <MainContent>
-        <div className=" flex flex-col lg:flex-row items-center justify-between lg:py-[15vh]">
-            <div className="lg:w-1/2 lg:order-2 relative">
-                <div className="relative left-20 top-16">
-                    <Image
-                    src="/iso-3d.png"
-                    width={534}
-                    height={523}
-                    quality={100}
-                    />
+        <div className=" bg-dark-dark">
+            <div className=" bg-ring bg-no-repeat bg-right-bottom h-screen flex">
+            <MainContent className="w-full">
+                <div className=" flex flex-col lg:flex-row items-center justify-between lg:py-[15vh] h-full">
+
+                    <div className="lg:w-1/2 lg:order-2 relative">
+
+
+                    </div>
+                    <div className="py-8">
+                        <h1 className=" text-3xl lg:text-6xl font-light">{locale =='en' ? "Tokenomics" : " Economía"}</h1>
+                        <div className=" h-[7px] w-16 bg-primary rounded-full my-8"></div>
+                        {locale == 'en'
+                        ?
+                        <>
+                            <p className=" max-w-xl leading-8 tracking-wide   text-2xl text-gray font-thin mb-8">
+                            Combining the crypto market with the traditional market has been our biggest achievement.  DISR Protocol aims to benefit clients, holders and users with the economic plan it has developed.
+                        </p>
+                            <a href="#utility">
+                                <Button variant="primary" size="sm">READ MORE</Button>
+                            </a>
+                        </>
+                        :
+                        <>
+                            <p className=" max-w-lg leading-8 tracking-wide   text-2xl text-gray font-light mb-8">Combinar el mercado tradicional con el mercado cripto ha sido nuestro mayor logro. Protocolo <span className="text-primary font-medium">DISR</span> tiene la meta de beneficiar clientes, portadores y usuarios a través del plan estratégico que ha sido desarrollado.</p>
+                            <Button variant="primary" size="sm">Leer más</Button>
+                        </>
+                        }
+
+                    </div>
+
+
                 </div>
-
-            </div>
-            <div className="py-8">
-                <h1 className=" text-3xl lg:text-6xl font-light">{locale =='en' ? "Tokenomics" : " Economía"}</h1>
-                <div className=" h-[7px] w-16 bg-primary rounded-full my-8"></div>
-                {locale == 'en'
-                ?
-                <>
-                    <p className=" max-w-xl leading-8 tracking-wide   text-2xl text-gray font-thin mb-8">
-                    Combining the crypto market with the traditional market has been our biggest achievement.  DISR Protocol aims to benefit clients, holders and users with the economic plan it has developed.
-                </p>
-                    <a href="#utility">
-                        <Button variant="primary" size="sm">READ MORE</Button>
-                    </a>
-                </>
-                :
-                <>
-                    <p className=" max-w-lg leading-8 tracking-wide   text-2xl text-gray font-light mb-8">Combinar el mercado tradicional con el mercado cripto ha sido nuestro mayor logro. Protocolo <span className="text-primary font-medium">DISR</span> tiene la meta de beneficiar clientes, portadores y usuarios a través del plan estratégico que ha sido desarrollado.</p>
-                    <Button variant="primary" size="sm">Leer más</Button>
-                </>
-                }
-
+            </MainContent>
             </div>
 
 
-         </div>
+        <MainContent>
 
-         <section id="utility">
-             <h2 className="text-center font-title_bold text-2xl lg:text-5xl">DISR Utility</h2>
+
+         <section id="utility" className=" mt-[10vh]">
+             <h2 className="text-center font-title_bold text-2xl lg:text-5xl">{locale == 'en' ? "DISR Utility" : "DISR Utilidades"}</h2>
 
 
 
@@ -144,7 +146,7 @@ export default function Tokenomics({locale}) {
                         </clipPath>
                         </defs>
                     </svg>
-                     <h3 className=" text-lg lg:text-2xl font-title_bold mt-8">Crypto processing</h3>
+                     <h3 className=" text-lg lg:text-2xl font-title_bold mt-8">{locale == 'en' ? "Crypto processing" : "Procesamiento Crypto"}</h3>
                  </div>
                  <div className="text-center">
                  <svg className=" inline-block mb-5" width="122" height="50" viewBox="0 0 122 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -189,7 +191,7 @@ export default function Tokenomics({locale}) {
                     </defs>
                     </svg>
 
-                     <h3 className=" text-lg lg:text-2xl font-title_bold mt-8">Bot Server Requests</h3>
+                     <h3 className=" text-lg lg:text-2xl font-title_bold mt-8">{locale == 'en' ? "Bot Server Requests" : "Peticiones del servidor de bots"}</h3>
                  </div>
                  <div className="text-center">
                         <svg className=" inline-block" width="96" height="74" viewBox="0 0 96 74" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -211,7 +213,7 @@ export default function Tokenomics({locale}) {
                         </svg>
 
 
-                     <h3 className=" text-lg lg:text-2xl font-title_bold mt-8">Metaverse Transactions</h3>
+                     <h3 className=" text-lg lg:text-2xl font-title_bold mt-8">{locale == 'en' ? "Metaverse Transactions" : "Transacciones en el metaverso"}</h3>
                  </div>
                  <div className="text-center">
                  <svg className=" inline-block" width="78" height="69" viewBox="0 0 78 69" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -257,7 +259,7 @@ export default function Tokenomics({locale}) {
                     </defs>
                     </svg>
 
-                     <h3 className=" text-lg lg:text-2xl font-title_bold mt-8">Traders gas fee</h3>
+                     <h3 className=" text-lg lg:text-2xl font-title_bold mt-8">{locale == 'en' ? "Traders gas fee" : "Tarifa de gas de los traders"}</h3>
                  </div>
 
 
@@ -270,7 +272,7 @@ export default function Tokenomics({locale}) {
 
 
 
-             <div className="text-center  max-w-3xl mx-auto  -mb-2">
+             <div className="text-center mt-[20vh]  max-w-3xl mx-auto  -mb-2">
                 <Image
                 className=" inline-block"
                 src="/planeta_arriba.png"
@@ -288,14 +290,26 @@ export default function Tokenomics({locale}) {
 
 
         </MainContent>
+        </div>
 
         <section className=" bg-dark   py-[10vh] lg:py-18 border-t border-t-light   border-b border-b-light border-opacity-10">
             <MainContent className="pb-24 !px-0">
 
-                <h3 className=" text-2xl lg:text-5xl text-center mb-12">Fees Economic Approach</h3>
+                <h3 className=" text-2xl lg:text-5xl text-center mb-12">{locale == 'en' ? "Fees Economic Approach" : "Enfoque económico de las tasas"}</h3>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 max-w-6xl mx-auto text-gray opacity-70 items-center justify-center px-8 lg:px-0">
-                    <p>DISR Protocol understands the basic economy values of scarcity/offer/demand and rewards every user who helps the internal economy grow by creating a highly incentivizing distribution of fees collected by the technology partners.</p>
-                    <p>Every fee collected from Payment Processing, Bot Server Requests, Metaverse Transactions and Traders Gas Fees, will be part of the same distribution rules</p>
+
+                    <p>
+                        {locale == 'en'
+                        ? "DISR Protocol understands the basic economy values of scarcity/offer/demand and rewards every user who helps the internal economy grow by creating a highly incentivizing distribution of fees collected by the technology partners."
+                        : "El Protocolo DISR entiende los valores básicos de la economía de la escasez/oferta/demanda y recompensa para cada usuario que ayuda a que la economía interna crezca creando una distribución que incentiva las tasas recaudadas por los socios tecnológicos."
+                        }
+                    </p>
+
+                    <p>
+                    {locale == 'en'
+                    ? "Every fee collected from Payment Processing, Bot Server Requests, Metaverse Transactions and Traders Gas Fees, will be part of the same distribution rules"
+                    : "Todas las comisiones recaudadas por el Procesamiento de Pagos, las Solicitudes del Servidor de Bot, las Transacciones del Metaverso y las Tasas de Gas de los traders, formarán parte de las mismas reglas de distribución."}
+                    </p>
                 </div>
 
                 <div className="bg-star bg-no-repeat bg-cover bg-center">
