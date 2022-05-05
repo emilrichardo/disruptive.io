@@ -158,7 +158,7 @@ export default function PointScored({locale}) {
                  </MainContent>
 
              </div>
-             <div>
+             <div className=" absolute w-full left-0 bottom-0">
              <MainContent className="!py-0">
                  <div className="">
                      <div className="hidden lg:flex justify-center text-center mb-0 scale-75">
@@ -166,7 +166,7 @@ export default function PointScored({locale}) {
                      </div>
 
 
-                    <div>
+                    <div >
                         <ul className="grid grid-cols-2 lg:grid-cols-4 text-center">
                             <li className="flex flex-col items-center  mx-auto   lg:my-8 max-w-[140px]">
                                 <svg   className="scale-50 lg:scale-100"  width="61" height="78" viewBox="0 0 61 78" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -8,7 +8,7 @@ export default function TokenOverview() {
     const router = useRouter();
     const { locale } = router;
     return(
-        <section className="bg-cover bg-no-repeat bg-top">
+        <section className="bg-cover bg-no-repeat bg-top h-screen">
              <div className="text-center  max-w-3xl mx-auto">
                 <Image
                 className=" inline-block"

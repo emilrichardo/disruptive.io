@@ -55,7 +55,7 @@ export default function Fea(params) {
 
 
     return(
-        <section className=" bg-dark h-screen   border-t border-t-light   border-b border-b-light border-opacity-10">
+        <section className=" bg-dark h-screen   border-t border-t-light   border-b border-b-light border-opacity-10 relative">
             <MainContent className="!px-0">
 
                 <h3 className=" text-2xl lg:text-5xl text-center mt-[8vh] mb-4 lg:mb-12">{locale == 'en' ? "Fees Economic Approach" : "Enfoque económico de las tasas"}</h3>
@@ -91,21 +91,21 @@ export default function Fea(params) {
                 </div>
 
 
-
-                <div className="grid grid-cols-4 px-4 lg:grid-cols-7 lg:gap-6 mx-auto max-w-7xl ">
-
-
-                    {feesEA.map((feesItem,i) =>(
-                         <CardNumbers
-                         number={feesItem.number}
-                         title={feesItem.title}
-                         color={feesItem.color}
-                         key={i+1}
-                         icon={<Image width={70} height={70}   src={feesItem.icon} />}
-                         />
-                    )) }
+                <div className='absolute  bottom-8 w-full left-0 right-0'>
+                  <div className="grid grid-cols-4 px-4 lg:grid-cols-7 lg:gap-6 mx-auto max-w-7xl  ">
+                      {feesEA.map((feesItem,i) =>(
+                          <CardNumbers
+                          number={feesItem.number}
+                          title={feesItem.title}
+                          color={feesItem.color}
+                          key={i+1}
+                          icon={<Image width={70} height={70}   src={feesItem.icon} />}
+                          />
+                      )) }
+                  </div>
 
                 </div>
+
 
              </MainContent>
          </section>

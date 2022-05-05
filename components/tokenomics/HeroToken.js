@@ -8,7 +8,7 @@ export default function HeroToken( ) {
     return(
         <div className=" bg-dark-dark">
             <div className=" bg-ring bg-no-repeat bg-top lg:bg-right-bottom bg-contain h-screen flex">
-            <MainContent className="w-full">
+            <MainContent className="w-full pt-0">
                 <div className=" flex flex-col lg:flex-row items-center justify-between lg:py-[15vh] h-full">
 
                     <div className="lg:w-1/2 lg:order-2 relative">

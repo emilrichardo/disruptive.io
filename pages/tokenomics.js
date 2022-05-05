@@ -22,24 +22,30 @@ export default function FullPage() {
 
 
       return (
-        <ReactFullpage.Wrapper>
+        <div  className=' bg-dark-dark'>
+          <ReactFullpage.Wrapper>
 
-          <SectionWrapper move={() => fullpageApi.moveSectionDown()} >
+            <SectionWrapper move={() => fullpageApi.moveSectionDown()} >
 
-            <HeroToken/>
+              <HeroToken/>
 
-          </SectionWrapper>
-          <SectionWrapper move={() => fullpageApi.moveSectionDown()} >
-            <Utility/>
-          </SectionWrapper>
-          <SectionWrapper move={() => fullpageApi.moveSectionDown()} >
-            <Fea/>
-          </SectionWrapper>
-          <SectionWrapper >
-            <TokenOverview/>
-          </SectionWrapper>
+            </SectionWrapper>
+            <SectionWrapper move={() => fullpageApi.moveSectionDown()} >
+              <Utility/>
+            </SectionWrapper>
+            <SectionWrapper move={() => fullpageApi.moveSectionDown()} >
+              <Fea/>
+            </SectionWrapper>
+            <SectionWrapper >
+              <TokenOverview/>
+            </SectionWrapper>
 
-        </ReactFullpage.Wrapper>
+          </ReactFullpage.Wrapper>
+
+        </div>
+
+
+
       );
     }}
   />
