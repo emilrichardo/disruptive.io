@@ -11,7 +11,7 @@ export default function MenuOverlay({menuState,MenuToggleSwitch}) {
 
             <SlidePanel   state={menuState} toggleSwitch={MenuToggleSwitch}>
                 <div className="h-full flex-col flex justify-between">
-                    <NavMain MenuToggleSwitch={MenuToggleSwitch} className="mt-36 " itemClassName="text-xl"/>
+                    <NavMain MenuToggleSwitch={MenuToggleSwitch} className="mt-36 " itemClassName="text-xl my-2"/>
                     <div className=" text-xs text-gray pb-14 text-center">
 
 
