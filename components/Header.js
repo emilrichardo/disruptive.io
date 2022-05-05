@@ -58,7 +58,7 @@ export default function Header({className}) {
 
 
     return(
-        <header className={` ${className} ${scrolled && "bg-dark bg-opacity-80 "} transition-all  px-4 py-2 lg:py-4 fixed top-0 w-screen flex justify-between items-center z-30 `}>
+        <header className={`main-header ${className && className} ${scrolled && "bg-dark bg-opacity-80 "} transition-all  px-4 py-2 lg:py-4 fixed top-0 w-screen flex justify-between items-center z-30 `}>
            <Link href="/"><a><Logo className=" z-50 w-8 lg:ml-2"/></a></Link>
 
 

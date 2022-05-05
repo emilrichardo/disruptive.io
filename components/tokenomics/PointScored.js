@@ -154,16 +154,18 @@ export default function PointScored({locale}) {
 
                     </div>
 
+                    <div className="hidden lg:flex justify-center text-center mb-0 scale-75">
+                         <RadialBars series={series} options={options} type="radialBar" height={400} width={400}/>
+                     </div>
+
+
 
                  </MainContent>
 
              </div>
              <div className=" absolute w-full left-0 bottom-0">
              <MainContent className="!py-0">
-                 <div className="">
-                     <div className="hidden lg:flex justify-center text-center mb-0 scale-75">
-                         <RadialBars series={series} options={options} type="radialBar" height={400} width={400}/>
-                     </div>
+                 <div className="pt-24">
 
 
                     <div >

@@ -46,3 +46,7 @@
 h1,h2,h3,h4,h5,h6{
   @apply font-title;
 }
+
+.fp-viewing-1 .main-header, .fp-viewing-2 .main-header,.fp-viewing-3 .main-header{
+   @apply bg-dark bg-opacity-80 ;
+}
