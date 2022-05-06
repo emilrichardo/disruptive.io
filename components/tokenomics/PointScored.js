@@ -192,7 +192,7 @@ export default function PointScored({locale}) {
 
                                 <div>
                                     <p className="lg:mt-2 font-medium">{locale == 'en' ? "Founders": "Fundadores"}</p>
-                                    <p className="font-medium">Locked Funds</p>
+                                    <p className="font-medium">{locale == 'en' ? "Locked Funds": "Fondos bloqueados"}   </p>
                                     <h3 className="mb-4 lg:text-2xl font-title_bold">{founders}</h3>
                                     <CopyClipboard adress="0x44b0b0d24047161c1d8297b045810d762c453253"/>
 
@@ -246,7 +246,7 @@ export default function PointScored({locale}) {
 
 
                                 <div>
-                                    <p className="lg:mt-4 max-w-[124px] mx-auto inline-block font-medium">{locale == 'en' ? "Initial Investors Unlocked Funds": "Initial Investors Unlocked Funds"}</p>
+                                    <p className="lg:mt-4 max-w-[124px] mx-auto inline-block font-medium">{locale == 'en' ? "Initial Investors Unlocked Funds": "Fondos desbloqueados de inversores iniciales"}</p>
                                     <h3 className="mb-4 lg:text-2xl font-title_bold">{investors}</h3>
                                     <CopyClipboard adress="0xef147130e1f7016ecF39916fCF8eEca7E5eD0729"/>
                                 </div>
@@ -283,7 +283,7 @@ export default function PointScored({locale}) {
 
 
                                 <div>
-                                    <p className="lg:mt-4 font-medium max-w-[124px] mx-auto inline-block">{locale == 'en' ? "Circulating Supply": "Circulating Supply"}</p>
+                                    <p className="lg:mt-4 font-medium max-w-[124px] mx-auto inline-block">{locale == 'en' ? "Circulating Supply": "Suministro circulante"}</p>
                                     <h3 className="mb-4 lg:text-2xl font-title_bold">{circulation}</h3>
                                     <CopyClipboard adress="0x7ffa738850ad1867e416e65c88a264f6e425a6b3"/>
                                 </div>

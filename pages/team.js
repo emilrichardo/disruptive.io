@@ -3,16 +3,27 @@ import Button from "../components/buttons";
 import Logo from "../components/Logo";
 import MainContent from "../components/MainContent";
 
-export default function Team() {
+export  async function getStaticProps({ locale }){
+    return{
+      props:{
+        locale,
+      }
+    }
+  }
+
+export default function Team({locale}) {
     return(
         <div className=" min-h-screen bg-team bg-no-repeat bg-top">
 
             <MainContent>
                 <div className=" text-center mt-[40vh] flex flex-col items-center justify-end">
                     <div className=" max-w-4xl text-center">
-                    <h1 className=" text-2xl lg:text-6xl">Our team</h1>
+                    <h1 className=" text-2xl lg:text-6xl">{locale == "en" ? "Our team": "Nuestro equipo"}</h1>
                     <div className=" h-[7px] w-16 bg-primary rounded-full mx-auto my-8"></div>
-                    <p className=" text-xl lg:text-3xl font-light">Meet the DISR team. The community behind a secure, transparent and quality project. Because Results Matters.</p>
+                    <p className=" text-xl lg:text-3xl font-light">
+                    {locale == "en" ? "Meet the DISR team. The community behind a secure, transparent and quality project. Because Results Matters.": "Conoce al equipo DISR. La comunidad detrás de un proyecto seguro, transparente y de calidad. Porque los resultados importan."}
+
+                    </p>
 
 
 
@@ -24,7 +35,7 @@ export default function Team() {
                         <TeamCard
                         image="https://disruptivestudio.com/admin/images/local/team/daniel.jpg"
                         name="Daniel Cruz"
-                        desc="Founder"
+                        desc={locale == "en" ? "Founder": "Fundador"}
                         />
                     </div>
 
@@ -55,10 +66,13 @@ export default function Team() {
                 </div>
 
                 <div className="flex flex-col items-center justify-center py-24">
-                    <h3 className=" text-center text-xl lg:text-2xl mb-8 max-w-2xl">Disr is a project that has been achieved thanks to the teamwork with Disruptive Studio.</h3>
+                    <h3 className=" text-center text-xl lg:text-2xl mb-8 max-w-2xl">
+                    {locale == "en" ? "Disr is a project that has been achieved thanks to the teamwork with Disruptive Studio.": "Disr es un proyecto que se ha logrado gracias al trabajo en equipo con Disruptive Studio."}
+
+                    </h3>
                     <Logo className=" w-14 mb-8" />
-                    <a href="https://disruptivestudio.com/?p=team" rel="noopener noreferrer" target="_blank">
-                        <Button  size="sm" variant="primary">Disruptive full team</Button>
+                    <a href={locale == "en" ? "https://disruptivestudio.com/?p=team" : "https://disruptivestudio.com/?p=team&language=spanish"} rel="noopener noreferrer" target="_blank">
+                        <Button  size="sm" variant="primary">{locale == "en" ? "Disruptive full team": "El equipo completo de Disruptive"}</Button>
                     </a>
                 </div>
 

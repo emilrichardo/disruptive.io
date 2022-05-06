@@ -6,16 +6,24 @@ export default function Fea(params) {
     const router = useRouter();
     const { locale } = router;
 
+    const operations = locale == "en" ? "Operations" : "Operaciones";
+    const development = locale == "en" ? "Development" : "Desarrollo";
+    const founders = locale == "en" ? "Founders" : "Fundadores";
+    const investors = locale == "en" ? "Investors" : "Inversores";
+    const treasury = locale == "en" ? "Treasury" : "Tesorería";
+    const burn = locale == "en" ? "Burn" : "Quemado";
     const feesEA = [
-        {    "number":25,    "title":"Operations",    "color":"#73BCFF", "icon" : "/icon-tokenomic-01.png"   },
-        {    "number":25,    "title":"Development",    "color":"#A5FFFF","icon" : "/icon-tokenomic-02.png"    },
-        {    "number":10,    "title":"Founders",    "color":"#F3CB8F",  "icon" : "/icon-tokenomic-03.png"  },
-        {    "number":10,    "title":"Investors",    "color":"#BEB8FF", "icon" : "/icon-tokenomic-04.png"   },
+        {    "number":25,    "title":operations,    "color":"#73BCFF", "icon" : "/icon-tokenomic-01.png"   },
+        {    "number":25,    "title":development,    "color":"#A5FFFF","icon" : "/icon-tokenomic-02.png"    },
+        {    "number":10,    "title":founders,    "color":"#F3CB8F",  "icon" : "/icon-tokenomic-03.png"  },
+        {    "number":10,    "title":investors,    "color":"#BEB8FF", "icon" : "/icon-tokenomic-04.png"   },
         {    "number":10,    "title":"Staking",    "color":"#C1FFAB", "icon" : "/icon-tokenomic-05.png"   },
-        {    "number":10,    "title":"Treasury",    "color":"#fff", "icon" : "/icon-tokenomic-06.png"   },
-        {    "number":10,    "title":"Burn",    "color":"#FFA1CE",  "icon" : "/icon-tokenomic-07.png"  }
+        {    "number":10,    "title":treasury,    "color":"#fff", "icon" : "/icon-tokenomic-06.png"   },
+        {    "number":10,    "title":burn,    "color":"#FFA1CE",  "icon" : "/icon-tokenomic-07.png"  }
 
       ]
+
+      console.log(locale)
 
 
       const series =  [25, 25, 10, 10, 10,10,10]

@@ -31,7 +31,7 @@ export default function Footer({className}) {
 
             </div>
             <div className="flex flex-col lg:flex-row justify-between text-gray  px-8 lg:px-20 py-6 border-t border-dark-light text-xs text-center lg:text-left">
-                <p>Revisa nuestra <a className="text-light">información legal</a> </p>
+                <p>{locale == "en" ? "Check our" : "Revisa nuestra"}  <a className="text-light">{locale == "en" ? "legal information" : "información legal"}</a> </p>
                 <p className="mt-4 lg:mt-0">Disruptivestudio ©. 2022  {locale == 'en'? "All rights reserved" : "todos los derechos reservados."} </p>
             </div>
 

@@ -4,8 +4,17 @@ import HeroToken from './../components/tokenomics/HeroToken';
 import Utility from './../components/tokenomics/Utility';
 import Fea from './../components/tokenomics/Fea';
 import TokenOverview from './../components/tokenomics/TokenOverview';
+import Button from '../components/buttons';
+import AnimationPage from "../components/AnimationPage";
+export  async function getStaticProps({ locale }){
+  return{
+    props:{
+      locale,
+    }
+  }
+}
 
-export default function FullPage() {
+export default function FullPage({locale}) {
   return(
     <ReactFullpage
 
@@ -23,11 +32,14 @@ export default function FullPage() {
 
       return (
         <div  className=' bg-dark-dark'>
+          <AnimationPage>
           <ReactFullpage.Wrapper>
 
             <SectionWrapper move={() => fullpageApi.moveSectionDown()} >
 
-              <HeroToken/>
+              <HeroToken>
+                <Button onClick={() => fullpageApi.moveSectionDown()} variant="primary" size="sm">  {locale == 'en'  ? "READ MORE" :"LEER MÁS"}</Button>
+              </HeroToken>
 
             </SectionWrapper>
             <SectionWrapper move={() => fullpageApi.moveSectionDown()} >
@@ -41,6 +53,7 @@ export default function FullPage() {
             </SectionWrapper>
 
           </ReactFullpage.Wrapper>
+          </AnimationPage>
 
         </div>
 
@@ -58,13 +71,6 @@ export function SectionWrapper ({children,move}) {
     <div className="section relative">
      {children}
     {move && <ButtonDown move={move} />}
-
-
-
-
-
-
-
     </div>
   )
 };
