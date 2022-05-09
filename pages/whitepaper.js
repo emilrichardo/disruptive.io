@@ -60,17 +60,17 @@ export default function WhitePaper({locale,data}) {
                         <h1 className=" text-4xl xl:text-6xl">Whitepaper</h1>
                         <h4 className="text-xl mt-8 xl:text-4xl opacity-60">Marzo 2022</h4>
 
-                        <div className={`${scrolled  &&  " xl:fixed xl:max-w-[35%] top-20" } mt-24 transition-all`}>
+                        <div className={`${scrolled  &&  " xl:fixed xl:max-w-[20%] top-20" } mt-24 transition-all`}>
                             <div className={`${scrolled && "  xl:max-w-sm "} `}>
                             {whitePaperData.map((itemWp,i)=>(
                                 <div key={i + "-itemWp-"+itemWp.slug}>
                                     <Link href={"#" + itemWp.slug}>
                                         <a className="hover:text-primary transition-all  duration-700">
-                                            <h2 className=" text-lg xl:text-2xl xl:mb-8 font-title_bold"> <span className="mr-3 text-primary">{(i + 1 ) / 10}</span>{itemWp.title}</h2>
+                                            <h2 className=" text-md   2xl:text-2xl 2xl:mb-8 font-title_bold"> <span className="mr-3 text-primary">{(i + 1 ) / 10}</span>{itemWp.title}</h2>
                                         </a>
                                     </Link>
 
-                                    <ul className="text-gray text-xl pb-4 pl-4 leading-10">
+                                    <ul className="text-gray xl:text-lg pb-4 pl-4 2xl:leading-10">
                                         {itemWp.sections.map((subItem,i) =>(
                                             <Link href={"#" + subItem.slug} key={"link-" +subItem.slug}>
                                             <a className="hover:text-primary transition-all  duration-700">
