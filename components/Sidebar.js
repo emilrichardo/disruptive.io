@@ -11,7 +11,7 @@ export default function Sidebar() {
 
 
 
-            <div className=" absolute bottom-0 left-0 px-7 py-10">
+            <div className=" absolute bottom-0 left-0 ">
                 <ChangeLang size="sm"/>
             </div>
 
