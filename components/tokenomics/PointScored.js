@@ -246,7 +246,7 @@ export default function PointScored({locale}) {
 
 
                                 <div>
-                                    <p className="lg:mt-4 max-w-[124px] mx-auto inline-block font-medium">{locale == 'en' ? "Initial Investors Unlocked Funds": "Fondos desbloqueados de inversores iniciales"}</p>
+                                    <p className="lg:mt-4 max-w-[154px] mx-auto inline-block font-medium">{locale == 'en' ? "Initial Investors Unlocked Funds": "Fondos desbloqueados de inversores iniciales"}</p>
                                     <h3 className="mb-4 lg:text-2xl font-title_bold">{investors}</h3>
                                     <CopyClipboard adress="0xef147130e1f7016ecF39916fCF8eEca7E5eD0729"/>
                                 </div>
