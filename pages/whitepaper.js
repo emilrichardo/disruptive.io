@@ -27,12 +27,18 @@ export default function WhitePaper({locale,data}) {
      useEffect(() => {
        const handleScroll = () => {
          const isScrolled = window.scrollY > 200;
-         const endScrolled = window.scrollY > 2200;
+
          if (isScrolled !== scrolled ) {
            setScrolled(!scrolled);
          }
+         if(window.scrollY > 5200){
+            setScrolled(false);
+         }
+         console.log(isScrolled)
 
        };
+
+
 
 
        document.addEventListener("scroll", handleScroll, { passive: true });
