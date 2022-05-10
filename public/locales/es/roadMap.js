@@ -1,7 +1,7 @@
 export default
 {
         title : "Mapa de Ruta",
-        excerpt: "El camino al éxito se recorre paso a paso, y DISR avanza con la vanguardia. Únete y descubre todos los detalles de nuestro crecimiento, hasta que alcancemos la cima. ¡Acompáñanos en nuestra aventura! Conoce nuestro Roadmap.",
+        excerpt: "El camino al éxito se recorre paso a paso, y DISR avanza con la vanguardia. Únete y descubre todos los detalles de nuestro crecimiento, hasta que alcancemos la cima. ¡Acompáñanos en nuestra aventura! Conoce nuestro Mapa de Ruta.",
         allMilestones: [
             {"yeard" : 2021,
             "accomplished" : "true",
