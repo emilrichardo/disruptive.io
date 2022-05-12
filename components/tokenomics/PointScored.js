@@ -115,7 +115,7 @@ export default function PointScored({locale}) {
                     <div className="lg:inline-flex  mx-auto my-4">
                         <div className=" text-center lg:text-right lg:border-r lg:border-r-light lg:pr-7">
                             <h4 className=" text-xl lg:text-4xl text-primary font-title_bold">{totalSupply}</h4>
-                            <p className=" text-gray">Total Supply</p>
+                            <p className=" text-gray"> {locale == 'en' ? "Total Supply" : "Suministro total"}</p>
                         </div>
                         <div className=" border-b border-b-light-light w-14 mx-auto mt-4 lg:hidden"></div>
                         <div className="mt-4 lg:mt-0 text-left flex lg:pl-8 items-center">

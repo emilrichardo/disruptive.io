@@ -63,8 +63,8 @@ export default function WhitePaper({locale,data}) {
 
                 <div className="xl:min-h-screen bg-dark-black  w-full flex justify-end   xl:max-w-[35%]">
                     <div className=" bg-dark-black w-full xl:max-w-xl  xl:min-h-screen pt-32 pb-14 px-8 xl:px-24 ">
-                        <h1 className=" text-4xl xl:text-6xl">Whitepaper</h1>
-                        <h4 className="text-xl mt-8 xl:text-4xl opacity-60">Marzo 2022</h4>
+                        <h1 className=" text-4xl xl:text-6xl">{locale ==  "en" ? "Whitepaper": "Libro Blanco" } </h1>
+                        <h4 className="text-xl mt-8 xl:text-4xl opacity-60">{locale ==  "en" ? "March": "Marzo" } 2022</h4>
 
                         <div className={`${scrolled  &&  " xl:fixed xl:max-w-[20%] top-20" } mt-24 transition-all`}>
                             <div className={`${scrolled && "  xl:max-w-sm "} `}>
