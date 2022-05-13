@@ -31,10 +31,10 @@ export default function WhitePaper({locale,data}) {
          if (isScrolled !== scrolled ) {
            setScrolled(!scrolled);
          }
-         if(window.scrollY > 5200){
+         if(window.scrollY > 4800){
             setScrolled(false);
          }
-         console.log(isScrolled)
+
 
        };
 
@@ -62,7 +62,7 @@ export default function WhitePaper({locale,data}) {
                 </Head>
 
                 <div className="xl:min-h-screen bg-dark-black  w-full flex justify-end   xl:max-w-[35%]">
-                    <div className=" bg-dark-black w-full xl:max-w-xl  xl:min-h-screen pt-32 pb-14 px-8 xl:px-24 ">
+                    <div className=" bg-dark-black w-full xl:max-w-xl  xl:min-h-screen pt-32 pb-14 px-8 xl:px-24 transition-all duration-300">
                         <h1 className=" text-4xl xl:text-6xl">{locale ==  "en" ? "Whitepaper": "Libro Blanco" } </h1>
                         <h4 className="text-xl mt-8 xl:text-4xl opacity-60">{locale ==  "en" ? "March": "Marzo" } 2022</h4>
 
