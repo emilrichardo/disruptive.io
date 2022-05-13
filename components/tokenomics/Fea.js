@@ -23,7 +23,7 @@ export default function Fea(params) {
 
       ]
 
-      console.log(locale)
+
 
 
       const series =  [25, 25, 10, 10, 10,10,10]
@@ -63,11 +63,11 @@ export default function Fea(params) {
 
 
     return(
-        <section className=" bg-dark h-screen   border-t border-t-light   border-b border-b-light border-opacity-10 relative">
+        <section className=" bg-dark h-screen bg-star bg-no-repeat  bg-center bg-auto  border-t border-t-light   border-b border-b-light border-opacity-10 relative">
             <MainContent className="!px-0">
 
                 <h3 className=" text-2xl lg:text-5xl text-center mt-[8vh] mb-4 lg:mb-12">{locale == 'en' ? "Fees Economic Approach" : "Enfoque económico de las tasas"}</h3>
-                <div className=" text-sm lg:text-lg grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-20 max-w-6xl mx-auto text-gray opacity-70 items-center justify-center px-8 lg:px-0 mb-4">
+                <div className=" text-sm lg:text-lg grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-20 max-w-6xl mx-auto text-gray opacity-70   justify-center px-8 lg:px-0 mb-4">
 
                     <p>
                         {locale == 'en'
@@ -83,7 +83,7 @@ export default function Fea(params) {
                     </p>
                 </div>
 
-                <div className="bg-star bg-no-repeat bg-contain bg-center hidden lg:block">
+                <div className=" hidden lg:block">
                     <div className=" text-center">
                         <div className="relative w-[300px] h-[300px] lg:w-[400px] lg:h-[400px]  inline-flex justify-center items-center    lg:mt-0"
 
