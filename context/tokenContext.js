@@ -23,8 +23,8 @@ export const TokenProvider = ({children }) => {
     const [circulation,SetCirculation] = useState([])
     const [investors, setInvestors]= useState([])
 
-
-    let  community = ( (Number(totalSupply)  - Number(founders) - Number(pss)))
+    //ok-totalsupply + ok-Founders - ok-Treasury - investors - ok-circulating
+    let  community = ( (Number(totalSupply)  - Number(founders) - Number(pss)) - Number(rtf) - Number(investors))
 
     const totalNumbers = Number(totalSupply) + Number(founders) + Number(pss)
 
