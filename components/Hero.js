@@ -2,7 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from "./Logo";
 
+import { useRouter } from 'next/router'
+
 export default function Hero() {
+    const router = useRouter();
+    const { locale } = router;
+
     return(
       <div className=' bg-body   z-0  w-full  h-screen  '>
 
@@ -33,12 +38,13 @@ export default function Hero() {
 
             <div className="absolute    lg:-ml-10 top-0 flex flex-col w-full h-full justify-center tracking-[.3em] text-xs items-center font-title_bold font-bold">
                 <div className="flex peer flex-col lg:justify-center items-center transition-all lg:scale-50 lg:hover:scale-105 z-10 hover:z-20 lg:opacity-0 lg:hover:opacity-100" >
-                        <Link href="/comming"><a className="my-4 hover:text-primary hover:scale-125 transition-all">PAYMENTS</a></Link>
-                        <Link href="/comming"><a className="my-4 hover:text-primary hover:scale-125 transition-all">TRADING BOTS</a></Link>
-                        <Link href="/comming"><a className="my-4 hover:text-primary hover:scale-125 transition-all">METAVERSE</a></Link>
-                        <Link href="/comming"><a className="my-4 hover:text-primary hover:scale-125 transition-all">TRADERS CITY</a></Link>
+                        <a href="https://disruptivepayments.io/" target="_blank" className="my-4 hover:text-primary hover:scale-125 transition-all">{ locale == "en" ? "PAYMENTS" : "PAGOS"}</a>
+                        <a href="https://disruptivebots.io/"  target="_blank" className="my-4 hover:text-primary hover:scale-125 transition-all">{ locale == "en" ? "TRADING BOTS" : "   BOTS DE TRADING"}</a>
+                        <a href="http://www.planetd.io/"  target="_blank" className="my-4 hover:text-primary hover:scale-125 transition-all">{ locale == "en" ? "METAVERSE" : "METAVERSO"}</a>
+                        <a href={`https://disruptivex${ locale == "en" ? ".io" : ".mx"}`} target="_blank" className="my-4 hover:text-primary hover:scale-125 transition-all">EXCHANGE</a>
+                        <a href="https://tradetizen.com/"  target="_blank" className="my-4 hover:text-primary hover:scale-125 transition-all">{ locale == "en" ? "TRADERS CITY" : "CIUDAD DE TRADERS"}</a>
                 </div>
-                <div className="hidden peer-hover:hidden lg:flex items-center  z-0 justify-center w-full h-full absolute">
+                <div className="hidden peer-hover:hidden lg:flex items-center  z-0 justify-center w-full h-full absolute logo-hero right-0">
                 <Logo className=" w-24 transition-all duration-700     " variant="gradient"/>
                 </div>
 

@@ -58,7 +58,7 @@ export default function Header({className}) {
 
 
     return(
-        <header className={` ${className} ${scrolled && "bg-dark bg-opacity-80 "} transition-all  px-4 py-2 lg:py-4 fixed top-0 w-screen flex justify-between items-center z-30 `}>
+        <header className={`main-header ${className && className} ${scrolled && "bg-dark bg-opacity-80 "} transition-all  px-4 py-2 lg:py-4 fixed top-0 w-screen flex justify-between items-center z-30 `}>
            <Link href="/"><a><Logo className=" z-50 w-8 lg:ml-2"/></a></Link>
 
 
@@ -74,9 +74,9 @@ export default function Header({className}) {
 
 
 
-               {/*  <Button onClick={PanelToggleSwitch} onKeyDown={PanelToggleSwitch}  className="px-7 mr-2" variant="primary" size="sm">
+                 <Button onClick={PanelToggleSwitch} onKeyDown={PanelToggleSwitch}  className="px-7 mr-2" variant="primary" size="sm">
                   Stake
-                </Button> */}
+                </Button>
                 <a target="_blank" rel="noreferrer noopener" href="https://pancakeswap.finance/info/token/0xd70a9d1c9fdd3d8dd2fb672bb399f7bca61666bd">
                   <Button
                   className="pr-8 group md:pr-8 pl-0 mt-0 mr-4 fill-light"

@@ -34,7 +34,9 @@ export default{
                 sections:[
                     {
                         title:"Real advantages vs an obsolete system",
+                        slug:"real_advantages",
                         content:"For decades, traditional banking has offered a model of operability with obvious weaknesses. <br/>  Perhaps the most striking are the low yields offered to account holders and the high account management fees. These two facts have led people to seek new business, investment and management models that allow them to play a more active role in controlling their resources. <br/><h4 className='font-title_bold'>Some other disadvantages of commercial banking are:</h4> <ul><li>Limited hours of operation. </li><li>They are inactive some days of the year.</li><li>Slow operations and transfers.</li><li>Their security system is corruptible.</li></ul><br/>Under this logic, and as a value proposition different from that obsolete model, DISR Coin provides security to users because it includes the four aspects that make up risk control.   <ul><li>Liquidity</li><li>Projection Oracle</li><li>Risk reserve</li><li>Community involvement</li></ul><br/>But it also gives them the opportunity to get to know a project with great growth potential, by being part of an integral ecosystem that provides them with the best experience in the crypto market.",
+
 
                     },
                     {

@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 import Head from "next/head";
 import AnimationPage from "../components/AnimationPage";
 
+
+
 export  async function getStaticProps({ locale }){
     return{
       props:{
@@ -15,7 +17,7 @@ export  async function getStaticProps({ locale }){
   }
 
 
-export default function WhitePaper({locale}) {
+export default function WhitePaper({locale,data}) {
 
      //scroll
 
@@ -25,12 +27,18 @@ export default function WhitePaper({locale}) {
      useEffect(() => {
        const handleScroll = () => {
          const isScrolled = window.scrollY > 200;
-         const endScrolled = window.scrollY > 2200;
+
          if (isScrolled !== scrolled ) {
            setScrolled(!scrolled);
          }
+         if(window.scrollY > 4800){
+            setScrolled(false);
+         }
+
 
        };
+
+
 
 
        document.addEventListener("scroll", handleScroll, { passive: true });
@@ -54,24 +62,24 @@ export default function WhitePaper({locale}) {
                 </Head>
 
                 <div className="xl:min-h-screen bg-dark-black  w-full flex justify-end   xl:max-w-[35%]">
-                    <div className=" bg-dark-black w-full xl:max-w-xl  xl:min-h-screen pt-32 pb-14 px-8 xl:px-24 ">
-                        <h1 className=" text-4xl xl:text-6xl">Whitepaper</h1>
-                        <h4 className="text-xl mt-8 xl:text-4xl opacity-60">Marzo 2022</h4>
+                    <div className=" bg-dark-black w-full xl:max-w-xl  xl:min-h-screen pt-32 pb-14 px-8 xl:px-24 transition-all duration-300">
+                        <h1 className=" text-4xl xl:text-6xl">{locale ==  "en" ? "Whitepaper": "Libro Blanco" } </h1>
+                        <h4 className="text-xl mt-8 xl:text-4xl opacity-60">{locale ==  "en" ? "March": "Marzo" } 2022</h4>
 
-                        <div className={`${scrolled  &&  " xl:fixed xl:max-w-[35%] top-20" } mt-24 transition-all`}>
+                        <div className={`${scrolled  &&  " xl:fixed xl:max-w-[20%] top-20" } mt-24 transition-all`}>
                             <div className={`${scrolled && "  xl:max-w-sm "} `}>
                             {whitePaperData.map((itemWp,i)=>(
                                 <div key={i + "-itemWp-"+itemWp.slug}>
                                     <Link href={"#" + itemWp.slug}>
-                                        <a className="hover:text-primary">
-                                            <h2 className=" text-lg xl:text-2xl xl:mb-8 font-title_bold"> <span className="mr-3 text-primary">{(i + 1 ) / 10}</span>{itemWp.title}</h2>
+                                        <a className="hover:text-primary transition-all  duration-700">
+                                            <h2 className=" text-md   2xl:text-2xl 2xl:mb-8 font-title_bold"> <span className="mr-3 text-primary">{(i + 1 ) / 10}</span>{itemWp.title}</h2>
                                         </a>
                                     </Link>
 
-                                    <ul className="text-gray text-xl pb-4 pl-4 leading-10">
+                                    <ul className="text-gray xl:text-lg pb-4 pl-4 2xl:leading-10">
                                         {itemWp.sections.map((subItem,i) =>(
                                             <Link href={"#" + subItem.slug} key={"link-" +subItem.slug}>
-                                            <a className="hover:text-primary">
+                                            <a className="hover:text-primary transition-all  duration-700">
                                                 <li className="mb-2 leading-7" key={subItem + i}>
                                                     {subItem.title}
                                                     </li>
@@ -105,12 +113,12 @@ export default function WhitePaper({locale}) {
                                     <span className="mr-3 text-primary">{(i + 1 ) / 10}</span>{itemWp.title}
                                 </h2>
 
-                                <div className="text-gray leading-7 lg:text-2xl lg:leading-10 font-light" dangerouslySetInnerHTML={{__html: itemWp.content}}/>
-                                <section className="text-gray text-xl pb-4   leading-10">
+                                <div className="text-gray leading-7 lg:text-xl lg:leading-8 font-light" dangerouslySetInnerHTML={{__html: itemWp.content}}/>
+                                <section className="text-gray text-xl pb-4   leading-8">
                                     {itemWp.sections.map((subItem,i) =>(
                                         <div id={subItem.slug} className="mb-2 pt-12" key={"subItem"+ subItem.slug}>
                                             <h3 className=" leading-7 text-2xl text-light font-title_bold">{subItem.title}</h3>
-                                            <div className="text-gray leading-7 lg:text-2xl lg:leading-10 font-light" dangerouslySetInnerHTML={{__html: subItem.content}}></div>
+                                            <div className="text-gray leading-7 lg:text-xl lg:leading-8 font-light" dangerouslySetInnerHTML={{__html: subItem.content}}></div>
                                         </div>
                                     ))}
                                 </section>

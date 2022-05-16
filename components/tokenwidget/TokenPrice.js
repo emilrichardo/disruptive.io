@@ -2,7 +2,7 @@ import React from "react";
 //import { StaticImage } from "gatsby-plugin-image";
 export default function TokePrice({token,loading,}) {
 
-    let tokenvalue = parseFloat(token.price).toFixed(2);
+    let tokenvalue = parseFloat(token.price).toFixed(4);
     let bnbvalue = parseFloat(token.price_BNB).toFixed(6);
 
 

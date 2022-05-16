@@ -34,11 +34,15 @@ module.exports = {
     extend: {
       backgroundImage: {
         main : "url('/agujero.jpg')",
+        star : "url('/bg-star.png')",
         astronauta: "url('/bg-astronauta.jpg')",
-        commingsoon: "url('/background__.jpg')",
+        team: "url('/bg-team.jpg')",
         pages: "url('/bg-pages.jpg')",
         page_news: "url('/bg-news.jpg')",
         post: "url('/bg-post.jpg')",
+        perspetiva: "url('/bg-perspectiva.jpg')",
+        galaxy: "url('/bg-galaxy.jpg')",
+        ring: "url('/bg-ring.jpg')",
       }
     },
   },
