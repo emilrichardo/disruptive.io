@@ -33,26 +33,7 @@ export default function FullPage({locale}) {
       return (
         <div  className=' bg-dark-dark'>
           <AnimationPage>
-          <ReactFullpage.Wrapper>
-
-            <SectionWrapper move={() => fullpageApi.moveSectionDown()} >
-
-              <HeroToken>
-                <Button onClick={() => fullpageApi.moveSectionDown()} variant="primary" size="sm">  {locale == 'en'  ? "READ MORE" :"LEER MÁS"}</Button>
-              </HeroToken>
-
-            </SectionWrapper>
-            <SectionWrapper move={() => fullpageApi.moveSectionDown()} >
-              <Utility/>
-            </SectionWrapper>
-            <SectionWrapper move={() => fullpageApi.moveSectionDown()} >
-              <Fea/>
-            </SectionWrapper>
-            <SectionWrapper >
-              <TokenOverview/>
-            </SectionWrapper>
-
-          </ReactFullpage.Wrapper>
+          <h1>Tokenomics</h1>
           </AnimationPage>
 
         </div>
