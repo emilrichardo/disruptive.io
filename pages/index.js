@@ -67,11 +67,11 @@ export default function Home({locale}) {
 
           </div>
 
-        </div>
+        </MainContent >
 
 
 
-      </div>
+      </AnimationPage>
 
 
 
