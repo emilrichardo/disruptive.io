@@ -32,7 +32,7 @@ export default function FullPage({locale}) {
 
       return (
         <div  className=' bg-dark-dark'>
-
+          <AnimationPage>
           <ReactFullpage.Wrapper>
 
             <SectionWrapper move={() => fullpageApi.moveSectionDown()} >
@@ -53,7 +53,7 @@ export default function FullPage({locale}) {
             </SectionWrapper>
 
           </ReactFullpage.Wrapper>
-
+          </AnimationPage>
 
         </div>
 
