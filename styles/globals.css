@@ -54,3 +54,7 @@ h1,h2,h3,h4,h5,h6{
 .fp-warning, .fp-watermark{
   @apply hidden;
 }
+
+.fp-scrollable .logo-hero{
+  @apply left-20;
+}

@@ -45,7 +45,7 @@ export default function Hero() {
                         <a href="https://tradetizen.com/"  target="_blank" className="my-4 hover:text-primary hover:scale-125 transition-all">{ locale == "en" ? "TRADERS CITY" : "CIUDAD DE TRADERS"}</a>
                 </div>
                 <div className="hidden peer-hover:hidden lg:flex items-center  z-0 justify-center w-full h-full absolute right-0">
-                <Logo className=" w-24 transition-all duration-700     " variant="gradient"/>
+                <Logo className="logo-hero w-24 transition-all duration-700     " variant="gradient"/>
                 </div>
 
             </div>
