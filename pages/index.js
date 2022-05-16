@@ -23,10 +23,11 @@ export default function Home({locale}) {
 
   return (
     <>
-    <AnimationPage>
+
       <Head>
         <title>Home  {" - " + process.env.projectName}</title>
       </Head>
+
       <Hero/>
         <MainContent className="!py-0 min-h-0">
           <div className="">
@@ -69,7 +70,7 @@ export default function Home({locale}) {
 
           </div>
         </MainContent>
-      </AnimationPage>
+
    </>
   )
 }
