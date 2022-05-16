@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps, router }) {
 
 
   return (
-      <>
+      <Layout>
 
 
         <TokenProvider>
@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps, router }) {
 
 
 
-      </>
+      </Layout>
   )
 }
 

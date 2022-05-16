@@ -1,8 +1,10 @@
-
 import Head from "next/head";
-import Image from "next/image";
+import AnimationPage from "../components/AnimationPage";
 
-
+import Hero from "../components/Hero";
+import MainContent from "../components/MainContent";
+import TokenWidget from "../components/tokenwidget/";
+import { TokenProvider } from "../context/tokenContext";
 
 
 export  async function getStaticProps({ locale }){
@@ -66,15 +68,8 @@ export default function Home({locale}) {
           </div>
 
           </div>
-
-        </MainContent >
-
-
-
+        </MainContent>
       </AnimationPage>
-
-
-
    </>
   )
 }
