@@ -74,9 +74,9 @@ export default function Header({className}) {
 
 
 
-                 {/* <Button onClick={PanelToggleSwitch} onKeyDown={PanelToggleSwitch}  className="px-7 mr-2" variant="primary" size="sm">
+                 <Button onClick={PanelToggleSwitch} onKeyDown={PanelToggleSwitch}  className="px-7 mr-2" variant="primary" size="sm">
                   Stake
-                </Button> */}
+                </Button>
                 <a target="_blank" rel="noreferrer noopener" href="https://pancakeswap.finance/info/token/0xd70a9d1c9fdd3d8dd2fb672bb399f7bca61666bd">
                   <Button
                   className="pr-8 group md:pr-8 pl-0 mt-0 mr-4 fill-light"
