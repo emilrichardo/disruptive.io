@@ -154,7 +154,7 @@ export default function PointScored({locale}) {
 
                     </div>
 
-                    <div className="hidden lg:flex justify-center text-center mb-0 scale-75">
+                    <div className="hidden 2xl:flex justify-center text-center mb-0 scale-75">
                          <RadialBars series={series} options={options} type="radialBar" height={400} width={400}/>
                      </div>
 
