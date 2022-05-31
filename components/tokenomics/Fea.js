@@ -63,7 +63,7 @@ export default function Fea(params) {
 
 
     return(
-        <section className=" bg-dark h-screen bg-star bg-no-repeat  bg-center bg-auto  border-t border-t-light   border-b border-b-light border-opacity-10 relative">
+        <section className=" bg-dark lg:h-screen bg-star bg-no-repeat  bg-center bg-auto  border-t border-t-light   border-b border-b-light border-opacity-10 relative">
             <MainContent className="!px-0">
 
                 <h3 className=" text-2xl lg:text-5xl text-center mt-[8vh] mb-4 lg:mb-12">{locale == 'en' ? "Fees Economic Approach" : "Enfoque económico de las tasas"}</h3>
