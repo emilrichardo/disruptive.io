@@ -168,7 +168,7 @@ export default function Utility(params) {
 
 
 
-            <div className="text-center flex justify-center absolute z-0 w-full bottom-0  left-0">
+            <div className="text-center flex justify-center lg:absolute z-0 w-full bottom-0  left-0">
                <Image
                className=" inline-block"
                src="/planeta_arriba.png"
