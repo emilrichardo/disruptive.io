@@ -8,7 +8,7 @@ export default function Utility(params) {
 
 
 
-        <section id="utility" className='h-screen' >
+        <section id="utility" className='lg:h-screen' >
             <MainContent>
             <h2 className="mt-[10vh] lg:mt-[25vh] text-center font-title_bold text-2xl lg:text-5xl">{locale == 'en' ? "DISR Utility" : "DISR Utilidades"}</h2>
 

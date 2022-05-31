@@ -6,6 +6,8 @@ import Fea from './../components/tokenomics/Fea';
 import TokenOverview from './../components/tokenomics/TokenOverview';
 import Button from '../components/buttons';
 import AnimationPage from "../components/AnimationPage";
+import { useWindowSize } from '../components/DetectWSize';
+
 export  async function getStaticProps({ locale }){
   return{
     props:{
@@ -15,53 +17,60 @@ export  async function getStaticProps({ locale }){
 }
 
 export default function FullPage({locale}) {
+  const size = useWindowSize();
+  console.log(size)
   return(
     <AnimationPage>
-    <ReactFullpage
+      {size.width  >   1024
+      ?
+        <ReactFullpage
+      //fullpage options
+          licenseKey = {'YOUR_KEY_HERE'}
+          scrollingSpeed = {1000} /* Options here */
+          scrollHorizontally = {true}  /* Because we are using the extension */
+          scrollHorizontallyKey = {'YOUR KEY HERE'}
 
+          render={({ state, fullpageApi,children }) => {
+            return (
+              <div  className=' bg-dark-dark'>
 
-    //fullpage options
-    licenseKey = {'YOUR_KEY_HERE'}
-    scrollingSpeed = {1000} /* Options here */
-    scrollHorizontally = {true}  /* Because we are using the extension */
-    scrollHorizontallyKey = {'YOUR KEY HERE'}
+                <ReactFullpage.Wrapper>
 
-    render={({ state, fullpageApi,children }) => {
+                  <SectionWrapper move={() => fullpageApi.moveSectionDown()} >
 
+                    <HeroToken>
+                      <Button onClick={() => fullpageApi.moveSectionDown()} variant="primary" size="sm">  {locale == 'en'  ? "READ MORE" :"LEER MÁS"}</Button>
+                    </HeroToken>
 
+                  </SectionWrapper>
+                  <SectionWrapper move={() => fullpageApi.moveSectionDown()} >
+                    <Utility/>
+                  </SectionWrapper>
+                  <SectionWrapper move={() => fullpageApi.moveSectionDown()} >
+                    <Fea/>
+                  </SectionWrapper>
+                  <SectionWrapper >
+                    <TokenOverview/>
+                  </SectionWrapper>
 
+                </ReactFullpage.Wrapper>
 
-      return (
-        <div  className=' bg-dark-dark'>
+              </div>
 
-          <ReactFullpage.Wrapper>
+            );
+          }}
+        />
+      :
+      <>
+        <HeroToken>
+        </HeroToken>
+        <Utility/>
+        <Fea/>
+        <TokenOverview/>
+      </>
 
-            <SectionWrapper move={() => fullpageApi.moveSectionDown()} >
+      }
 
-              <HeroToken>
-                <Button onClick={() => fullpageApi.moveSectionDown()} variant="primary" size="sm">  {locale == 'en'  ? "READ MORE" :"LEER MÁS"}</Button>
-              </HeroToken>
-
-            </SectionWrapper>
-            <SectionWrapper move={() => fullpageApi.moveSectionDown()} >
-              <Utility/>
-            </SectionWrapper>
-            <SectionWrapper move={() => fullpageApi.moveSectionDown()} >
-              <Fea/>
-            </SectionWrapper>
-            <SectionWrapper >
-              <TokenOverview/>
-            </SectionWrapper>
-
-          </ReactFullpage.Wrapper>
-
-        </div>
-
-
-
-      );
-    }}
-  />
   </AnimationPage>
 
   )
