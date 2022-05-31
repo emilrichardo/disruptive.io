@@ -163,7 +163,7 @@ export default function PointScored({locale}) {
                  </MainContent>
 
              </div>
-             <div className=" absolute w-full left-0 bottom-0">
+             <div className=" lg:absolute w-full left-0 bottom-0">
              <MainContent className="!py-0">
                  <div className="pt-24">
 
