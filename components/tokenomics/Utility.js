@@ -14,7 +14,7 @@ export default function Utility(params) {
 
 
 
-            <div   className="py-16 grid grid-cols-2 z-10  gap-y-8 lg:grid-cols-4 relative">
+            <div   className="py-16 grid grid-cols-1 z-10  gap-y-8 lg:grid-cols-4 relative">
                 <div className="text-center">
                    <svg className=" inline-block" width="60" height="66" viewBox="0 0 60 66" fill="none" xmlns="http://www.w3.org/2000/svg">
                        <g clipPath="url(#clip0_381_470)">

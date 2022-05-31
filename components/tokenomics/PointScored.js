@@ -109,12 +109,12 @@ export default function PointScored({locale}) {
 
 
                  <MainContent className="min-h-0 !pt-4">
-                    <h3 className="text-center text-xl lg:text-5xl">{locale == 'en' ? "Real time Token Overview": "Vista previa en tiempo real de DISR Tokens"}</h3>
+                    <h3 className="text-center text-3xl lg:text-5xl">{locale == 'en' ? "Real time Token Overview": "Vista previa en tiempo real de DISR Tokens"}</h3>
 
 
                     <div className="lg:inline-flex  mx-auto my-4">
                         <div className=" text-center lg:text-right lg:border-r lg:border-r-light lg:pr-7">
-                            <h4 className=" text-xl lg:text-4xl text-primary font-title_bold">{totalSupply}</h4>
+                            <h4 className=" text-4xl lg:text-4xl text-primary font-title_bold">{totalSupply}</h4>
                             <p className=" text-gray"> {locale == 'en' ? "Total Supply" : "Suministro total"}</p>
                         </div>
                         <div className=" border-b border-b-light-light w-14 mx-auto mt-4 lg:hidden"></div>
@@ -154,7 +154,7 @@ export default function PointScored({locale}) {
 
                     </div>
 
-                    <div className="hidden 2xl:flex justify-center text-center mb-0 scale-75">
+                    <div className=" flex justify-center text-center mb-0 scale-75">
                          <RadialBars series={series} options={options} type="radialBar" height={400} width={400}/>
                      </div>
 
@@ -163,13 +163,13 @@ export default function PointScored({locale}) {
                  </MainContent>
 
              </div>
-             <div className=" lg:absolute w-full left-0 bottom-0">
+             <div className=" lg:absolute w-full left-0 bottom-0 pb-24 lg:pb-0">
              <MainContent className="!py-0">
-                 <div className="pt-24">
+                 <div className="lg:pt-24">
 
 
                     <div >
-                        <ul className="grid grid-cols-2 lg:grid-cols-4 text-center">
+                        <ul className="grid grid-cols-1 lg:grid-cols-4 gap-y-8 lg:gap-y-0 text-center">
                             <li className="flex flex-col items-center  mx-auto   lg:my-8 max-w-[140px]">
                                 <svg   className="scale-50 lg:scale-100"  width="61" height="78" viewBox="0 0 61 78" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clipPath="url(#clip0_382_566)">

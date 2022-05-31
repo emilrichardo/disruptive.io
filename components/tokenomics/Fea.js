@@ -99,8 +99,8 @@ export default function Fea(params) {
                 </div>
 
 
-                <div className='lg:absolute  lg:bottom-[10vh] w-full left-0 right-0'>
-                  <div className="grid grid-cols-4 px-4 lg:grid-cols-7 lg:gap-6 mx-auto max-w-7xl  ">
+                <div className='lg:absolute pt-32 lg:pt-0 pb-24 lg:pb0  lg:bottom-[10vh] w-full left-0 right-0'>
+                  <div className="grid grid-cols-2 gap-y-8 px-4 lg:grid-cols-7 lg:gap-6 mx-auto max-w-7xl  ">
                       {feesEA.map((feesItem,i) =>(
                           <CardNumbers
                           number={feesItem.number}
@@ -127,7 +127,7 @@ const CardNumbers = ({number,title,color,icon})=>{
 
     return(
 
-            <div className=" flex flex-col items-center  px-10 lg:py-4 text-center scale-75 lg:scale-100">
+            <div className=" flex flex-col items-center  px-10 lg:py-4 text-center ">
                 <div className='responsive w-14 h-14 lg:w-24 lg:h-24 mb-4 rounded-full border-2 flex justify-center items-center'
                 style={{borderColor:color}}
                 >
