@@ -99,7 +99,7 @@ export default function Fea(params) {
                 </div>
 
 
-                <div className='absolute  bottom-[10vh] w-full left-0 right-0'>
+                <div className='lg:absolute  bottom-[10vh] w-full left-0 right-0'>
                   <div className="grid grid-cols-4 px-4 lg:grid-cols-7 lg:gap-6 mx-auto max-w-7xl  ">
                       {feesEA.map((feesItem,i) =>(
                           <CardNumbers
